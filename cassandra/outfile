@@ -1,0 +1,11 @@
+Now tracing requests.
+
+Tracing session: 162a3040-29f8-11e5-a978-cd6f09429713
+
+ activity                                                         | timestamp    | source    | source_elapsed
+------------------------------------------------------------------+--------------+-----------+----------------
+                                               execute_cql3_query | 12:45:20,516 | 127.0.0.1 |              0
+ Parsing insert into users (id, name) values (111111, GoodFella); | 12:45:20,517 | 127.0.0.1 |             97
+                                                 Request complete | 12:45:20,516 | 127.0.0.1 |            405
+
+
