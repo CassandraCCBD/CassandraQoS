@@ -124,6 +124,7 @@ public class CustomTThreadPoolServer extends TServer
 			//setting priority here
 	//		wp.setPriority(10);
 			//the thread runs here when the execute thing is done 
+			logger.debug("CASSANDRA TEAM: time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
 			executorService.execute(wp);
 		}
 		//for the odd one 
@@ -132,6 +133,7 @@ public class CustomTThreadPoolServer extends TServer
 			WorkerProcess wp = new WorkerProcess(client);
 			//setting priority here
 //			wp.setPriority(1);
+			logger.debug("CASSANDRA TEAM: time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
 			executorService.execute(wp);
 		}
 			
@@ -157,6 +159,7 @@ public class CustomTThreadPoolServer extends TServer
                 logger.warn("Maximum number of clients " + args.maxWorkerThreads + " reached");
         }
 
+	logger.debug("CASSANDRA TEAM: time before shutdown is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
         executorService.shutdown();
         // Thrift's default shutdown waits for the WorkerProcess threads to complete.  We do not,
         // because doing that allows a client to hold our shutdown "hostage" by simply not sending

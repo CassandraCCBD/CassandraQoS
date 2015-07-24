@@ -79,6 +79,7 @@ public abstract class AbstractReadExecutor
     {
 	logger.debug("CASSANDRA TEAM: in makeDataRequests, endpoints are {}", endpoints);
 	logger.debug("CASSANDRA TEAM: END of THRIFTStage");
+	logger.debug("Time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));	
         for (InetAddress endpoint : endpoints)
         {
             if (isLocalRequest(endpoint))
