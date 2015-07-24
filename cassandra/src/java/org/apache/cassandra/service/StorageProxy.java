@@ -1118,6 +1118,7 @@ public class StorageProxy implements StorageProxyMBean
                                              final String localDataCenter,
                                              final ConsistencyLevel consistency_level)
     {
+	logger.debug("CASSANDRA TEAM: counterWriteTask");
         return new DroppableRunnable(MessagingService.Verb.COUNTER_MUTATION)
         {
             public void runMayThrow()

@@ -77,11 +77,13 @@ public abstract class AbstractReadExecutor
 
     protected void makeDataRequests(Iterable<InetAddress> endpoints)
     {
+	logger.debug("CASSANDRA TEAM: in makeDataRequests, endpoints are {}", endpoints);
+	logger.debug("CASSANDRA TEAM: END of THRIFTStage");
         for (InetAddress endpoint : endpoints)
         {
             if (isLocalRequest(endpoint))
-            {
-                logger.trace("reading data locally");
+            {   /* CASSANDRA TEAM: this is where the ReadStage begins */
+                logger.trace("reading data locally ");
                 StageManager.getStage(Stage.READ).execute(new LocalReadRunnable(command, handler));
             }
             else
