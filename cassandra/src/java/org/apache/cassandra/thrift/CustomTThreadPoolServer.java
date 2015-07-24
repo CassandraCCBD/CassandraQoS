@@ -65,9 +65,7 @@ public class CustomTThreadPoolServer extends TServer
     private static final Logger logger = LoggerFactory.getLogger(CustomTThreadPoolServer.class.getName());
 
     // Executor service for handling client connections
-//    private final ExecutorService executorService;
-	/* CASSANDRA TEAM */
-	private final PriorityThreadPoolExecutor testexecutor;
+    private final ExecutorService executorService;
     // Flag for stopping the server
     private volatile boolean stopped;
 

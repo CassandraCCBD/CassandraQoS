@@ -1,11 +1,27 @@
 Now tracing requests.
 
-Tracing session: 162a3040-29f8-11e5-a978-cd6f09429713
+ id | name
+----+----------
+  3 | Username
 
- activity                                                         | timestamp    | source    | source_elapsed
-------------------------------------------------------------------+--------------+-----------+----------------
-                                               execute_cql3_query | 12:45:20,516 | 127.0.0.1 |              0
- Parsing insert into users (id, name) values (111111, GoodFella); | 12:45:20,517 | 127.0.0.1 |             97
-                                                 Request complete | 12:45:20,516 | 127.0.0.1 |            405
+(1 rows)
+
+
+Tracing session: 70c420b0-31c8-11e5-8da6-55bb596001d5
+
+ activity                                                                  | timestamp    | source    | source_elapsed
+---------------------------------------------------------------------------+--------------+-----------+----------------
+                                                        execute_cql3_query | 11:24:25,980 | 127.0.0.1 |              0
+                       Parsing select * from users where id=3 LIMIT 10000; | 11:24:25,980 | 127.0.0.1 |             68
+                                                       Preparing statement | 11:24:25,980 | 127.0.0.1 |            273
+                                 Executing single-partition query on users | 11:24:25,981 | 127.0.0.1 |           1372
+                                              Acquiring sstable references | 11:24:25,981 | 127.0.0.1 |           1390
+                                               Merging memtable tombstones | 11:24:25,981 | 127.0.0.1 |           1444
+                        Partition index with 0 entries found for sstable 1 | 11:24:25,982 | 127.0.0.1 |           2665
+                               Seeking to partition beginning in data file | 11:24:25,983 | 127.0.0.1 |           3058
+ Skipped 0/1 non-slice-intersecting sstables, included 0 due to tombstones | 11:24:25,983 | 127.0.0.1 |           3131
+                                Merging data from memtables and 1 sstables | 11:24:25,983 | 127.0.0.1 |           3149
+                                         Read 1 live and 0 tombstone cells | 11:24:25,983 | 127.0.0.1 |           3467
+                                                          Request complete | 11:24:25,985 | 127.0.0.1 |           5756
 
 
