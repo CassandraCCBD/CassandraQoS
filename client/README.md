@@ -3,5 +3,6 @@ Beginning.java contains the client itself that connects to the database and exec
 
 Compilation: 
 	javac -cp *:.:. beginning.java
+
 Run the Client:
 	java -cp *:. beginning
