@@ -7,21 +7,21 @@ Now tracing requests.
 (1 rows)
 
 
-Tracing session: cdb45470-3209-11e5-8bab-55bb596001d5
+Tracing session: 311ec370-3353-11e5-a454-3fe0c1ba1964
 
  activity                                                                  | timestamp    | source    | source_elapsed
 ---------------------------------------------------------------------------+--------------+-----------+----------------
-                                                        execute_cql3_query | 19:12:19,192 | 127.0.0.1 |              0
-                       Parsing select * from users where id=3 LIMIT 10000; | 19:12:19,192 | 127.0.0.1 |            659
-                                                       Preparing statement | 19:12:19,193 | 127.0.0.1 |           1466
-                                 Executing single-partition query on users | 19:12:19,200 | 127.0.0.1 |           8032
-                                              Acquiring sstable references | 19:12:19,200 | 127.0.0.1 |           8051
-                                               Merging memtable tombstones | 19:12:19,200 | 127.0.0.1 |           8109
-                                               Key cache hit for sstable 1 | 19:12:19,200 | 127.0.0.1 |           8241
-                               Seeking to partition beginning in data file | 19:12:19,200 | 127.0.0.1 |           8255
- Skipped 0/1 non-slice-intersecting sstables, included 0 due to tombstones | 19:12:19,200 | 127.0.0.1 |           8793
-                                Merging data from memtables and 1 sstables | 19:12:19,201 | 127.0.0.1 |           8817
-                                         Read 1 live and 0 tombstone cells | 19:12:19,201 | 127.0.0.1 |           9640
-                                                          Request complete | 19:12:19,202 | 127.0.0.1 |          10577
+                                                        execute_cql3_query | 10:30:10,408 | 127.0.0.1 |              0
+                       Parsing select * from users where id=3 LIMIT 10000; | 10:30:10,409 | 127.0.0.1 |            975
+                                                       Preparing statement | 10:30:10,411 | 127.0.0.1 |           2101
+                                 Executing single-partition query on users | 10:30:10,419 | 127.0.0.1 |          10123
+                                              Acquiring sstable references | 10:30:10,419 | 127.0.0.1 |          10146
+                                               Merging memtable tombstones | 10:30:10,419 | 127.0.0.1 |          10208
+                                               Key cache hit for sstable 1 | 10:30:10,419 | 127.0.0.1 |          10340
+                               Seeking to partition beginning in data file | 10:30:10,419 | 127.0.0.1 |          10356
+ Skipped 0/1 non-slice-intersecting sstables, included 0 due to tombstones | 10:30:10,431 | 127.0.0.1 |          22240
+                                Merging data from memtables and 1 sstables | 10:30:10,431 | 127.0.0.1 |          22263
+                                         Read 1 live and 0 tombstone cells | 10:30:10,432 | 127.0.0.1 |          23734
+                                                          Request complete | 10:30:10,433 | 127.0.0.1 |          25628
 
 

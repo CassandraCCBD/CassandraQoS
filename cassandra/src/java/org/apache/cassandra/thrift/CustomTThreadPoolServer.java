@@ -68,6 +68,7 @@ public class CustomTThreadPoolServer extends TServer
     private final ExecutorService executorService;
     // Flag for stopping the server
     private volatile boolean stopped;
+    public static long startTime=0;
 
     // Server options
     private final TThreadPoolServer.Args args;
@@ -124,6 +125,7 @@ public class CustomTThreadPoolServer extends TServer
 			//setting priority here
 	//		wp.setPriority(10);
 			//the thread runs here when the execute thing is done 
+			startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
 			logger.debug("CASSANDRA TEAM: time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
 			executorService.execute(wp);
 		}
@@ -133,6 +135,7 @@ public class CustomTThreadPoolServer extends TServer
 			WorkerProcess wp = new WorkerProcess(client);
 			//setting priority here
 //			wp.setPriority(1);
+			startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
 			logger.debug("CASSANDRA TEAM: time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
 			executorService.execute(wp);
 		}
