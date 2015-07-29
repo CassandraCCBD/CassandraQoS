@@ -253,21 +253,21 @@ public class SliceQueryFilter implements IDiskAtomFilter
         columnCounter = columnCounter(container.getComparator(), now);
         DeletionInfo.InOrderTester tester = container.deletionInfo().inOrderTester(reversed);
 	logger.debug("CASSANDRA TEAM: creating an Exception Scene in ReadStage to see where it starts");
-	try 
+	/*try 
 	{
 		throw new RuntimeException("Exception created successfully");
 	}
 	catch (Exception e)
 	{
 		logger.debug("CASSANDRA TEAM: stacktrace is ", e);
-	}
+	}*/
         while (reducedColumns.hasNext())
         {
             Column column = reducedColumns.next();
-            if (logger.isTraceEnabled())
+        /*    if (logger.isTraceEnabled())
                 logger.trace(String.format("collecting %s of %s: %s",
                                            columnCounter.live(), count, column.getString(container.getComparator())));
-
+        */  
             columnCounter.count(column, tester);
 
             if (columnCounter.live() > count)

@@ -31,7 +31,6 @@ import javax.net.ssl.SSLServerSocket;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.apache.cassandra.concurrent.NamedThreadFactory;
 import org.apache.cassandra.config.DatabaseDescriptor;
 import org.apache.cassandra.config.EncryptionOptions.ClientEncryptionOptions;
@@ -48,6 +47,9 @@ import org.apache.thrift.transport.TTransport;
 import org.apache.thrift.transport.TTransportException;
 import org.apache.thrift.transport.TSSLTransportFactory.TSSLTransportParameters;
 
+import com.util.concurrent.Executors;
+import com.util.concurrent.PriorityExecutorService;
+import com.util.concurrent.PriorityThreadPoolExecutor;
 import com.google.common.util.concurrent.Uninterruptibles;
 
 
@@ -76,7 +78,9 @@ public class CustomTThreadPoolServer extends TServer
     //Track and Limit the number of connected clients
     private final AtomicInteger activeClients = new AtomicInteger(0);
 
-
+    //**Creating priority based thread pool
+    PriorityExecutorService s ;
+    int count=0;
     public CustomTThreadPoolServer(TThreadPoolServer.Args args, ExecutorService executorService) {
         super(args);
         this.executorService = executorService;
@@ -98,36 +102,37 @@ public class CustomTThreadPoolServer extends TServer
         stopped = false;
         while (!stopped)
         {
-   	    logger.debug("CASSANDRA TEAM: going to create the thread");
+        	logger.debug("CASSANDRA TEAM: time  client " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
+			
+   	    // logger.debug("CASSANDRA TEAM: going to create the thread");
             // block until we are under max clients
             while (activeClients.get() >= args.maxWorkerThreads)
             {
                 Uninterruptibles.sleepUninterruptibly(10, TimeUnit.MILLISECONDS);
             }
-
+            logger.debug("CASSANDRA TEAM: number of activeClients {}", activeClients.get());
             try
             {
                 TTransport client = serverTransport_.accept();
                 activeClients.incrementAndGet();
 		logger.debug("CASSANDRA TEAM: going to execute WorkerProcess, number of activeClients {}", activeClients.get());
-		try 
-		{
-			throw new RuntimeException("CASSANDRA TEAM creating Exception scene");
-		}
-		catch (Exception e)
-		{
-			logger.debug("CASSANDRA TEAM: exception ", e);
-		}
+		
 		// if this is an "even" client, then it gets a higher priority, i.e, the second client gets a higher one 
-		if (activeClients.get()%2==0)
+		if (count%2==0)
 		{
 			WorkerProcess wp = new WorkerProcess(client);
 			//setting priority here
 	//		wp.setPriority(10);
 			//the thread runs here when the execute thing is done 
 			startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
-			logger.debug("CASSANDRA TEAM: time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
-			executorService.execute(wp);
+			//** Priority Thread Pool
+			logger.debug("CASSANDRA TEAM : counter "+count);
+			s = Executors.newPriorityFixedThreadPool(2);
+			s.submit(wp);
+			s.changePriorities(5, 10);
+			count++;
+			logger.debug("CASSANDRA TEAM: time for even request " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
+			
 		}
 		//for the odd one 
 		else 
@@ -135,9 +140,12 @@ public class CustomTThreadPoolServer extends TServer
 			WorkerProcess wp = new WorkerProcess(client);
 			//setting priority here
 //			wp.setPriority(1);
+			logger.debug("CASSANDRA TEAM : counter "+count);
 			startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
-			logger.debug("CASSANDRA TEAM: time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
 			executorService.execute(wp);
+			count++;
+			logger.debug("CASSANDRA TEAM: time for odd request " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
+			
 		}
 			
             }

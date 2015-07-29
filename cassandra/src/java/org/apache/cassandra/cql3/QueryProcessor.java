@@ -171,7 +171,7 @@ public class QueryProcessor implements QueryHandler
         CQLStatement prepared = getStatement(queryString, queryState.getClientState()).statement;
         if (prepared.getBoundTerms() != options.getValues().size())
             throw new InvalidRequestException("Invalid amount of bind variables");
-
+        logger.debug("CASSANDRA TEAM : Query "+queryString);
         return processStatement(prepared, queryState, options);
     }
 
