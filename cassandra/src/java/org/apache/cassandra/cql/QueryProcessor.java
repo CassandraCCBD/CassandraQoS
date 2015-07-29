@@ -112,7 +112,6 @@ public class QueryProcessor
             for (Term rawKey: select.getKeys())
             {
                 ByteBuffer key = rawKey.getByteBuffer(metadata.getKeyValidator(),variables);
-
                 validateKey(key);
                 commands.add(new SliceByNamesReadCommand(metadata.ksName, key, select.getColumnFamily(), now, new NamesQueryFilter(columnNames)));
             }
@@ -371,7 +370,7 @@ public class QueryProcessor
         String keyspace = null;
         ThriftClientState clientState = context.clientState;
         List<ByteBuffer> variables = context.variables;
-
+	logger.debug("CASSANDRA TEAM: Query is : {} ExecutionContext is {}", statement, context);
         // Some statements won't have (or don't need) a keyspace (think USE, or CREATE).
         if (statement.type != StatementType.SELECT && StatementType.REQUIRES_KEYSPACE.contains(statement.type))
             keyspace = clientState.getKeyspace();

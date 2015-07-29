@@ -98,7 +98,6 @@ public class CustomTThreadPoolServer extends TServer
         stopped = false;
         while (!stopped)
         {
-   	    logger.debug("CASSANDRA TEAM: going to create the thread");
             // block until we are under max clients
             while (activeClients.get() >= args.maxWorkerThreads)
             {
@@ -237,6 +236,7 @@ public class CustomTThreadPoolServer extends TServer
                 {
                     inputProtocol = inputProtocolFactory_.getProtocol(inputTransport);
                     outputProtocol = outputProtocolFactory_.getProtocol(outputTransport);
+		    logger.debug("CASSANDRA TEAM: inside the while loop in the run() of CustomTThreadPoolServer stopped is " + stopped);
                 }
             }
             catch (TTransportException ttx)

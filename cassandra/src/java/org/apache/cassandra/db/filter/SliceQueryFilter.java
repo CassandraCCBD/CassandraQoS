@@ -265,8 +265,8 @@ public class SliceQueryFilter implements IDiskAtomFilter
         {
             Column column = reducedColumns.next();
             if (logger.isTraceEnabled())
-                logger.trace(String.format("collecting %s of %s: %s",
-                                           columnCounter.live(), count, column.getString(container.getComparator())));
+              /*  logger.trace(String.format("collecting %s of %s: %s",
+                                           columnCounter.live(), count, column.getString(container.getComparator()))); */
 
             columnCounter.count(column, tester);
 

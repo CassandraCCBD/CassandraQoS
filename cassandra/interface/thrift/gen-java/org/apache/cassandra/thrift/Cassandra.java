@@ -55,7 +55,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Cassandra {
-
+  private final static Logger logger = LoggerFactory.getLogger(Cassandra.class);
   public interface Iface {
 
     public void login(AuthenticationRequest auth_request) throws AuthenticationException, AuthorizationException, org.apache.thrift.TException;
@@ -4483,6 +4483,7 @@ public class Cassandra {
       public execute_cql3_query_result getResult(I iface, execute_cql3_query_args args) throws org.apache.thrift.TException {
         execute_cql3_query_result result = new execute_cql3_query_result();
         try {
+	  logger.debug("CASSANDRA TEAM: going to try executing query in Cassandra.java");
           result.success = iface.execute_cql3_query(args.query, args.compression, args.consistency);
         } catch (InvalidRequestException ire) {
           result.ire = ire;
