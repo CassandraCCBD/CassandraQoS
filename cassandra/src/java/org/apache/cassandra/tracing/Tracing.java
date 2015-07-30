@@ -149,9 +149,9 @@ public class Tracing
         }
         else
         {
+ 	    logger.debug("CASSANDRA TEAM: Request not complete");	
             final int elapsed = state.elapsed();
             final ByteBuffer sessionIdBytes = state.sessionIdBytes;
-
             StageManager.getStage(Stage.TRACING).execute(new Runnable()
             {
                 public void run()
