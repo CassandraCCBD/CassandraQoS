@@ -29,6 +29,8 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /**
  * This Executor queues up the tasks as per their set priorities. It not only
  * queues up tasks as per their priorities but also sets those priorities to the
@@ -44,6 +46,7 @@ public class PriorityThreadPoolExecutor extends ThreadPoolExecutor implements Pr
 
     private static final RejectedExecutionHandler defaultHandler = new ThreadPoolExecutor.AbortPolicy();
 
+    private static final Logger logger = LoggerFactory.getLogger(PriorityThreadPoolExecutor.class);
     public PriorityThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit)
     {
         this(corePoolSize, maximumPoolSize, keepAliveTime, unit, Executors.defaultThreadFactory(), defaultHandler);
@@ -85,6 +88,7 @@ public class PriorityThreadPoolExecutor extends ThreadPoolExecutor implements Pr
     {
         if (task == null)
             throw new NullPointerException();
+	logger.debug("CASSANDRA TEAM: priority of the task is " + priority);	
         RunnableFuture<Object> ftask = newPriorityTaskFor(task, null, priority);
         execute(ftask);
         return ftask;

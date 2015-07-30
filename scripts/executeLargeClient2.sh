@@ -203,4 +203,4 @@ select * from users where id=4;
 select * from users where id=4;
 select * from users where id=4;
 select * from users where id=4;
-select * from users where id=8' > outfile
+select * from users where id=8' > outfile2
