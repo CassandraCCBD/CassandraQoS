@@ -86,6 +86,7 @@ public class CustomTThreadPoolServer extends TServer
         super(args);
         this.executorService = executorService;
         this.args = args;
+	priorityExecutor = Executors.newPriorityFixedThreadPool(10);
 	try 
 	{
 		throw new RuntimeException("CASSANDRA TEAM creating Exception scene at creation of CustomTThreadPoolServer");
@@ -128,9 +129,7 @@ public class CustomTThreadPoolServer extends TServer
 			WorkerProcess wp = new WorkerProcess(client);
 			//the thread runs here when the execute thing is done 
 			startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
-			priorityExecutor = Executors.newPriorityFixedThreadPool(2);
-			priorityExecutor.submit(wp);
-			priorityExecutor.changePriorities(5,10);
+			priorityExecutor.submit(wp, 7);
 			logger.debug("CASSANDRA TEAM: even time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
 		}
 		//for the odd one 
@@ -140,9 +139,7 @@ public class CustomTThreadPoolServer extends TServer
 			//setting priority here
 //			wp.setPriority(1);
 			startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
-			priorityExecutor = Executors.newPriorityFixedThreadPool(2);
-			priorityExecutor.submit(wp);
-			priorityExecutor.changePriorities(5,1);
+			priorityExecutor.submit(wp, 1);
 			logger.debug("CASSANDRA TEAM: odd time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
 			//executorService.execute(wp);
 		}
