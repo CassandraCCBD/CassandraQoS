@@ -87,14 +87,6 @@ public class CustomTThreadPoolServer extends TServer
         this.executorService = executorService;
         this.args = args;
 	priorityExecutor = Executors.newPriorityFixedThreadPool(10);
-	try 
-	{
-		throw new RuntimeException("CASSANDRA TEAM creating Exception scene at creation of CustomTThreadPoolServer");
-	}
-	catch (Exception e)
-	{
-		logger.debug("CASSANDRA TEAM: exception ", e);
-	}
     }
 
     public void serve()
@@ -223,7 +215,6 @@ public class CustomTThreadPoolServer extends TServer
             TProtocol inputProtocol = null;
             TProtocol outputProtocol = null;
             SocketAddress socket = null;
-	    logger.debug("CASSANDRA TEAM: in run() client_ of WorkerProcess - {} args {}", client_, args);
             try
             {
                 socket = ((TCustomSocket) client_).getSocket().getRemoteSocketAddress();
@@ -241,7 +232,6 @@ public class CustomTThreadPoolServer extends TServer
                 {
                     inputProtocol = inputProtocolFactory_.getProtocol(inputTransport);
                     outputProtocol = outputProtocolFactory_.getProtocol(outputTransport);
-		    logger.debug("CASSANDRA TEAM: inside the while loop in the run() of CustomTThreadPoolServer stopped is " + stopped);
                 }
             }
             catch (TTransportException ttx)

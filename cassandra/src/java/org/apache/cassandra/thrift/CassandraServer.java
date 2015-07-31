@@ -1952,14 +1952,14 @@ public class CassandraServer implements Cassandra.Iface
             else
             {
                 logger.debug("execute_cql3_query");
-		try 
+	/*	try 
 		{
 			throw new RuntimeException("Exception scene");
 		}
 		catch (Exception e)
 		{
 			logger.debug("CASSANDRA TEAM ", e);
-		}
+		} */
 
 
             }
