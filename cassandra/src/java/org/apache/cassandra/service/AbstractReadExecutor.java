@@ -27,6 +27,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.apache.cassandra.thrift.CustomTThreadPoolServer;
+import org.apache.cassandra.thrift.CassandraServer;
 import org.apache.cassandra.concurrent.Stage;
 import org.apache.cassandra.concurrent.StageManager;
 import org.apache.cassandra.config.CFMetaData.SpeculativeRetry.RetryType;
@@ -81,8 +82,7 @@ public abstract class AbstractReadExecutor
 	logger.debug("CASSANDRA TEAM: in makeDataRequests, endpoints are {}", endpoints);
 	logger.debug("CASSANDRA TEAM: END of THRIFTStage");
 	logger.debug("Time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));	
-	logger.debug("CASSANDRA TEAM: start time for Thrift stage " + CustomTThreadPoolServer.startTime);	
-	logger.debug("Time taken is for ThriftStage " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime())-CustomTThreadPoolServer.startTime));	
+	logger.debug("Time taken is for ThriftStage " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime())-CassandraServer.startTime));	
         for (InetAddress endpoint : endpoints)
         {
             if (isLocalRequest(endpoint))

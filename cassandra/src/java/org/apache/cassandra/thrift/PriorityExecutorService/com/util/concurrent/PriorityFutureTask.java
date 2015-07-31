@@ -20,9 +20,13 @@ package com.util.concurrent;
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class PriorityFutureTask<T> extends FutureTask<T>
 {
     private int priority;
+    private static final Logger logger = LoggerFactory.getLogger(PriorityFutureTask.class);
     
     public PriorityFutureTask(Callable<T> callable, int priority) 
     {
@@ -59,6 +63,7 @@ public class PriorityFutureTask<T> extends FutureTask<T>
     public void run()
     {
         int originalPriority = Thread.currentThread().getPriority();
+	logger.debug("CASSANDRA TEAM: originalPriority is " + originalPriority + " setting it to " + priority);
         Thread.currentThread().setPriority(priority);
         super.run();
         Thread.currentThread().setPriority(originalPriority);

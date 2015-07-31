@@ -70,7 +70,6 @@ public class CustomTThreadPoolServer extends TServer
     private final ExecutorService executorService;
     // Flag for stopping the server
     private volatile boolean stopped;
-    public static long startTime=0;
 
     // Server options
     private final TThreadPoolServer.Args args;
@@ -116,11 +115,10 @@ public class CustomTThreadPoolServer extends TServer
                 activeClients.incrementAndGet();
 		logger.debug("CASSANDRA TEAM: going to execute WorkerProcess, number of activeClients {} ExecutorService {}", activeClients.get(), executorService);
 		// if this is an "even" client, then it gets a higher priority, i.e, the second client gets a higher one 
-		if (activeClients.get()%2==0)
+		if (activeClients.get()%4==0)
 		{
 			WorkerProcess wp = new WorkerProcess(client);
 			//the thread runs here when the execute thing is done 
-			startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
 			priorityExecutor.submit(wp, 7);
 			logger.debug("CASSANDRA TEAM: even time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
 		}
@@ -130,7 +128,6 @@ public class CustomTThreadPoolServer extends TServer
 			WorkerProcess wp = new WorkerProcess(client);
 			//setting priority here
 //			wp.setPriority(1);
-			startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
 			priorityExecutor.submit(wp, 1);
 			logger.debug("CASSANDRA TEAM: odd time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
 			//executorService.execute(wp);

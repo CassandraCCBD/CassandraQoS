@@ -26,6 +26,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.TimeoutException;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
+import java.util.concurrent.TimeUnit;
 
 import com.google.common.base.Function;
 import com.google.common.base.Joiner;
@@ -82,6 +83,7 @@ public class CassandraServer implements Cassandra.Iface
     private final static List<ColumnOrSuperColumn> EMPTY_COLUMNS = Collections.emptyList();
 
     private volatile boolean loggedCQL2Warning = false;
+    public static long startTime = 0;	
 
     /*
      * RequestScheduler to perform the scheduling of incoming requests
@@ -1940,6 +1942,7 @@ public class CassandraServer implements Cassandra.Iface
     public CqlResult execute_cql3_query(ByteBuffer query, Compression compression, ConsistencyLevel cLevel)
     throws InvalidRequestException, UnavailableException, TimedOutException, SchemaDisagreementException, TException
     {
+	startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
         validateCQLVersion(3);
         try
         {
@@ -1951,7 +1954,7 @@ public class CassandraServer implements Cassandra.Iface
             }
             else
             {
-                logger.debug("execute_cql3_query");
+                logger.debug("execute_cql3_query, start time - " + startTime);
 	/*	try 
 		{
 			throw new RuntimeException("Exception scene");
