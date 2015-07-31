@@ -48,8 +48,10 @@ import org.apache.thrift.transport.TTransport;
 import org.apache.thrift.transport.TTransportException;
 import org.apache.thrift.transport.TSSLTransportFactory.TSSLTransportParameters;
 
+import com.util.concurrent.Executors;
+import com.util.concurrent.PriorityExecutorService;
+import com.util.concurrent.PriorityThreadPoolExecutor;
 import com.google.common.util.concurrent.Uninterruptibles;
-
 
 /**
  * Slightly modified version of the Apache Thrift TThreadPoolServer.
@@ -75,6 +77,9 @@ public class CustomTThreadPoolServer extends TServer
 
     //Track and Limit the number of connected clients
     private final AtomicInteger activeClients = new AtomicInteger(0);
+
+    /*our own PriorityExecutorService */
+    PriorityExecutorService priorityExecutor;
 
 
     public CustomTThreadPoolServer(TThreadPoolServer.Args args, ExecutorService executorService) {
@@ -121,12 +126,12 @@ public class CustomTThreadPoolServer extends TServer
 		if (activeClients.get()%2==0)
 		{
 			WorkerProcess wp = new WorkerProcess(client);
-			//setting priority here
-	//		wp.setPriority(10);
 			//the thread runs here when the execute thing is done 
 			startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
-			logger.debug("CASSANDRA TEAM: time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
-			executorService.execute(wp);
+			priorityExecutor = Executors.newPriorityFixedThreadPool(2);
+			priorityExecutor.submit(wp);
+			priorityExecutor.changePriorities(5,10);
+			logger.debug("CASSANDRA TEAM: even time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
 		}
 		//for the odd one 
 		else 
@@ -135,8 +140,11 @@ public class CustomTThreadPoolServer extends TServer
 			//setting priority here
 //			wp.setPriority(1);
 			startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
-			logger.debug("CASSANDRA TEAM: time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
-			executorService.execute(wp);
+			priorityExecutor = Executors.newPriorityFixedThreadPool(2);
+			priorityExecutor.submit(wp);
+			priorityExecutor.changePriorities(5,1);
+			logger.debug("CASSANDRA TEAM: odd time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
+			//executorService.execute(wp);
 		}
 			
             }
