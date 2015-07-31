@@ -81,6 +81,14 @@ public class CustomTThreadPoolServer extends TServer
         super(args);
         this.executorService = executorService;
         this.args = args;
+	try 
+	{
+		throw new RuntimeException("CASSANDRA TEAM creating Exception scene at creation of CustomTThreadPoolServer");
+	}
+	catch (Exception e)
+	{
+		logger.debug("CASSANDRA TEAM: exception ", e);
+	}
     }
 
     public void serve()
@@ -108,15 +116,7 @@ public class CustomTThreadPoolServer extends TServer
             {
                 TTransport client = serverTransport_.accept();
                 activeClients.incrementAndGet();
-		logger.debug("CASSANDRA TEAM: going to execute WorkerProcess, number of activeClients {}", activeClients.get());
-		try 
-		{
-			throw new RuntimeException("CASSANDRA TEAM creating Exception scene");
-		}
-		catch (Exception e)
-		{
-			logger.debug("CASSANDRA TEAM: exception ", e);
-		}
+		logger.debug("CASSANDRA TEAM: going to execute WorkerProcess, number of activeClients {} ExecutorService {}", activeClients.get(), executorService);
 		// if this is an "even" client, then it gets a higher priority, i.e, the second client gets a higher one 
 		if (activeClients.get()%2==0)
 		{

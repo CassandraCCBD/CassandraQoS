@@ -19,6 +19,8 @@ package org.apache.cassandra.concurrent;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class is an implementation of the <i>ThreadFactory</i> interface. This
@@ -28,6 +30,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class NamedThreadFactory implements ThreadFactory
 {
+    private static final Logger logger = LoggerFactory.getLogger(NamedThreadFactory.class);
     protected final String id;
     private final int priority;
     protected final AtomicInteger n = new AtomicInteger(1);
@@ -39,7 +42,18 @@ public class NamedThreadFactory implements ThreadFactory
 
     public NamedThreadFactory(String id, int priority)
     {
-
+	logger.debug("CASSANDRA TEAM: Id is " + id + " n is " + n + " priority is " + priority);
+	if (id.equals("Thrift"))
+	{
+		try 
+		{
+			throw new RuntimeException("Throwing exception for stacktrace of Thrift Thread");
+		}
+		catch (Exception e)
+		{
+			logger.debug("CASSANDRA TEAM: Stacktrace ", e);
+		}
+	}
         this.id = id;
         this.priority = priority;
     }
@@ -47,6 +61,18 @@ public class NamedThreadFactory implements ThreadFactory
     public Thread newThread(Runnable runnable)
     {
         String name = id + ":" + n.getAndIncrement();
+	logger.debug("CASSANDRA TEAM: Id is " + id + " n is " + n + " priority is " + priority);
+	if (id.equals("Thrift"))
+	{
+		try 
+		{
+			throw new RuntimeException("Throwing exception for stacktrace of Thrift Thread");
+		}
+		catch (Exception e)
+		{
+			logger.debug("CASSANDRA TEAM: Stacktrace ", e);
+		}
+	}
         Thread thread = new Thread(runnable, name);
         thread.setPriority(priority);
         thread.setDaemon(true);

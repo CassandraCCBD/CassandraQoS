@@ -1,1 +1,1 @@
-sudo cassandra/bin/cassandra -p PID
+sudo bin/cassandra -p PID

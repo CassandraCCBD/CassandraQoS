@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="maven-dependencies" default="init-dependencies">
 <target name="init-dependencies">
-    <echo level="info" message="Loading dependency paths from file: /home/yasu/cassandra/build/build-dependencies.xml"/>
+    <echo level="info" message="Loading dependency paths from file: /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/build/build-dependencies.xml"/>
     <property name="junit:junit:jar" value="/root/.m2/repository/junit/junit/4.6/junit-4.6.jar"/>
     <fileset id="junit:junit:jar" dir="/root/.m2/repository/junit/junit/4.6">
       <include name="junit-4.6.jar"/>

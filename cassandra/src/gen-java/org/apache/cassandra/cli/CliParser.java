@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g 2015-07-29 20:35:11
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g 2015-07-31 01:02:47
 
 package org.apache.cassandra.cli;
 
@@ -897,7 +897,7 @@ public class CliParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: host, username, port, password
+                    // elements: password, port, host, username
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -918,13 +918,13 @@ public class CliParser extends Parser {
                         adaptor.addChild(root_1, stream_host.nextTree());
                         adaptor.addChild(root_1, stream_port.nextTree());
                         // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:168:37: ( username password )?
-                        if ( stream_username.hasNext()||stream_password.hasNext() ) {
+                        if ( stream_password.hasNext()||stream_username.hasNext() ) {
                             adaptor.addChild(root_1, stream_username.nextTree());
                             adaptor.addChild(root_1, stream_password.nextTree());
 
                         }
-                        stream_username.reset();
                         stream_password.reset();
+                        stream_username.reset();
 
                         adaptor.addChild(root_0, root_1);
                         }
@@ -987,7 +987,7 @@ public class CliParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: port, password, username, ip_address
+                    // elements: ip_address, password, username, port
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2898,7 +2898,7 @@ public class CliParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: columnFamilyExpr, typeIdentifier, limit
+                    // elements: limit, columnFamilyExpr, typeIdentifier
                     // token labels: limit
                     // rule labels: retval
                     // token list labels: 
@@ -3035,7 +3035,7 @@ public class CliParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: limit, getCondition, columnFamily
+                    // elements: getCondition, columnFamily, limit
                     // token labels: limit
                     // rule labels: retval
                     // token list labels: 
@@ -3164,7 +3164,7 @@ public class CliParser extends Parser {
 
 
             // AST REWRITE
-            // elements: value, columnOrSuperColumn, operator
+            // elements: columnOrSuperColumn, value, operator
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3421,7 +3421,7 @@ public class CliParser extends Parser {
 
 
             // AST REWRITE
-            // elements: ttlValue, columnFamilyExpr, objectValue
+            // elements: objectValue, ttlValue, columnFamilyExpr
             // token labels: ttlValue
             // rule labels: retval, objectValue
             // token list labels: 
@@ -3571,7 +3571,7 @@ public class CliParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: columnFamilyExpr, byValue
+                    // elements: byValue, columnFamilyExpr
                     // token labels: 
                     // rule labels: retval, byValue
                     // token list labels: 
@@ -3647,7 +3647,7 @@ public class CliParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: byValue, columnFamilyExpr
+                    // elements: columnFamilyExpr, byValue
                     // token labels: 
                     // rule labels: retval, byValue
                     // token list labels: 
@@ -4131,7 +4131,7 @@ public class CliParser extends Parser {
 
 
             // AST REWRITE
-            // elements: columnFamily, keyRangeExpr, rowLimitExpr, columnLimitExpr
+            // elements: columnLimitExpr, columnFamily, keyRangeExpr, rowLimitExpr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -4338,7 +4338,7 @@ public class CliParser extends Parser {
 
 
             // AST REWRITE
-            // elements: entityName, columnFamily, assumptionElement
+            // elements: assumptionElement, columnFamily, entityName
             // token labels: assumptionElement
             // rule labels: retval
             // token list labels: 
@@ -5774,7 +5774,7 @@ public class CliParser extends Parser {
 
 
             // AST REWRITE
-            // elements: keyspace, username, password
+            // elements: password, keyspace, username
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -6223,7 +6223,7 @@ public class CliParser extends Parser {
 
 
             // AST REWRITE
-            // elements: attr_name, attrValue
+            // elements: attrValue, attr_name
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -6743,7 +6743,7 @@ public class CliParser extends Parser {
 
 
             // AST REWRITE
-            // elements: rowValue, rowKey
+            // elements: rowKey, rowValue
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -6914,7 +6914,7 @@ public class CliParser extends Parser {
 
 
             // AST REWRITE
-            // elements: super_column, rowKey, column, columnFamily
+            // elements: column, super_column, columnFamily, rowKey
             // token labels: 
             // rule labels: retval, column, super_column
             // token list labels: 
@@ -6937,7 +6937,7 @@ public class CliParser extends Parser {
                 adaptor.addChild(root_1, stream_columnFamily.nextTree());
                 adaptor.addChild(root_1, stream_rowKey.nextTree());
                 // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:433:51: ( $column ( $super_column)? )?
-                if ( stream_super_column.hasNext()||stream_column.hasNext() ) {
+                if ( stream_column.hasNext()||stream_super_column.hasNext() ) {
                     adaptor.addChild(root_1, stream_column.nextTree());
                     // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:433:60: ( $super_column)?
                     if ( stream_super_column.hasNext() ) {
@@ -6947,8 +6947,8 @@ public class CliParser extends Parser {
                     stream_super_column.reset();
 
                 }
-                stream_super_column.reset();
                 stream_column.reset();
+                stream_super_column.reset();
 
                 adaptor.addChild(root_0, root_1);
                 }
@@ -7085,7 +7085,7 @@ public class CliParser extends Parser {
 
 
             // AST REWRITE
-            // elements: startKey, endKey
+            // elements: endKey, startKey
             // token labels: 
             // rule labels: endKey, retval, startKey
             // token list labels: 
@@ -7288,7 +7288,7 @@ public class CliParser extends Parser {
 
 
             // AST REWRITE
-            // elements: columns, reversedExpr
+            // elements: reversedExpr, columns
             // token labels: columns
             // rule labels: retval
             // token list labels: 
@@ -8769,7 +8769,7 @@ public class CliParser extends Parser {
 
 
             // AST REWRITE
-            // elements: functionArgument, functionName
+            // elements: functionName, functionArgument
             // token labels: functionName
             // rule labels: retval
             // token list labels: 
