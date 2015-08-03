@@ -1,0 +1,4 @@
+javac Hello.java
+javah -jni Hello
+gcc -I/usr/lib/jvm/java-7-openjdk-i386/include -o libhello.so -shared hello.c;
+java -Djava.library.path=. Hello
