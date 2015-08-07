@@ -17,6 +17,7 @@
  */
 package org.apache.cassandra.thrift;
 
+import java.lang.management.*;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.net.SocketTimeoutException;
@@ -52,7 +53,23 @@ import com.util.concurrent.Executors;
 import com.util.concurrent.PriorityExecutorService;
 import com.util.concurrent.PriorityThreadPoolExecutor;
 import com.google.common.util.concurrent.Uninterruptibles;
+/* This Class Hello Loads the C Library to get the Thread ID */
+/*
+class Hello {
+	private static final Logger logger = LoggerFactory.getLogger(Hello.class);
+	public native int HelloWorld();
+	static {
+		logger.debug("Going to Load the Library");
+		System.loadLibrary("hello");
+	}
 
+	public int returnThread()
+	{
+		int id = HelloWorld();
+		logger.debug("In returnThread of Hello");
+		return id;
+	}
+} */
 /**
  * Slightly modified version of the Apache Thrift TThreadPoolServer.
  * <p/>
@@ -212,6 +229,21 @@ public class CustomTThreadPoolServer extends TServer
             TProtocol inputProtocol = null;
             TProtocol outputProtocol = null;
             SocketAddress socket = null;
+	    ThreadMXBean tm = ManagementFactory.getThreadMXBean();
+	    logger.debug("CASSANDRA TEAM: Thread ID "  + Thread.currentThread().getId());
+	    logger.debug("CPU time: " + tm.getThreadCpuTime(Thread.currentThread().getId()));
+	   /* try 
+	    {
+	    logger.debug("Going to try Hello stuff");
+	    Hello obj = new Hello();
+	    logger.debug("Made the object, now going to initialize id");
+            int id=obj.returnThread();	
+	    logger.debug("Thread id is " + id);
+	    }
+	    catch (Exception e)
+	    {
+	    	logger.debug("Exception thrown at Hello ", e);
+	    } */
             try
             {
                 socket = ((TCustomSocket) client_).getSocket().getRemoteSocketAddress();

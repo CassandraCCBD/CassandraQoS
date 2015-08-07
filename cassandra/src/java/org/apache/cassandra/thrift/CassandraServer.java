@@ -28,6 +28,7 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
 import java.util.concurrent.TimeUnit;
 
+import java.lang.management.*;
 import com.google.common.base.Function;
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableMap;
@@ -38,6 +39,7 @@ import com.google.common.collect.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.apache.cassandra.Native.Hello;
 import org.apache.cassandra.auth.AuthenticatedUser;
 import org.apache.cassandra.auth.Permission;
 import org.apache.cassandra.config.CFMetaData;
@@ -1943,6 +1945,9 @@ public class CassandraServer implements Cassandra.Iface
     throws InvalidRequestException, UnavailableException, TimedOutException, SchemaDisagreementException, TException
     {
 	startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+        ThreadMXBean tm = ManagementFactory.getThreadMXBean();
+        long startCPU = TimeUnit.NANOSECONDS.toMillis(tm.getThreadCpuTime(Thread.currentThread().getId()));
+        long startUser= TimeUnit.NANOSECONDS.toMillis(tm.getThreadUserTime(Thread.currentThread().getId()));
         validateCQLVersion(3);
         try
         {
@@ -1954,7 +1959,7 @@ public class CassandraServer implements Cassandra.Iface
             }
             else
             {
-                logger.debug("execute_cql3_query, start time - " + startTime);
+                logger.debug("execute_cql3_query, start time - " + startTime );
 	/*	try 
 		{
 			throw new RuntimeException("Exception scene");
@@ -1980,6 +1985,12 @@ public class CassandraServer implements Cassandra.Iface
         }
         finally
         {
+	    long endTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+	    long endCPU = TimeUnit.NANOSECONDS.toMillis(tm.getThreadCpuTime(Thread.currentThread().getId())); 
+            long endUser = TimeUnit.NANOSECONDS.toMillis(tm.getThreadUserTime(Thread.currentThread().getId()));
+	    logger.debug("CASSANDRA TEAM: response time is " + (endTime - startTime));
+	    logger.debug("CASSANDRA TEAM: CPU time is " + (endCPU - startCPU));
+	    logger.debug("CASSANDRA TEAM: User time is " + (endUser - startUser));
             Tracing.instance.stopSession();
         }
     }
