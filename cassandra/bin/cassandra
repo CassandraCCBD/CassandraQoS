@@ -66,7 +66,7 @@
 
 #Cassandra Team modification
 #going to set $LD_LIBRARY_PATH for the libhello.so for the JNI Interface 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/yasu/Summer\ Stuff/CassandraQoS/CassandraQoS/JNI
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/centos/CASSANDRA_TEAM/CassandraQoS/JNI
 echo "java.library.path" $LD_LIBRARY_PATH
 
 # If an include wasn't specified in the environment, then search for one...
