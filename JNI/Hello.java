@@ -3,13 +3,10 @@ public class Hello {
 	static {
 		System.loadLibrary("hello");
 	}
-
-	public static void main(String args[])
+	int returnThread()
 	{
-		Hello object = new Hello();
-		int id = object.HelloWorld();
-		System.out.println("id is " + id);
-		while (true);
+		int id=HelloWorld();
+		return id;
 	}
 }
-
+	

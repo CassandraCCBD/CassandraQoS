@@ -64,6 +64,11 @@
 # NB: Developers should be aware that this script should remain compatible with
 # POSIX sh and Solaris sh. This means, in particular, no $(( )) and no $( ).
 
+#Cassandra Team modification
+#going to set $LD_LIBRARY_PATH for the libhello.so for the JNI Interface 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/yasu/Summer\ Stuff/CassandraQoS/CassandraQoS/JNI
+echo "java.library.path" $LD_LIBRARY_PATH
+
 # If an include wasn't specified in the environment, then search for one...
 if [ "x$CASSANDRA_INCLUDE" = "x" ]; then
     # Locations (in order) to use when searching for an include file.
