@@ -141,6 +141,8 @@ public class CustomTThreadPoolServer extends TServer
     private final ExecutorService executorService;
     // Flag for stopping the server
     private volatile boolean stopped;
+    // This is used to figure if the current client should be a high priority or a low prioirity one 
+    public static boolean highPriority ;
 
     // Server options
     private final TThreadPoolServer.Args args;
@@ -189,6 +191,7 @@ public class CustomTThreadPoolServer extends TServer
 		if (activeClients.get()%4==0)
 		{
 			WorkerProcess wp = new WorkerProcess(client);
+			CustomTThreadPoolServer.highPriority=true;
 			//the thread runs here when the execute thing is done 
 			priorityExecutor.submit(wp, 7);
 			logger.debug("CASSANDRA TEAM: even time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
@@ -199,6 +202,7 @@ public class CustomTThreadPoolServer extends TServer
 			WorkerProcess wp = new WorkerProcess(client);
 			//setting priority here
 //			wp.setPriority(1);
+			CustomTThreadPoolServer.highPriority=false;
 			priorityExecutor.submit(wp, 1);
 			logger.debug("CASSANDRA TEAM: odd time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
 			//executorService.execute(wp);
@@ -288,11 +292,36 @@ public class CustomTThreadPoolServer extends TServer
 	    logger.debug("CPU time: " + tm.getThreadCpuTime(Thread.currentThread().getId()));
 	    try 
 	    {
-	    logger.debug("Going to try Hello stuff");
-	    Hello obj = new Hello();
-	    logger.debug("Made the object, now going to initialize id");
-            int id=obj.returnThread();	
-	    logger.debug("Thread id is " + id);
+		    logger.debug("Going to try Hello stuff");
+		    Hello obj = new Hello();
+		    logger.debug("Made the object, now going to initialize id");
+		    int id=obj.returnThread();
+		    logger.debug("Thread id is " + id);
+		    if (CustomTThreadPoolServer.highPriority==false)
+		    {
+			    try
+			    {
+			    	    logger.debug("Sending to group1");
+				    Runtime.getRuntime().exec("cgclassify -g cpu:/test_cpu/group1 "+id);
+			    }
+			    catch(Exception e)
+			    {
+				    logger.debug("not sent to cgroup",e);
+				
+			    }
+		    }
+		    else 
+		    {
+			    try
+			    {
+			    	    logger.debug("Sending to group2");
+				    Runtime.getRuntime().exec("cgclassify -g cpu:/test_cpu/group2 "+id);
+			    }
+			    catch(Exception e)
+			    {
+				    logger.debug("not sent to cgroup",e);
+			    }
+		    }
 	    }
 	    catch (Exception e)
 	    {
