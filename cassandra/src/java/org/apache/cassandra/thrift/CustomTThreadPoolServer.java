@@ -21,6 +21,7 @@ import java.lang.management.*;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.net.SocketTimeoutException;
+import java.util.Vector;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.SynchronousQueue;
@@ -54,22 +55,75 @@ import com.util.concurrent.PriorityExecutorService;
 import com.util.concurrent.PriorityThreadPoolExecutor;
 import com.google.common.util.concurrent.Uninterruptibles;
 /* This Class Hello Loads the C Library to get the Thread ID */
-/*
+
 class Hello {
 	private static final Logger logger = LoggerFactory.getLogger(Hello.class);
 	public native int HelloWorld();
 	static {
 		logger.debug("Going to Load the Library");
-		System.loadLibrary("hello");
+		try 
+		{
+			System.loadLibrary("hello");
+		}
+		catch(Exception e)
+		{
+			logger.debug("Got an exception in loadLibrary");
+		}
 	}
 
 	public int returnThread()
 	{
-		int id = HelloWorld();
+		final String[] libraries = GetLibraries.getLoadedLibraries(ClassLoader.getSystemClassLoader());
+		logger.debug("CASSANDRA TEAM:List of libraries");
+		for (int i=0;i<libraries.length;i++)
+			logger.debug(libraries[i]);
 		logger.debug("In returnThread of Hello");
+		int id = HelloWorld();
+		logger.debug("In returnThread after HelloWorld");
 		return id;
 	}
-} */
+} 
+
+/* this class gets the list of already loaded libraries. 
+we can check if it loaded the library "hello" successfully */
+
+class GetLibraries {
+	private static final Logger logger = LoggerFactory.getLogger(Hello.class);
+	private static java.lang.reflect.Field LIBRARIES;	
+/*	static 
+	{
+		try 
+		{
+			LIBRARIES = ClassLoader.class.getDeclaredField("loadedLibraryNames");
+			LIBRARIES.setAccessible(true);
+		}
+		catch(Exception e)
+		{
+			logger.debug("Exception: ", e);
+		}
+		finally
+		{
+		}
+	}*/
+	public static String[] getLoadedLibraries(final ClassLoader loader) 
+	{
+		try 
+		{
+			LIBRARIES = ClassLoader.class.getDeclaredField("loadedLibraryNames");
+			LIBRARIES.setAccessible(true);
+			 final Vector<String> libraries = (Vector<String>) LIBRARIES.get(loader);
+		         return libraries.toArray(new String[] {});
+		}
+		catch (Exception e)
+		{
+			logger.debug("Exception: ", e);
+			String[] array = new String[1];
+			array[0] = "Error";
+			return array;
+		}
+        }
+}
+
 /**
  * Slightly modified version of the Apache Thrift TThreadPoolServer.
  * <p/>
@@ -87,6 +141,8 @@ public class CustomTThreadPoolServer extends TServer
     private final ExecutorService executorService;
     // Flag for stopping the server
     private volatile boolean stopped;
+    // This is used to figure if the current client should be a high priority or a low prioirity one 
+    public static boolean highPriority ;
 
     // Server options
     private final TThreadPoolServer.Args args;
@@ -135,6 +191,7 @@ public class CustomTThreadPoolServer extends TServer
 		if (activeClients.get()%4==0)
 		{
 			WorkerProcess wp = new WorkerProcess(client);
+			CustomTThreadPoolServer.highPriority=true;
 			//the thread runs here when the execute thing is done 
 			priorityExecutor.submit(wp, 7);
 			logger.debug("CASSANDRA TEAM: even time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
@@ -145,6 +202,7 @@ public class CustomTThreadPoolServer extends TServer
 			WorkerProcess wp = new WorkerProcess(client);
 			//setting priority here
 //			wp.setPriority(1);
+			CustomTThreadPoolServer.highPriority=false;
 			priorityExecutor.submit(wp, 1);
 			logger.debug("CASSANDRA TEAM: odd time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
 			//executorService.execute(wp);
@@ -232,18 +290,43 @@ public class CustomTThreadPoolServer extends TServer
 	    ThreadMXBean tm = ManagementFactory.getThreadMXBean();
 	    logger.debug("CASSANDRA TEAM: Thread ID "  + Thread.currentThread().getId());
 	    logger.debug("CPU time: " + tm.getThreadCpuTime(Thread.currentThread().getId()));
-	   /* try 
+	    try 
 	    {
-	    logger.debug("Going to try Hello stuff");
-	    Hello obj = new Hello();
-	    logger.debug("Made the object, now going to initialize id");
-            int id=obj.returnThread();	
-	    logger.debug("Thread id is " + id);
+		    logger.debug("Going to try Hello stuff");
+		    Hello obj = new Hello();
+		    logger.debug("Made the object, now going to initialize id");
+		    int id=obj.returnThread();
+		    logger.debug("Thread id is " + id);
+		    if (CustomTThreadPoolServer.highPriority==false)
+		    {
+			    try
+			    {
+			    	    logger.debug("Sending to group1");
+				    Runtime.getRuntime().exec("cgclassify -g cpu:/test_cpu/group1 "+id);
+			    }
+			    catch(Exception e)
+			    {
+				    logger.debug("not sent to cgroup",e);
+				
+			    }
+		    }
+		    else 
+		    {
+			    try
+			    {
+			    	    logger.debug("Sending to group2");
+				    Runtime.getRuntime().exec("cgclassify -g cpu:/test_cpu/group2 "+id);
+			    }
+			    catch(Exception e)
+			    {
+				    logger.debug("not sent to cgroup",e);
+			    }
+		    }
 	    }
 	    catch (Exception e)
 	    {
 	    	logger.debug("Exception thrown at Hello ", e);
-	    } */
+	    } 
             try
             {
                 socket = ((TCustomSocket) client_).getSocket().getRemoteSocketAddress();
