@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g 2015-07-26 10:23:38
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g 2015-09-15 19:32:28
 
 package org.apache.cassandra.cli;
 
@@ -172,15 +172,15 @@ public class CliLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "/home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g"; }
+    public String getGrammarFileName() { return "/root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g"; }
 
     // $ANTLR start "T__111"
     public final void mT__111() throws RecognitionException {
         try {
             int _type = T__111;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:28:8: ( '/' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:28:10: '/'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:28:8: ( '/' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:28:10: '/'
             {
             match('/'); 
 
@@ -199,8 +199,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__112;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:29:8: ( 'CLUSTER' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:29:10: 'CLUSTER'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:29:8: ( 'CLUSTER' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:29:10: 'CLUSTER'
             {
             match("CLUSTER"); 
 
@@ -220,8 +220,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__113;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:30:8: ( 'CLUSTER NAME' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:30:10: 'CLUSTER NAME'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:30:8: ( 'CLUSTER NAME' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:30:10: 'CLUSTER NAME'
             {
             match("CLUSTER NAME"); 
 
@@ -241,8 +241,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__114;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:31:8: ( '?' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:31:10: '?'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:31:8: ( '?' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:31:10: '?'
             {
             match('?'); 
 
@@ -261,8 +261,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__115;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:32:8: ( 'AS' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:32:10: 'AS'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:32:8: ( 'AS' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:32:10: 'AS'
             {
             match("AS"); 
 
@@ -282,8 +282,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__116;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:33:8: ( 'WHERE' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:33:10: 'WHERE'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:33:8: ( 'WHERE' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:33:10: 'WHERE'
             {
             match("WHERE"); 
 
@@ -303,8 +303,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__117;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:34:8: ( '=' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:34:10: '='
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:34:8: ( '=' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:34:10: '='
             {
             match('='); 
 
@@ -323,8 +323,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__118;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:35:8: ( '>' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:35:10: '>'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:35:8: ( '>' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:35:10: '>'
             {
             match('>'); 
 
@@ -343,8 +343,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__119;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:36:8: ( '<' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:36:10: '<'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:36:8: ( '<' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:36:10: '<'
             {
             match('<'); 
 
@@ -363,8 +363,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__120;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:37:8: ( '>=' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:37:10: '>='
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:37:8: ( '>=' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:37:10: '>='
             {
             match(">="); 
 
@@ -384,8 +384,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__121;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:38:8: ( '<=' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:38:10: '<='
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:38:8: ( '<=' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:38:10: '<='
             {
             match("<="); 
 
@@ -405,8 +405,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__122;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:39:8: ( '.' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:39:10: '.'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:39:8: ( '.' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:39:10: '.'
             {
             match('.'); 
 
@@ -425,8 +425,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__123;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:40:8: ( '[' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:40:10: '['
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:40:8: ( '[' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:40:10: '['
             {
             match('['); 
 
@@ -445,8 +445,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__124;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:41:8: ( ',' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:41:10: ','
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:41:8: ( ',' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:41:10: ','
             {
             match(','); 
 
@@ -465,8 +465,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__125;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:42:8: ( ']' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:42:10: ']'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:42:8: ( ']' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:42:10: ']'
             {
             match(']'); 
 
@@ -485,8 +485,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__126;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:43:8: ( '{' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:43:10: '{'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:43:8: ( '{' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:43:10: '{'
             {
             match('{'); 
 
@@ -505,8 +505,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__127;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:44:8: ( '}' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:44:10: '}'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:44:8: ( '}' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:44:10: '}'
             {
             match('}'); 
 
@@ -525,8 +525,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__128;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:45:8: ( ':' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:45:10: ':'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:45:8: ( ':' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:45:10: ':'
             {
             match(':'); 
 
@@ -545,8 +545,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__129;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:46:8: ( 'COLUMNS' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:46:10: 'COLUMNS'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:46:8: ( 'COLUMNS' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:46:10: 'COLUMNS'
             {
             match("COLUMNS"); 
 
@@ -566,8 +566,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__130;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:47:8: ( 'REVERSED' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:47:10: 'REVERSED'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:47:8: ( 'REVERSED' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:47:10: 'REVERSED'
             {
             match("REVERSED"); 
 
@@ -587,8 +587,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__131;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:48:8: ( '(' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:48:10: '('
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:48:8: ( '(' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:48:10: '('
             {
             match('('); 
 
@@ -607,8 +607,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = T__132;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:49:8: ( ')' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:49:10: ')'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:49:8: ( ')' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:49:10: ')'
             {
             match(')'); 
 
@@ -627,8 +627,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = CONFIG;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:580:7: ( 'CONFIG' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:580:14: 'CONFIG'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:580:7: ( 'CONFIG' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:580:14: 'CONFIG'
             {
             match("CONFIG"); 
 
@@ -648,8 +648,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = CONNECT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:581:8: ( 'CONNECT' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:581:14: 'CONNECT'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:581:8: ( 'CONNECT' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:581:14: 'CONNECT'
             {
             match("CONNECT"); 
 
@@ -669,8 +669,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = COUNT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:582:6: ( 'COUNT' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:582:14: 'COUNT'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:582:6: ( 'COUNT' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:582:14: 'COUNT'
             {
             match("COUNT"); 
 
@@ -690,8 +690,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = DEL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:583:4: ( 'DEL' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:583:14: 'DEL'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:583:4: ( 'DEL' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:583:14: 'DEL'
             {
             match("DEL"); 
 
@@ -711,8 +711,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = DESCRIBE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:584:9: ( 'DESCRIBE' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:584:14: 'DESCRIBE'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:584:9: ( 'DESCRIBE' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:584:14: 'DESCRIBE'
             {
             match("DESCRIBE"); 
 
@@ -732,8 +732,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = USE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:585:4: ( 'USE' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:585:14: 'USE'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:585:4: ( 'USE' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:585:14: 'USE'
             {
             match("USE"); 
 
@@ -753,8 +753,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = TRACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:586:6: ( 'TRACE' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:586:14: 'TRACE'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:586:6: ( 'TRACE' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:586:14: 'TRACE'
             {
             match("TRACE"); 
 
@@ -774,8 +774,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = PROBABILITY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:587:12: ( 'PROBABILITY' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:587:14: 'PROBABILITY'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:587:12: ( 'PROBABILITY' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:587:14: 'PROBABILITY'
             {
             match("PROBABILITY"); 
 
@@ -795,8 +795,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = NEXT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:588:5: ( 'NEXT' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:588:14: 'NEXT'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:588:5: ( 'NEXT' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:588:14: 'NEXT'
             {
             match("NEXT"); 
 
@@ -816,8 +816,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = QUERY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:589:6: ( 'QUERY' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:589:14: 'QUERY'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:589:6: ( 'QUERY' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:589:14: 'QUERY'
             {
             match("QUERY"); 
 
@@ -837,8 +837,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = GET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:590:4: ( 'GET' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:590:14: 'GET'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:590:4: ( 'GET' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:590:14: 'GET'
             {
             match("GET"); 
 
@@ -858,8 +858,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = HELP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:591:5: ( 'HELP' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:591:14: 'HELP'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:591:5: ( 'HELP' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:591:14: 'HELP'
             {
             match("HELP"); 
 
@@ -879,8 +879,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = EXIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:592:5: ( 'EXIT' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:592:14: 'EXIT'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:592:5: ( 'EXIT' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:592:14: 'EXIT'
             {
             match("EXIT"); 
 
@@ -900,8 +900,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = FILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:593:5: ( 'FILE' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:593:14: 'FILE'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:593:5: ( 'FILE' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:593:14: 'FILE'
             {
             match("FILE"); 
 
@@ -921,8 +921,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = QUIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:594:5: ( 'QUIT' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:594:14: 'QUIT'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:594:5: ( 'QUIT' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:594:14: 'QUIT'
             {
             match("QUIT"); 
 
@@ -942,8 +942,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = SET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:595:4: ( 'SET' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:595:14: 'SET'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:595:4: ( 'SET' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:595:14: 'SET'
             {
             match("SET"); 
 
@@ -963,8 +963,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = INCR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:596:5: ( 'INCR' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:596:14: 'INCR'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:596:5: ( 'INCR' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:596:14: 'INCR'
             {
             match("INCR"); 
 
@@ -984,8 +984,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = DECR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:597:5: ( 'DECR' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:597:14: 'DECR'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:597:5: ( 'DECR' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:597:14: 'DECR'
             {
             match("DECR"); 
 
@@ -1005,8 +1005,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = SHOW;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:598:5: ( 'SHOW' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:598:14: 'SHOW'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:598:5: ( 'SHOW' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:598:14: 'SHOW'
             {
             match("SHOW"); 
 
@@ -1026,8 +1026,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = KEYSPACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:599:9: ( 'KEYSPACE' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:599:14: 'KEYSPACE'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:599:9: ( 'KEYSPACE' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:599:14: 'KEYSPACE'
             {
             match("KEYSPACE"); 
 
@@ -1047,8 +1047,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = KEYSPACES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:600:10: ( 'KEYSPACES' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:600:14: 'KEYSPACES'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:600:10: ( 'KEYSPACES' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:600:14: 'KEYSPACES'
             {
             match("KEYSPACES"); 
 
@@ -1068,8 +1068,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = API_VERSION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:601:12: ( 'API VERSION' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:601:14: 'API VERSION'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:601:12: ( 'API VERSION' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:601:14: 'API VERSION'
             {
             match("API VERSION"); 
 
@@ -1089,8 +1089,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = CREATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:602:7: ( 'CREATE' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:602:14: 'CREATE'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:602:7: ( 'CREATE' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:602:14: 'CREATE'
             {
             match("CREATE"); 
 
@@ -1110,8 +1110,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = DROP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:603:5: ( 'DROP' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:603:14: 'DROP'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:603:5: ( 'DROP' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:603:14: 'DROP'
             {
             match("DROP"); 
 
@@ -1131,8 +1131,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = COLUMN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:604:7: ( 'COLUMN' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:604:14: 'COLUMN'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:604:7: ( 'COLUMN' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:604:14: 'COLUMN'
             {
             match("COLUMN"); 
 
@@ -1152,8 +1152,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = FAMILY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:605:7: ( 'FAMILY' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:605:14: 'FAMILY'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:605:7: ( 'FAMILY' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:605:14: 'FAMILY'
             {
             match("FAMILY"); 
 
@@ -1173,8 +1173,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = WITH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:606:5: ( 'WITH' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:606:14: 'WITH'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:606:5: ( 'WITH' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:606:14: 'WITH'
             {
             match("WITH"); 
 
@@ -1194,8 +1194,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = BY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:607:3: ( 'BY' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:607:14: 'BY'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:607:3: ( 'BY' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:607:14: 'BY'
             {
             match("BY"); 
 
@@ -1215,8 +1215,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:608:4: ( 'AND' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:608:14: 'AND'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:608:4: ( 'AND' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:608:14: 'AND'
             {
             match("AND"); 
 
@@ -1236,8 +1236,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = UPDATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:609:7: ( 'UPDATE' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:609:14: 'UPDATE'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:609:7: ( 'UPDATE' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:609:14: 'UPDATE'
             {
             match("UPDATE"); 
 
@@ -1257,8 +1257,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = LIST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:610:5: ( 'LIST' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:610:14: 'LIST'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:610:5: ( 'LIST' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:610:14: 'LIST'
             {
             match("LIST"); 
 
@@ -1278,8 +1278,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = LIMIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:611:6: ( 'LIMIT' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:611:14: 'LIMIT'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:611:6: ( 'LIMIT' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:611:14: 'LIMIT'
             {
             match("LIMIT"); 
 
@@ -1299,8 +1299,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = TRUNCATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:612:9: ( 'TRUNCATE' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:612:14: 'TRUNCATE'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:612:9: ( 'TRUNCATE' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:612:14: 'TRUNCATE'
             {
             match("TRUNCATE"); 
 
@@ -1320,8 +1320,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = ASSUME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:613:7: ( 'ASSUME' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:613:14: 'ASSUME'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:613:7: ( 'ASSUME' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:613:14: 'ASSUME'
             {
             match("ASSUME"); 
 
@@ -1341,8 +1341,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = TTL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:614:4: ( 'TTL' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:614:14: 'TTL'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:614:4: ( 'TTL' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:614:14: 'TTL'
             {
             match("TTL"); 
 
@@ -1362,8 +1362,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = CONSISTENCYLEVEL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:615:17: ( 'CONSISTENCYLEVEL' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:615:21: 'CONSISTENCYLEVEL'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:615:17: ( 'CONSISTENCYLEVEL' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:615:21: 'CONSISTENCYLEVEL'
             {
             match("CONSISTENCYLEVEL"); 
 
@@ -1383,8 +1383,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = INDEX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:616:6: ( 'INDEX' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:616:14: 'INDEX'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:616:6: ( 'INDEX' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:616:14: 'INDEX'
             {
             match("INDEX"); 
 
@@ -1404,8 +1404,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = ON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:617:3: ( 'ON' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:617:14: 'ON'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:617:3: ( 'ON' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:617:14: 'ON'
             {
             match("ON"); 
 
@@ -1425,8 +1425,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = SCHEMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:618:7: ( 'SCHEMA' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:618:14: 'SCHEMA'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:618:7: ( 'SCHEMA' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:618:14: 'SCHEMA'
             {
             match("SCHEMA"); 
 
@@ -1446,8 +1446,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = IP_ADDRESS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:621:5: ( IntegerPositiveLiteral '.' IntegerPositiveLiteral '.' IntegerPositiveLiteral '.' IntegerPositiveLiteral )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:621:7: IntegerPositiveLiteral '.' IntegerPositiveLiteral '.' IntegerPositiveLiteral '.' IntegerPositiveLiteral
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:621:5: ( IntegerPositiveLiteral '.' IntegerPositiveLiteral '.' IntegerPositiveLiteral '.' IntegerPositiveLiteral )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:621:7: IntegerPositiveLiteral '.' IntegerPositiveLiteral '.' IntegerPositiveLiteral '.' IntegerPositiveLiteral
             {
             mIntegerPositiveLiteral(); 
             match('.'); 
@@ -1470,8 +1470,8 @@ public class CliLexer extends Lexer {
     // $ANTLR start "Letter"
     public final void mLetter() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:627:5: ( 'a' .. 'z' | 'A' .. 'Z' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:627:5: ( 'a' .. 'z' | 'A' .. 'Z' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -1494,8 +1494,8 @@ public class CliLexer extends Lexer {
     // $ANTLR start "Digit"
     public final void mDigit() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:633:5: ( '0' .. '9' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:633:7: '0' .. '9'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:633:5: ( '0' .. '9' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:633:7: '0' .. '9'
             {
             matchRange('0','9'); 
 
@@ -1510,8 +1510,8 @@ public class CliLexer extends Lexer {
     // $ANTLR start "Alnum"
     public final void mAlnum() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:638:5: ( Letter | Digit )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:638:5: ( Letter | Digit )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -1536,10 +1536,10 @@ public class CliLexer extends Lexer {
         try {
             int _type = IntegerPositiveLiteral;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:644:4: ( ( Digit )+ )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:644:6: ( Digit )+
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:644:4: ( ( Digit )+ )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:644:6: ( Digit )+
             {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:644:6: ( Digit )+
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:644:6: ( Digit )+
             int cnt1=0;
             loop1:
             do {
@@ -1553,7 +1553,7 @@ public class CliLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:644:6: Digit
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:644:6: Digit
             	    {
             	    mDigit(); 
 
@@ -1585,11 +1585,11 @@ public class CliLexer extends Lexer {
         try {
             int _type = IntegerNegativeLiteral;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:648:4: ( '-' ( Digit )+ )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:648:6: '-' ( Digit )+
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:648:4: ( '-' ( Digit )+ )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:648:6: '-' ( Digit )+
             {
             match('-'); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:648:10: ( Digit )+
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:648:10: ( Digit )+
             int cnt2=0;
             loop2:
             do {
@@ -1603,7 +1603,7 @@ public class CliLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:648:10: Digit
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:648:10: Digit
             	    {
             	    mDigit(); 
 
@@ -1635,7 +1635,7 @@ public class CliLexer extends Lexer {
         try {
             int _type = DoubleLiteral;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:4: ( ( Digit )+ ( '.' ( Digit )+ )? | ' ' '.' ( Digit )+ )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:4: ( ( Digit )+ ( '.' ( Digit )+ )? | ' ' '.' ( Digit )+ )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1653,9 +1653,9 @@ public class CliLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:6: ( Digit )+ ( '.' ( Digit )+ )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:6: ( Digit )+ ( '.' ( Digit )+ )?
                     {
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:6: ( Digit )+
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:6: ( Digit )+
                     int cnt3=0;
                     loop3:
                     do {
@@ -1669,7 +1669,7 @@ public class CliLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:6: Digit
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:6: Digit
                     	    {
                     	    mDigit(); 
 
@@ -1685,7 +1685,7 @@ public class CliLexer extends Lexer {
                         cnt3++;
                     } while (true);
 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:13: ( '.' ( Digit )+ )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:13: ( '.' ( Digit )+ )?
                     int alt5=2;
                     int LA5_0 = input.LA(1);
 
@@ -1694,10 +1694,10 @@ public class CliLexer extends Lexer {
                     }
                     switch (alt5) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:14: '.' ( Digit )+
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:14: '.' ( Digit )+
                             {
                             match('.'); 
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:18: ( Digit )+
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:18: ( Digit )+
                             int cnt4=0;
                             loop4:
                             do {
@@ -1711,7 +1711,7 @@ public class CliLexer extends Lexer {
 
                                 switch (alt4) {
                             	case 1 :
-                            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:18: Digit
+                            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:652:18: Digit
                             	    {
                             	    mDigit(); 
 
@@ -1737,11 +1737,11 @@ public class CliLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:653:6: ' ' '.' ( Digit )+
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:653:6: ' ' '.' ( Digit )+
                     {
                     match(' '); 
                     match('.'); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:653:14: ( Digit )+
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:653:14: ( Digit )+
                     int cnt6=0;
                     loop6:
                     do {
@@ -1755,7 +1755,7 @@ public class CliLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:653:14: Digit
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:653:14: Digit
                     	    {
                     	    mDigit(); 
 
@@ -1789,8 +1789,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = Identifier;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:657:5: ( ( Letter | Alnum ) ( Alnum | '_' | '-' )* )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:657:7: ( Letter | Alnum ) ( Alnum | '_' | '-' )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:657:5: ( ( Letter | Alnum ) ( Alnum | '_' | '-' )* )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:657:7: ( Letter | Alnum ) ( Alnum | '_' | '-' )*
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -1801,7 +1801,7 @@ public class CliLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:657:24: ( Alnum | '_' | '-' )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:657:24: ( Alnum | '_' | '-' )*
             loop8:
             do {
                 int alt8=2;
@@ -1814,7 +1814,7 @@ public class CliLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:
             	    {
             	    if ( input.LA(1)=='-'||(input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -1850,11 +1850,11 @@ public class CliLexer extends Lexer {
         try {
             int _type = StringLiteral;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:662:5: ( '\\'' ( SingleStringCharacter )* '\\'' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:662:7: '\\'' ( SingleStringCharacter )* '\\''
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:662:5: ( '\\'' ( SingleStringCharacter )* '\\'' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:662:7: '\\'' ( SingleStringCharacter )* '\\''
             {
             match('\''); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:662:12: ( SingleStringCharacter )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:662:12: ( SingleStringCharacter )*
             loop9:
             do {
                 int alt9=2;
@@ -1867,7 +1867,7 @@ public class CliLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:662:12: SingleStringCharacter
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:662:12: SingleStringCharacter
             	    {
             	    mSingleStringCharacter(); 
 
@@ -1894,7 +1894,7 @@ public class CliLexer extends Lexer {
     // $ANTLR start "SingleStringCharacter"
     public final void mSingleStringCharacter() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:666:5: (~ ( '\\'' | '\\\\' ) | '\\\\' EscapeSequence )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:666:5: (~ ( '\\'' | '\\\\' ) | '\\\\' EscapeSequence )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1912,7 +1912,7 @@ public class CliLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:666:7: ~ ( '\\'' | '\\\\' )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:666:7: ~ ( '\\'' | '\\\\' )
                     {
                     if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                         input.consume();
@@ -1927,7 +1927,7 @@ public class CliLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:667:7: '\\\\' EscapeSequence
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:667:7: '\\\\' EscapeSequence
                     {
                     match('\\'); 
                     mEscapeSequence(); 
@@ -1945,7 +1945,7 @@ public class CliLexer extends Lexer {
     // $ANTLR start "EscapeSequence"
     public final void mEscapeSequence() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:671:5: ( CharacterEscapeSequence | '0' | HexEscapeSequence | UnicodeEscapeSequence )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:671:5: ( CharacterEscapeSequence | '0' | HexEscapeSequence | UnicodeEscapeSequence )
             int alt11=4;
             int LA11_0 = input.LA(1);
 
@@ -1969,28 +1969,28 @@ public class CliLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:671:7: CharacterEscapeSequence
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:671:7: CharacterEscapeSequence
                     {
                     mCharacterEscapeSequence(); 
 
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:672:7: '0'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:672:7: '0'
                     {
                     match('0'); 
 
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:673:7: HexEscapeSequence
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:673:7: HexEscapeSequence
                     {
                     mHexEscapeSequence(); 
 
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:674:7: UnicodeEscapeSequence
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:674:7: UnicodeEscapeSequence
                     {
                     mUnicodeEscapeSequence(); 
 
@@ -2007,7 +2007,7 @@ public class CliLexer extends Lexer {
     // $ANTLR start "CharacterEscapeSequence"
     public final void mCharacterEscapeSequence() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:678:5: ( SingleEscapeCharacter | NonEscapeCharacter )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:678:5: ( SingleEscapeCharacter | NonEscapeCharacter )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -2025,14 +2025,14 @@ public class CliLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:678:7: SingleEscapeCharacter
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:678:7: SingleEscapeCharacter
                     {
                     mSingleEscapeCharacter(); 
 
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:679:7: NonEscapeCharacter
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:679:7: NonEscapeCharacter
                     {
                     mNonEscapeCharacter(); 
 
@@ -2049,8 +2049,8 @@ public class CliLexer extends Lexer {
     // $ANTLR start "NonEscapeCharacter"
     public final void mNonEscapeCharacter() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:683:5: (~ ( EscapeCharacter ) )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:683:7: ~ ( EscapeCharacter )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:683:5: (~ ( EscapeCharacter ) )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:683:7: ~ ( EscapeCharacter )
             {
             if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='/')||(input.LA(1)>=':' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='a')||(input.LA(1)>='c' && input.LA(1)<='e')||(input.LA(1)>='g' && input.LA(1)<='m')||(input.LA(1)>='o' && input.LA(1)<='q')||input.LA(1)=='s'||input.LA(1)=='w'||(input.LA(1)>='y' && input.LA(1)<='\uFFFF') ) {
                 input.consume();
@@ -2073,8 +2073,8 @@ public class CliLexer extends Lexer {
     // $ANTLR start "SingleEscapeCharacter"
     public final void mSingleEscapeCharacter() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:687:5: ( '\\'' | '\"' | '\\\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:687:5: ( '\\'' | '\"' | '\\\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:
             {
             if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t'||input.LA(1)=='v' ) {
                 input.consume();
@@ -2097,7 +2097,7 @@ public class CliLexer extends Lexer {
     // $ANTLR start "EscapeCharacter"
     public final void mEscapeCharacter() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:691:5: ( SingleEscapeCharacter | DecimalDigit | 'x' | 'u' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:691:5: ( SingleEscapeCharacter | DecimalDigit | 'x' | 'u' )
             int alt13=4;
             switch ( input.LA(1) ) {
             case '\"':
@@ -2146,28 +2146,28 @@ public class CliLexer extends Lexer {
 
             switch (alt13) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:691:7: SingleEscapeCharacter
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:691:7: SingleEscapeCharacter
                     {
                     mSingleEscapeCharacter(); 
 
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:692:7: DecimalDigit
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:692:7: DecimalDigit
                     {
                     mDecimalDigit(); 
 
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:693:7: 'x'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:693:7: 'x'
                     {
                     match('x'); 
 
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:694:7: 'u'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:694:7: 'u'
                     {
                     match('u'); 
 
@@ -2184,8 +2184,8 @@ public class CliLexer extends Lexer {
     // $ANTLR start "HexEscapeSequence"
     public final void mHexEscapeSequence() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:698:5: ( 'x' HexDigit HexDigit )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:698:7: 'x' HexDigit HexDigit
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:698:5: ( 'x' HexDigit HexDigit )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:698:7: 'x' HexDigit HexDigit
             {
             match('x'); 
             mHexDigit(); 
@@ -2202,8 +2202,8 @@ public class CliLexer extends Lexer {
     // $ANTLR start "UnicodeEscapeSequence"
     public final void mUnicodeEscapeSequence() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:702:5: ( 'u' HexDigit HexDigit HexDigit HexDigit )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:702:7: 'u' HexDigit HexDigit HexDigit HexDigit
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:702:5: ( 'u' HexDigit HexDigit HexDigit HexDigit )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:702:7: 'u' HexDigit HexDigit HexDigit HexDigit
             {
             match('u'); 
             mHexDigit(); 
@@ -2222,7 +2222,7 @@ public class CliLexer extends Lexer {
     // $ANTLR start "HexDigit"
     public final void mHexDigit() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:5: ( DecimalDigit | ( 'a' .. 'f' ) | ( 'A' .. 'F' ) )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:5: ( DecimalDigit | ( 'a' .. 'f' ) | ( 'A' .. 'F' ) )
             int alt14=3;
             switch ( input.LA(1) ) {
             case '0':
@@ -2268,17 +2268,17 @@ public class CliLexer extends Lexer {
 
             switch (alt14) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:7: DecimalDigit
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:7: DecimalDigit
                     {
                     mDecimalDigit(); 
 
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:22: ( 'a' .. 'f' )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:22: ( 'a' .. 'f' )
                     {
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:22: ( 'a' .. 'f' )
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:23: 'a' .. 'f'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:22: ( 'a' .. 'f' )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:23: 'a' .. 'f'
                     {
                     matchRange('a','f'); 
 
@@ -2288,10 +2288,10 @@ public class CliLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:35: ( 'A' .. 'F' )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:35: ( 'A' .. 'F' )
                     {
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:35: ( 'A' .. 'F' )
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:36: 'A' .. 'F'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:35: ( 'A' .. 'F' )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:706:36: 'A' .. 'F'
                     {
                     matchRange('A','F'); 
 
@@ -2311,8 +2311,8 @@ public class CliLexer extends Lexer {
     // $ANTLR start "DecimalDigit"
     public final void mDecimalDigit() throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:710:5: ( ( '0' .. '9' ) )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:710:7: ( '0' .. '9' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:710:5: ( ( '0' .. '9' ) )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:710:7: ( '0' .. '9' )
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9') ) {
                 input.consume();
@@ -2337,8 +2337,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = SEMICOLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:718:5: ( ';' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:718:7: ';'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:718:5: ( ';' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:718:7: ';'
             {
             match(';'); 
 
@@ -2357,8 +2357,8 @@ public class CliLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:722:5: ( ( ' ' | '\\r' | '\\t' | '\\n' ) )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:722:8: ( ' ' | '\\r' | '\\t' | '\\n' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:722:5: ( ( ' ' | '\\r' | '\\t' | '\\n' ) )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:722:8: ( ' ' | '\\r' | '\\t' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -2386,7 +2386,7 @@ public class CliLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:726:5: ( '--' (~ ( '\\n' | '\\r' ) )* | '/*' ( options {greedy=false; } : . )* '*/' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:726:5: ( '--' (~ ( '\\n' | '\\r' ) )* | '/*' ( options {greedy=false; } : . )* '*/' )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -2404,11 +2404,11 @@ public class CliLexer extends Lexer {
             }
             switch (alt17) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:726:7: '--' (~ ( '\\n' | '\\r' ) )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:726:7: '--' (~ ( '\\n' | '\\r' ) )*
                     {
                     match("--"); 
 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:726:12: (~ ( '\\n' | '\\r' ) )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:726:12: (~ ( '\\n' | '\\r' ) )*
                     loop15:
                     do {
                         int alt15=2;
@@ -2421,7 +2421,7 @@ public class CliLexer extends Lexer {
 
                         switch (alt15) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:726:13: ~ ( '\\n' | '\\r' )
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:726:13: ~ ( '\\n' | '\\r' )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2446,11 +2446,11 @@ public class CliLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:727:7: '/*' ( options {greedy=false; } : . )* '*/'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:727:7: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:727:12: ( options {greedy=false; } : . )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:727:12: ( options {greedy=false; } : . )*
                     loop16:
                     do {
                         int alt16=2;
@@ -2475,7 +2475,7 @@ public class CliLexer extends Lexer {
 
                         switch (alt16) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:727:39: .
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:727:39: .
                     	    {
                     	    matchAny(); 
 
@@ -2504,495 +2504,495 @@ public class CliLexer extends Lexer {
     // $ANTLR end "COMMENT"
 
     public void mTokens() throws RecognitionException {
-        // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:8: ( T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | CONFIG | CONNECT | COUNT | DEL | DESCRIBE | USE | TRACE | PROBABILITY | NEXT | QUERY | GET | HELP | EXIT | FILE | QUIT | SET | INCR | DECR | SHOW | KEYSPACE | KEYSPACES | API_VERSION | CREATE | DROP | COLUMN | FAMILY | WITH | BY | AND | UPDATE | LIST | LIMIT | TRUNCATE | ASSUME | TTL | CONSISTENCYLEVEL | INDEX | ON | SCHEMA | IP_ADDRESS | IntegerPositiveLiteral | IntegerNegativeLiteral | DoubleLiteral | Identifier | StringLiteral | SEMICOLON | WS | COMMENT )
+        // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:8: ( T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | CONFIG | CONNECT | COUNT | DEL | DESCRIBE | USE | TRACE | PROBABILITY | NEXT | QUERY | GET | HELP | EXIT | FILE | QUIT | SET | INCR | DECR | SHOW | KEYSPACE | KEYSPACES | API_VERSION | CREATE | DROP | COLUMN | FAMILY | WITH | BY | AND | UPDATE | LIST | LIMIT | TRUNCATE | ASSUME | TTL | CONSISTENCYLEVEL | INDEX | ON | SCHEMA | IP_ADDRESS | IntegerPositiveLiteral | IntegerNegativeLiteral | DoubleLiteral | Identifier | StringLiteral | SEMICOLON | WS | COMMENT )
         int alt18=70;
         alt18 = dfa18.predict(input);
         switch (alt18) {
             case 1 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:10: T__111
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:10: T__111
                 {
                 mT__111(); 
 
                 }
                 break;
             case 2 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:17: T__112
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:17: T__112
                 {
                 mT__112(); 
 
                 }
                 break;
             case 3 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:24: T__113
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:24: T__113
                 {
                 mT__113(); 
 
                 }
                 break;
             case 4 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:31: T__114
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:31: T__114
                 {
                 mT__114(); 
 
                 }
                 break;
             case 5 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:38: T__115
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:38: T__115
                 {
                 mT__115(); 
 
                 }
                 break;
             case 6 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:45: T__116
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:45: T__116
                 {
                 mT__116(); 
 
                 }
                 break;
             case 7 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:52: T__117
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:52: T__117
                 {
                 mT__117(); 
 
                 }
                 break;
             case 8 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:59: T__118
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:59: T__118
                 {
                 mT__118(); 
 
                 }
                 break;
             case 9 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:66: T__119
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:66: T__119
                 {
                 mT__119(); 
 
                 }
                 break;
             case 10 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:73: T__120
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:73: T__120
                 {
                 mT__120(); 
 
                 }
                 break;
             case 11 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:80: T__121
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:80: T__121
                 {
                 mT__121(); 
 
                 }
                 break;
             case 12 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:87: T__122
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:87: T__122
                 {
                 mT__122(); 
 
                 }
                 break;
             case 13 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:94: T__123
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:94: T__123
                 {
                 mT__123(); 
 
                 }
                 break;
             case 14 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:101: T__124
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:101: T__124
                 {
                 mT__124(); 
 
                 }
                 break;
             case 15 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:108: T__125
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:108: T__125
                 {
                 mT__125(); 
 
                 }
                 break;
             case 16 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:115: T__126
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:115: T__126
                 {
                 mT__126(); 
 
                 }
                 break;
             case 17 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:122: T__127
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:122: T__127
                 {
                 mT__127(); 
 
                 }
                 break;
             case 18 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:129: T__128
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:129: T__128
                 {
                 mT__128(); 
 
                 }
                 break;
             case 19 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:136: T__129
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:136: T__129
                 {
                 mT__129(); 
 
                 }
                 break;
             case 20 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:143: T__130
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:143: T__130
                 {
                 mT__130(); 
 
                 }
                 break;
             case 21 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:150: T__131
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:150: T__131
                 {
                 mT__131(); 
 
                 }
                 break;
             case 22 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:157: T__132
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:157: T__132
                 {
                 mT__132(); 
 
                 }
                 break;
             case 23 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:164: CONFIG
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:164: CONFIG
                 {
                 mCONFIG(); 
 
                 }
                 break;
             case 24 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:171: CONNECT
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:171: CONNECT
                 {
                 mCONNECT(); 
 
                 }
                 break;
             case 25 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:179: COUNT
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:179: COUNT
                 {
                 mCOUNT(); 
 
                 }
                 break;
             case 26 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:185: DEL
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:185: DEL
                 {
                 mDEL(); 
 
                 }
                 break;
             case 27 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:189: DESCRIBE
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:189: DESCRIBE
                 {
                 mDESCRIBE(); 
 
                 }
                 break;
             case 28 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:198: USE
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:198: USE
                 {
                 mUSE(); 
 
                 }
                 break;
             case 29 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:202: TRACE
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:202: TRACE
                 {
                 mTRACE(); 
 
                 }
                 break;
             case 30 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:208: PROBABILITY
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:208: PROBABILITY
                 {
                 mPROBABILITY(); 
 
                 }
                 break;
             case 31 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:220: NEXT
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:220: NEXT
                 {
                 mNEXT(); 
 
                 }
                 break;
             case 32 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:225: QUERY
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:225: QUERY
                 {
                 mQUERY(); 
 
                 }
                 break;
             case 33 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:231: GET
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:231: GET
                 {
                 mGET(); 
 
                 }
                 break;
             case 34 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:235: HELP
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:235: HELP
                 {
                 mHELP(); 
 
                 }
                 break;
             case 35 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:240: EXIT
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:240: EXIT
                 {
                 mEXIT(); 
 
                 }
                 break;
             case 36 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:245: FILE
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:245: FILE
                 {
                 mFILE(); 
 
                 }
                 break;
             case 37 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:250: QUIT
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:250: QUIT
                 {
                 mQUIT(); 
 
                 }
                 break;
             case 38 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:255: SET
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:255: SET
                 {
                 mSET(); 
 
                 }
                 break;
             case 39 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:259: INCR
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:259: INCR
                 {
                 mINCR(); 
 
                 }
                 break;
             case 40 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:264: DECR
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:264: DECR
                 {
                 mDECR(); 
 
                 }
                 break;
             case 41 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:269: SHOW
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:269: SHOW
                 {
                 mSHOW(); 
 
                 }
                 break;
             case 42 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:274: KEYSPACE
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:274: KEYSPACE
                 {
                 mKEYSPACE(); 
 
                 }
                 break;
             case 43 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:283: KEYSPACES
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:283: KEYSPACES
                 {
                 mKEYSPACES(); 
 
                 }
                 break;
             case 44 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:293: API_VERSION
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:293: API_VERSION
                 {
                 mAPI_VERSION(); 
 
                 }
                 break;
             case 45 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:305: CREATE
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:305: CREATE
                 {
                 mCREATE(); 
 
                 }
                 break;
             case 46 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:312: DROP
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:312: DROP
                 {
                 mDROP(); 
 
                 }
                 break;
             case 47 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:317: COLUMN
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:317: COLUMN
                 {
                 mCOLUMN(); 
 
                 }
                 break;
             case 48 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:324: FAMILY
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:324: FAMILY
                 {
                 mFAMILY(); 
 
                 }
                 break;
             case 49 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:331: WITH
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:331: WITH
                 {
                 mWITH(); 
 
                 }
                 break;
             case 50 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:336: BY
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:336: BY
                 {
                 mBY(); 
 
                 }
                 break;
             case 51 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:339: AND
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:339: AND
                 {
                 mAND(); 
 
                 }
                 break;
             case 52 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:343: UPDATE
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:343: UPDATE
                 {
                 mUPDATE(); 
 
                 }
                 break;
             case 53 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:350: LIST
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:350: LIST
                 {
                 mLIST(); 
 
                 }
                 break;
             case 54 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:355: LIMIT
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:355: LIMIT
                 {
                 mLIMIT(); 
 
                 }
                 break;
             case 55 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:361: TRUNCATE
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:361: TRUNCATE
                 {
                 mTRUNCATE(); 
 
                 }
                 break;
             case 56 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:370: ASSUME
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:370: ASSUME
                 {
                 mASSUME(); 
 
                 }
                 break;
             case 57 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:377: TTL
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:377: TTL
                 {
                 mTTL(); 
 
                 }
                 break;
             case 58 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:381: CONSISTENCYLEVEL
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:381: CONSISTENCYLEVEL
                 {
                 mCONSISTENCYLEVEL(); 
 
                 }
                 break;
             case 59 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:398: INDEX
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:398: INDEX
                 {
                 mINDEX(); 
 
                 }
                 break;
             case 60 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:404: ON
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:404: ON
                 {
                 mON(); 
 
                 }
                 break;
             case 61 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:407: SCHEMA
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:407: SCHEMA
                 {
                 mSCHEMA(); 
 
                 }
                 break;
             case 62 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:414: IP_ADDRESS
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:414: IP_ADDRESS
                 {
                 mIP_ADDRESS(); 
 
                 }
                 break;
             case 63 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:425: IntegerPositiveLiteral
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:425: IntegerPositiveLiteral
                 {
                 mIntegerPositiveLiteral(); 
 
                 }
                 break;
             case 64 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:448: IntegerNegativeLiteral
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:448: IntegerNegativeLiteral
                 {
                 mIntegerNegativeLiteral(); 
 
                 }
                 break;
             case 65 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:471: DoubleLiteral
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:471: DoubleLiteral
                 {
                 mDoubleLiteral(); 
 
                 }
                 break;
             case 66 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:485: Identifier
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:485: Identifier
                 {
                 mIdentifier(); 
 
                 }
                 break;
             case 67 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:496: StringLiteral
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:496: StringLiteral
                 {
                 mStringLiteral(); 
 
                 }
                 break;
             case 68 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:510: SEMICOLON
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:510: SEMICOLON
                 {
                 mSEMICOLON(); 
 
                 }
                 break;
             case 69 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:520: WS
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:520: WS
                 {
                 mWS(); 
 
                 }
                 break;
             case 70 :
-                // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:523: COMMENT
+                // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cli/Cli.g:1:523: COMMENT
                 {
                 mCOMMENT(); 
 

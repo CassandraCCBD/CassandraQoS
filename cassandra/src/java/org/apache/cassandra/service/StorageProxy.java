@@ -17,7 +17,7 @@
  */
 package org.apache.cassandra.service;
 
-import java.io.IOException;
+import java.io.*;
 import java.lang.management.ManagementFactory;
 import java.net.InetAddress;
 import java.nio.ByteBuffer;
@@ -1306,6 +1306,15 @@ public class StorageProxy implements StorageProxyMBean
 
                     if (logger.isDebugEnabled())
                         logger.debug("Read: {} ms.", TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - exec.handler.start));
+		    try {
+			PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("/root/Cassandra_Team/CassandraQoS/cassandra/outIO", true)));
+			out.println(TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - exec.handler.start));
+			out.close();
+			logger.debug("writed ");
+		    }
+		    catch (IOException e){
+		    	logger.debug("WRITE FAILED HAHAH");
+		    }
                 }
                 catch (ReadTimeoutException ex)
                 {

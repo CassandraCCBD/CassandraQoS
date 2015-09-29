@@ -535,6 +535,11 @@ public class Cassandra {
   }
 
   public static class Client extends org.apache.thrift.TServiceClient implements Iface {
+  	private static Logger  logger = LoggerFactory.getLogger(Client.class);
+	static 
+	{
+		logger.debug("Client has been initialized");
+	}
     public static class Factory implements org.apache.thrift.TServiceClientFactory<Client> {
       public Factory() {}
       public Client getClient(org.apache.thrift.protocol.TProtocol prot) {
@@ -642,6 +647,7 @@ public class Cassandra {
 
     public List<ColumnOrSuperColumn> get_slice(ByteBuffer key, ColumnParent column_parent, SlicePredicate predicate, ConsistencyLevel consistency_level) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException
     {
+      logger.debug("In getSlice()");
       send_get_slice(key, column_parent, predicate, consistency_level);
       return recv_get_slice();
     }
@@ -658,6 +664,16 @@ public class Cassandra {
 
     public List<ColumnOrSuperColumn> recv_get_slice() throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException
     {
+     // logger.debug("In getSlice()");
+      logger.debug("Throwing an exception to see how the client is calling this function");
+      try 
+      {
+      	throw new RuntimeException("In Cassandra.Client");
+      }
+      catch (Exception e)
+      {
+      	logger.debug("Stacktrace is ", e);
+      }
       get_slice_result result = new get_slice_result();
       receiveBase(result, "get_slice");
       if (result.isSetSuccess()) {

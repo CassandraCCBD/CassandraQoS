@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.6
+Created-By: 1.7.0_85-mockbuild_2015_07_25_13_10-b00 (Oracle Corporatio
+ n)
+Built-By: Pavel Yaskevich
+Main-Class: org.apache.cassandra.stress.Stress
+

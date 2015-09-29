@@ -26,7 +26,8 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.TimeoutException;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
-
+import java.lang.management.*;
+import java.util.concurrent.TimeUnit;
 import com.google.common.base.Function;
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableMap;
@@ -37,6 +38,7 @@ import com.google.common.collect.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.*;
 import org.apache.cassandra.auth.AuthenticatedUser;
 import org.apache.cassandra.auth.Permission;
 import org.apache.cassandra.config.CFMetaData;
@@ -87,9 +89,10 @@ public class CassandraServer implements Cassandra.Iface
      * RequestScheduler to perform the scheduling of incoming requests
      */
     private final IRequestScheduler requestScheduler;
-
+    
     public CassandraServer()
-    {
+    {   
+	logger.debug("Krithika");
         requestScheduler = DatabaseDescriptor.getRequestScheduler();
         registerMetrics();
     }
@@ -300,6 +303,7 @@ public class CassandraServer implements Cassandra.Iface
     public List<ColumnOrSuperColumn> get_slice(ByteBuffer key, ColumnParent column_parent, SlicePredicate predicate, ConsistencyLevel consistency_level)
     throws InvalidRequestException, UnavailableException, TimedOutException
     {
+    	long ycsbStart = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
         if (startSessionIfRequested())
         {
             Map<String, String> traceParameters = ImmutableMap.of("key", ByteBufferUtil.bytesToHex(key),
@@ -311,6 +315,16 @@ public class CassandraServer implements Cassandra.Iface
         else
         {
             logger.debug("get_slice");
+	    // CASSANDRA TEAM MODIFICATION
+	    /* this is where the ycsb client is ending up */
+	    try 
+	    {
+	    	throw new RuntimeException("Exception for YCSB");
+	    }
+	    catch(Exception e)
+	    {
+	    	logger.debug("Stacktrace is ", e);
+	    }
         }
 
         try
@@ -326,6 +340,8 @@ public class CassandraServer implements Cassandra.Iface
         }
         finally
         {
+       	    long ycsbStop = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+	    logger.debug("Time taken" + (ycsbStop-ycsbStart));
             Tracing.instance.stopSession();
         }
     }
@@ -1940,6 +1956,10 @@ public class CassandraServer implements Cassandra.Iface
     public CqlResult execute_cql3_query(ByteBuffer query, Compression compression, ConsistencyLevel cLevel)
     throws InvalidRequestException, UnavailableException, TimedOutException, SchemaDisagreementException, TException
     {
+	long startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+        ThreadMXBean tm = ManagementFactory.getThreadMXBean();
+        long startCPU = TimeUnit.NANOSECONDS.toMillis(tm.getThreadCpuTime(Thread.currentThread().getId()));
+        long startUser= TimeUnit.NANOSECONDS.toMillis(tm.getThreadUserTime(Thread.currentThread().getId()));
         validateCQLVersion(3);
         try
         {
@@ -1977,6 +1997,22 @@ public class CassandraServer implements Cassandra.Iface
         }
         finally
         {
+	    long endTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+	    long endCPU = TimeUnit.NANOSECONDS.toMillis(tm.getThreadCpuTime(Thread.currentThread().getId())); 
+            long endUser = TimeUnit.NANOSECONDS.toMillis(tm.getThreadUserTime(Thread.currentThread().getId()));
+	    try {
+	    	PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("/root/Cassandra_Team/CassandraQoS/cassandra/outCPU", true)));
+		out.println(endCPU-startCPU);
+		logger.debug("SUCCEEDED");
+		out.close();
+	    }
+	    catch (Exception e){
+		logger.debug("WHERE IS THE FiLE ?");
+	    }
+	   
+	    logger.debug("CASSANDRA TEAM: response time is " + (endTime - startTime));
+	    logger.debug("CASSANDRA TEAM: CPU time is " + (endCPU - startCPU));
+	    logger.debug("CASSANDRA TEAM: User time is " + (endUser - startUser));
             Tracing.instance.stopSession();
         }
     }

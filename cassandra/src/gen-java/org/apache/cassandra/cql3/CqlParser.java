@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g 2015-07-26 10:23:41
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g 2015-09-15 19:32:30
 
     package org.apache.cassandra.cql3;
 
@@ -200,7 +200,7 @@ public class CqlParser extends Parser {
         
 
     public String[] getTokenNames() { return CqlParser.tokenNames; }
-    public String getGrammarFileName() { return "/home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g"; }
+    public String getGrammarFileName() { return "/root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g"; }
 
 
         private final List<String> recognitionErrors = new ArrayList<String>();
@@ -308,7 +308,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "query"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:200:1: query returns [ParsedStatement stmnt] : st= cqlStatement ( ';' )* EOF ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:200:1: query returns [ParsedStatement stmnt] : st= cqlStatement ( ';' )* EOF ;
     public final ParsedStatement query() throws RecognitionException {
         ParsedStatement stmnt = null;
 
@@ -316,15 +316,15 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:203:5: (st= cqlStatement ( ';' )* EOF )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:203:7: st= cqlStatement ( ';' )* EOF
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:203:5: (st= cqlStatement ( ';' )* EOF )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:203:7: st= cqlStatement ( ';' )* EOF
             {
             pushFollow(FOLLOW_cqlStatement_in_query72);
             st=cqlStatement();
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:203:23: ( ';' )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:203:23: ( ';' )*
             loop1:
             do {
                 int alt1=2;
@@ -337,7 +337,7 @@ public class CqlParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:203:24: ';'
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:203:24: ';'
             	    {
             	    match(input,136,FOLLOW_136_in_query75); 
 
@@ -367,7 +367,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "cqlStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:206:1: cqlStatement returns [ParsedStatement stmt] : (st1= selectStatement | st2= insertStatement | st3= updateStatement | st4= batchStatement | st5= deleteStatement | st6= useStatement | st7= truncateStatement | st8= createKeyspaceStatement | st9= createTableStatement | st10= createIndexStatement | st11= dropKeyspaceStatement | st12= dropTableStatement | st13= dropIndexStatement | st14= alterTableStatement | st15= alterKeyspaceStatement | st16= grantStatement | st17= revokeStatement | st18= listPermissionsStatement | st19= createUserStatement | st20= alterUserStatement | st21= dropUserStatement | st22= listUsersStatement | st23= createTriggerStatement | st24= dropTriggerStatement );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:206:1: cqlStatement returns [ParsedStatement stmt] : (st1= selectStatement | st2= insertStatement | st3= updateStatement | st4= batchStatement | st5= deleteStatement | st6= useStatement | st7= truncateStatement | st8= createKeyspaceStatement | st9= createTableStatement | st10= createIndexStatement | st11= dropKeyspaceStatement | st12= dropTableStatement | st13= dropIndexStatement | st14= alterTableStatement | st15= alterKeyspaceStatement | st16= grantStatement | st17= revokeStatement | st18= listPermissionsStatement | st19= createUserStatement | st20= alterUserStatement | st21= dropUserStatement | st22= listUsersStatement | st23= createTriggerStatement | st24= dropTriggerStatement );
     public final ParsedStatement cqlStatement() throws RecognitionException {
         ParsedStatement stmt = null;
 
@@ -421,12 +421,12 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:208:5: (st1= selectStatement | st2= insertStatement | st3= updateStatement | st4= batchStatement | st5= deleteStatement | st6= useStatement | st7= truncateStatement | st8= createKeyspaceStatement | st9= createTableStatement | st10= createIndexStatement | st11= dropKeyspaceStatement | st12= dropTableStatement | st13= dropIndexStatement | st14= alterTableStatement | st15= alterKeyspaceStatement | st16= grantStatement | st17= revokeStatement | st18= listPermissionsStatement | st19= createUserStatement | st20= alterUserStatement | st21= dropUserStatement | st22= listUsersStatement | st23= createTriggerStatement | st24= dropTriggerStatement )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:208:5: (st1= selectStatement | st2= insertStatement | st3= updateStatement | st4= batchStatement | st5= deleteStatement | st6= useStatement | st7= truncateStatement | st8= createKeyspaceStatement | st9= createTableStatement | st10= createIndexStatement | st11= dropKeyspaceStatement | st12= dropTableStatement | st13= dropIndexStatement | st14= alterTableStatement | st15= alterKeyspaceStatement | st16= grantStatement | st17= revokeStatement | st18= listPermissionsStatement | st19= createUserStatement | st20= alterUserStatement | st21= dropUserStatement | st22= listUsersStatement | st23= createTriggerStatement | st24= dropTriggerStatement )
             int alt2=24;
             alt2 = dfa2.predict(input);
             switch (alt2) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:208:7: st1= selectStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:208:7: st1= selectStatement
                     {
                     pushFollow(FOLLOW_selectStatement_in_cqlStatement113);
                     st1=selectStatement();
@@ -438,7 +438,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:209:7: st2= insertStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:209:7: st2= insertStatement
                     {
                     pushFollow(FOLLOW_insertStatement_in_cqlStatement138);
                     st2=insertStatement();
@@ -450,7 +450,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:210:7: st3= updateStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:210:7: st3= updateStatement
                     {
                     pushFollow(FOLLOW_updateStatement_in_cqlStatement163);
                     st3=updateStatement();
@@ -462,7 +462,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:211:7: st4= batchStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:211:7: st4= batchStatement
                     {
                     pushFollow(FOLLOW_batchStatement_in_cqlStatement188);
                     st4=batchStatement();
@@ -474,7 +474,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:212:7: st5= deleteStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:212:7: st5= deleteStatement
                     {
                     pushFollow(FOLLOW_deleteStatement_in_cqlStatement214);
                     st5=deleteStatement();
@@ -486,7 +486,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:213:7: st6= useStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:213:7: st6= useStatement
                     {
                     pushFollow(FOLLOW_useStatement_in_cqlStatement239);
                     st6=useStatement();
@@ -498,7 +498,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:214:7: st7= truncateStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:214:7: st7= truncateStatement
                     {
                     pushFollow(FOLLOW_truncateStatement_in_cqlStatement267);
                     st7=truncateStatement();
@@ -510,7 +510,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:215:7: st8= createKeyspaceStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:215:7: st8= createKeyspaceStatement
                     {
                     pushFollow(FOLLOW_createKeyspaceStatement_in_cqlStatement290);
                     st8=createKeyspaceStatement();
@@ -522,7 +522,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:216:7: st9= createTableStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:216:7: st9= createTableStatement
                     {
                     pushFollow(FOLLOW_createTableStatement_in_cqlStatement307);
                     st9=createTableStatement();
@@ -534,7 +534,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:217:7: st10= createIndexStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:217:7: st10= createIndexStatement
                     {
                     pushFollow(FOLLOW_createIndexStatement_in_cqlStatement326);
                     st10=createIndexStatement();
@@ -546,7 +546,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:218:7: st11= dropKeyspaceStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:218:7: st11= dropKeyspaceStatement
                     {
                     pushFollow(FOLLOW_dropKeyspaceStatement_in_cqlStatement345);
                     st11=dropKeyspaceStatement();
@@ -558,7 +558,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:219:7: st12= dropTableStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:219:7: st12= dropTableStatement
                     {
                     pushFollow(FOLLOW_dropTableStatement_in_cqlStatement363);
                     st12=dropTableStatement();
@@ -570,7 +570,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 13 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:220:7: st13= dropIndexStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:220:7: st13= dropIndexStatement
                     {
                     pushFollow(FOLLOW_dropIndexStatement_in_cqlStatement384);
                     st13=dropIndexStatement();
@@ -582,7 +582,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 14 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:221:7: st14= alterTableStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:221:7: st14= alterTableStatement
                     {
                     pushFollow(FOLLOW_alterTableStatement_in_cqlStatement405);
                     st14=alterTableStatement();
@@ -594,7 +594,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 15 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:222:7: st15= alterKeyspaceStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:222:7: st15= alterKeyspaceStatement
                     {
                     pushFollow(FOLLOW_alterKeyspaceStatement_in_cqlStatement425);
                     st15=alterKeyspaceStatement();
@@ -606,7 +606,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 16 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:223:7: st16= grantStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:223:7: st16= grantStatement
                     {
                     pushFollow(FOLLOW_grantStatement_in_cqlStatement442);
                     st16=grantStatement();
@@ -618,7 +618,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 17 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:224:7: st17= revokeStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:224:7: st17= revokeStatement
                     {
                     pushFollow(FOLLOW_revokeStatement_in_cqlStatement467);
                     st17=revokeStatement();
@@ -630,7 +630,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 18 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:225:7: st18= listPermissionsStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:225:7: st18= listPermissionsStatement
                     {
                     pushFollow(FOLLOW_listPermissionsStatement_in_cqlStatement491);
                     st18=listPermissionsStatement();
@@ -642,7 +642,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 19 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:226:7: st19= createUserStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:226:7: st19= createUserStatement
                     {
                     pushFollow(FOLLOW_createUserStatement_in_cqlStatement506);
                     st19=createUserStatement();
@@ -654,7 +654,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 20 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:227:7: st20= alterUserStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:227:7: st20= alterUserStatement
                     {
                     pushFollow(FOLLOW_alterUserStatement_in_cqlStatement526);
                     st20=alterUserStatement();
@@ -666,7 +666,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 21 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:228:7: st21= dropUserStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:228:7: st21= dropUserStatement
                     {
                     pushFollow(FOLLOW_dropUserStatement_in_cqlStatement547);
                     st21=dropUserStatement();
@@ -678,7 +678,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 22 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:229:7: st22= listUsersStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:229:7: st22= listUsersStatement
                     {
                     pushFollow(FOLLOW_listUsersStatement_in_cqlStatement569);
                     st22=listUsersStatement();
@@ -690,7 +690,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 23 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:230:7: st23= createTriggerStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:230:7: st23= createTriggerStatement
                     {
                     pushFollow(FOLLOW_createTriggerStatement_in_cqlStatement590);
                     st23=createTriggerStatement();
@@ -702,7 +702,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 24 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:231:7: st24= dropTriggerStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:231:7: st24= dropTriggerStatement
                     {
                     pushFollow(FOLLOW_dropTriggerStatement_in_cqlStatement607);
                     st24=dropTriggerStatement();
@@ -729,7 +729,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "useStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:237:1: useStatement returns [UseStatement stmt] : K_USE ks= keyspaceName ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:237:1: useStatement returns [UseStatement stmt] : K_USE ks= keyspaceName ;
     public final UseStatement useStatement() throws RecognitionException {
         UseStatement stmt = null;
 
@@ -737,8 +737,8 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:238:5: ( K_USE ks= keyspaceName )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:238:7: K_USE ks= keyspaceName
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:238:5: ( K_USE ks= keyspaceName )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:238:7: K_USE ks= keyspaceName
             {
             match(input,K_USE,FOLLOW_K_USE_in_useStatement639); 
             pushFollow(FOLLOW_keyspaceName_in_useStatement643);
@@ -763,7 +763,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "selectStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:241:1: selectStatement returns [SelectStatement.RawStatement expr] : K_SELECT ( ( K_DISTINCT )? sclause= selectClause | ( K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )? ) ) K_FROM cf= columnFamilyName ( K_WHERE wclause= whereClause )? ( K_ORDER K_BY orderByClause[orderings] ( ',' orderByClause[orderings] )* )? ( K_LIMIT rows= intValue )? ( K_ALLOW K_FILTERING )? ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:241:1: selectStatement returns [SelectStatement.RawStatement expr] : K_SELECT ( ( K_DISTINCT )? sclause= selectClause | ( K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )? ) ) K_FROM cf= columnFamilyName ( K_WHERE wclause= whereClause )? ( K_ORDER K_BY orderByClause[orderings] ( ',' orderByClause[orderings] )* )? ( K_LIMIT rows= intValue )? ( K_ALLOW K_FILTERING )? ;
     public final SelectStatement.RawStatement selectStatement() throws RecognitionException {
         SelectStatement.RawStatement expr = null;
 
@@ -787,11 +787,11 @@ public class CqlParser extends Parser {
                 boolean allowFiltering = false;
             
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:256:5: ( K_SELECT ( ( K_DISTINCT )? sclause= selectClause | ( K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )? ) ) K_FROM cf= columnFamilyName ( K_WHERE wclause= whereClause )? ( K_ORDER K_BY orderByClause[orderings] ( ',' orderByClause[orderings] )* )? ( K_LIMIT rows= intValue )? ( K_ALLOW K_FILTERING )? )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:256:7: K_SELECT ( ( K_DISTINCT )? sclause= selectClause | ( K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )? ) ) K_FROM cf= columnFamilyName ( K_WHERE wclause= whereClause )? ( K_ORDER K_BY orderByClause[orderings] ( ',' orderByClause[orderings] )* )? ( K_LIMIT rows= intValue )? ( K_ALLOW K_FILTERING )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:256:5: ( K_SELECT ( ( K_DISTINCT )? sclause= selectClause | ( K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )? ) ) K_FROM cf= columnFamilyName ( K_WHERE wclause= whereClause )? ( K_ORDER K_BY orderByClause[orderings] ( ',' orderByClause[orderings] )* )? ( K_LIMIT rows= intValue )? ( K_ALLOW K_FILTERING )? )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:256:7: K_SELECT ( ( K_DISTINCT )? sclause= selectClause | ( K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )? ) ) K_FROM cf= columnFamilyName ( K_WHERE wclause= whereClause )? ( K_ORDER K_BY orderByClause[orderings] ( ',' orderByClause[orderings] )* )? ( K_LIMIT rows= intValue )? ( K_ALLOW K_FILTERING )?
             {
             match(input,K_SELECT,FOLLOW_K_SELECT_in_selectStatement677); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:256:16: ( ( K_DISTINCT )? sclause= selectClause | ( K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )? ) )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:256:16: ( ( K_DISTINCT )? sclause= selectClause | ( K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )? ) )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -822,9 +822,9 @@ public class CqlParser extends Parser {
             }
             switch (alt5) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:256:18: ( K_DISTINCT )? sclause= selectClause
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:256:18: ( K_DISTINCT )? sclause= selectClause
                     {
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:256:18: ( K_DISTINCT )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:256:18: ( K_DISTINCT )?
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -851,7 +851,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt3) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:256:20: K_DISTINCT
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:256:20: K_DISTINCT
                             {
                             match(input,K_DISTINCT,FOLLOW_K_DISTINCT_in_selectStatement683); 
                              isDistinct = true; 
@@ -870,10 +870,10 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:257:18: ( K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )? )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:257:18: ( K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )? )
                     {
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:257:18: ( K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )? )
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:257:19: K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:257:18: ( K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )? )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:257:19: K_COUNT '(' sclause= selectCountClause ')' ( K_AS c= ident )?
                     {
                     match(input,K_COUNT,FOLLOW_K_COUNT_in_selectStatement712); 
                     match(input,137,FOLLOW_137_in_selectStatement714); 
@@ -884,7 +884,7 @@ public class CqlParser extends Parser {
 
                     match(input,138,FOLLOW_138_in_selectStatement720); 
                      isCount = true; 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:257:81: ( K_AS c= ident )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:257:81: ( K_AS c= ident )?
                     int alt4=2;
                     int LA4_0 = input.LA(1);
 
@@ -893,7 +893,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt4) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:257:82: K_AS c= ident
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:257:82: K_AS c= ident
                             {
                             match(input,K_AS,FOLLOW_K_AS_in_selectStatement725); 
                             pushFollow(FOLLOW_ident_in_selectStatement729);
@@ -923,7 +923,7 @@ public class CqlParser extends Parser {
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:259:7: ( K_WHERE wclause= whereClause )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:259:7: ( K_WHERE wclause= whereClause )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -932,7 +932,7 @@ public class CqlParser extends Parser {
             }
             switch (alt6) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:259:9: K_WHERE wclause= whereClause
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:259:9: K_WHERE wclause= whereClause
                     {
                     match(input,K_WHERE,FOLLOW_K_WHERE_in_selectStatement758); 
                     pushFollow(FOLLOW_whereClause_in_selectStatement762);
@@ -946,7 +946,7 @@ public class CqlParser extends Parser {
 
             }
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:260:7: ( K_ORDER K_BY orderByClause[orderings] ( ',' orderByClause[orderings] )* )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:260:7: ( K_ORDER K_BY orderByClause[orderings] ( ',' orderByClause[orderings] )* )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -955,7 +955,7 @@ public class CqlParser extends Parser {
             }
             switch (alt8) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:260:9: K_ORDER K_BY orderByClause[orderings] ( ',' orderByClause[orderings] )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:260:9: K_ORDER K_BY orderByClause[orderings] ( ',' orderByClause[orderings] )*
                     {
                     match(input,K_ORDER,FOLLOW_K_ORDER_in_selectStatement775); 
                     match(input,K_BY,FOLLOW_K_BY_in_selectStatement777); 
@@ -964,7 +964,7 @@ public class CqlParser extends Parser {
 
                     state._fsp--;
 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:260:47: ( ',' orderByClause[orderings] )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:260:47: ( ',' orderByClause[orderings] )*
                     loop7:
                     do {
                         int alt7=2;
@@ -977,7 +977,7 @@ public class CqlParser extends Parser {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:260:49: ',' orderByClause[orderings]
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:260:49: ',' orderByClause[orderings]
                     	    {
                     	    match(input,139,FOLLOW_139_in_selectStatement784); 
                     	    pushFollow(FOLLOW_orderByClause_in_selectStatement786);
@@ -1000,7 +1000,7 @@ public class CqlParser extends Parser {
 
             }
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:261:7: ( K_LIMIT rows= intValue )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:261:7: ( K_LIMIT rows= intValue )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1009,7 +1009,7 @@ public class CqlParser extends Parser {
             }
             switch (alt9) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:261:9: K_LIMIT rows= intValue
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:261:9: K_LIMIT rows= intValue
                     {
                     match(input,K_LIMIT,FOLLOW_K_LIMIT_in_selectStatement803); 
                     pushFollow(FOLLOW_intValue_in_selectStatement807);
@@ -1024,7 +1024,7 @@ public class CqlParser extends Parser {
 
             }
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:262:7: ( K_ALLOW K_FILTERING )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:262:7: ( K_ALLOW K_FILTERING )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1033,7 +1033,7 @@ public class CqlParser extends Parser {
             }
             switch (alt10) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:262:9: K_ALLOW K_FILTERING
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:262:9: K_ALLOW K_FILTERING
                     {
                     match(input,K_ALLOW,FOLLOW_K_ALLOW_in_selectStatement822); 
                     match(input,K_FILTERING,FOLLOW_K_FILTERING_in_selectStatement824); 
@@ -1068,7 +1068,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "selectClause"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:273:1: selectClause returns [List<RawSelector> expr] : (t1= selector ( ',' tN= selector )* | '\\*' );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:273:1: selectClause returns [List<RawSelector> expr] : (t1= selector ( ',' tN= selector )* | '\\*' );
     public final List<RawSelector> selectClause() throws RecognitionException {
         List<RawSelector> expr = null;
 
@@ -1078,7 +1078,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:274:5: (t1= selector ( ',' tN= selector )* | '\\*' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:274:5: (t1= selector ( ',' tN= selector )* | '\\*' )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1096,7 +1096,7 @@ public class CqlParser extends Parser {
             }
             switch (alt12) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:274:7: t1= selector ( ',' tN= selector )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:274:7: t1= selector ( ',' tN= selector )*
                     {
                     pushFollow(FOLLOW_selector_in_selectClause861);
                     t1=selector();
@@ -1104,7 +1104,7 @@ public class CqlParser extends Parser {
                     state._fsp--;
 
                      expr = new ArrayList<RawSelector>(); expr.add(t1); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:274:76: ( ',' tN= selector )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:274:76: ( ',' tN= selector )*
                     loop11:
                     do {
                         int alt11=2;
@@ -1117,7 +1117,7 @@ public class CqlParser extends Parser {
 
                         switch (alt11) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:274:77: ',' tN= selector
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:274:77: ',' tN= selector
                     	    {
                     	    match(input,139,FOLLOW_139_in_selectClause866); 
                     	    pushFollow(FOLLOW_selector_in_selectClause870);
@@ -1139,7 +1139,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:275:7: '\\*'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:275:7: '\\*'
                     {
                     match(input,140,FOLLOW_140_in_selectClause882); 
                      expr = Collections.<RawSelector>emptyList();
@@ -1161,7 +1161,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "selector"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:278:1: selector returns [RawSelector s] : us= unaliasedSelector ( K_AS c= ident )? ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:278:1: selector returns [RawSelector s] : us= unaliasedSelector ( K_AS c= ident )? ;
     public final RawSelector selector() throws RecognitionException {
         RawSelector s = null;
 
@@ -1172,15 +1172,15 @@ public class CqlParser extends Parser {
 
          ColumnIdentifier alias = null; 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:280:5: (us= unaliasedSelector ( K_AS c= ident )? )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:280:7: us= unaliasedSelector ( K_AS c= ident )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:280:5: (us= unaliasedSelector ( K_AS c= ident )? )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:280:7: us= unaliasedSelector ( K_AS c= ident )?
             {
             pushFollow(FOLLOW_unaliasedSelector_in_selector915);
             us=unaliasedSelector();
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:280:28: ( K_AS c= ident )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:280:28: ( K_AS c= ident )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1189,7 +1189,7 @@ public class CqlParser extends Parser {
             }
             switch (alt13) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:280:29: K_AS c= ident
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:280:29: K_AS c= ident
                     {
                     match(input,K_AS,FOLLOW_K_AS_in_selector918); 
                     pushFollow(FOLLOW_ident_in_selector922);
@@ -1221,7 +1221,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "unaliasedSelector"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:283:1: unaliasedSelector returns [Selectable.Raw s] : (c= cident | K_WRITETIME '(' c= cident ')' | K_TTL '(' c= cident ')' | f= functionName args= selectionFunctionArgs );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:283:1: unaliasedSelector returns [Selectable.Raw s] : (c= cident | K_WRITETIME '(' c= cident ')' | K_TTL '(' c= cident ')' | f= functionName args= selectionFunctionArgs );
     public final Selectable.Raw unaliasedSelector() throws RecognitionException {
         Selectable.Raw s = null;
 
@@ -1233,12 +1233,12 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:284:5: (c= cident | K_WRITETIME '(' c= cident ')' | K_TTL '(' c= cident ')' | f= functionName args= selectionFunctionArgs )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:284:5: (c= cident | K_WRITETIME '(' c= cident ')' | K_TTL '(' c= cident ')' | f= functionName args= selectionFunctionArgs )
             int alt14=4;
             alt14 = dfa14.predict(input);
             switch (alt14) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:284:7: c= cident
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:284:7: c= cident
                     {
                     pushFollow(FOLLOW_cident_in_unaliasedSelector951);
                     c=cident();
@@ -1250,7 +1250,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:285:7: K_WRITETIME '(' c= cident ')'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:285:7: K_WRITETIME '(' c= cident ')'
                     {
                     match(input,K_WRITETIME,FOLLOW_K_WRITETIME_in_unaliasedSelector994); 
                     match(input,137,FOLLOW_137_in_unaliasedSelector996); 
@@ -1265,7 +1265,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:286:7: K_TTL '(' c= cident ')'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:286:7: K_TTL '(' c= cident ')'
                     {
                     match(input,K_TTL,FOLLOW_K_TTL_in_unaliasedSelector1025); 
                     match(input,137,FOLLOW_137_in_unaliasedSelector1033); 
@@ -1280,7 +1280,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:287:7: f= functionName args= selectionFunctionArgs
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:287:7: f= functionName args= selectionFunctionArgs
                     {
                     pushFollow(FOLLOW_functionName_in_unaliasedSelector1064);
                     f=functionName();
@@ -1311,7 +1311,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "selectionFunctionArgs"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:290:1: selectionFunctionArgs returns [List<Selectable.Raw> a] : ( '(' ')' | '(' s1= unaliasedSelector ( ',' sn= unaliasedSelector )* ')' );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:290:1: selectionFunctionArgs returns [List<Selectable.Raw> a] : ( '(' ')' | '(' s1= unaliasedSelector ( ',' sn= unaliasedSelector )* ')' );
     public final List<Selectable.Raw> selectionFunctionArgs() throws RecognitionException {
         List<Selectable.Raw> a = null;
 
@@ -1321,7 +1321,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:291:5: ( '(' ')' | '(' s1= unaliasedSelector ( ',' sn= unaliasedSelector )* ')' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:291:5: ( '(' ')' | '(' s1= unaliasedSelector ( ',' sn= unaliasedSelector )* ')' )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1349,7 +1349,7 @@ public class CqlParser extends Parser {
             }
             switch (alt16) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:291:7: '(' ')'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:291:7: '(' ')'
                     {
                     match(input,137,FOLLOW_137_in_selectionFunctionArgs1091); 
                     match(input,138,FOLLOW_138_in_selectionFunctionArgs1093); 
@@ -1358,7 +1358,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:292:7: '(' s1= unaliasedSelector ( ',' sn= unaliasedSelector )* ')'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:292:7: '(' s1= unaliasedSelector ( ',' sn= unaliasedSelector )* ')'
                     {
                     match(input,137,FOLLOW_137_in_selectionFunctionArgs1103); 
                     pushFollow(FOLLOW_unaliasedSelector_in_selectionFunctionArgs1107);
@@ -1367,7 +1367,7 @@ public class CqlParser extends Parser {
                     state._fsp--;
 
                      List<Selectable.Raw> args = new ArrayList<Selectable.Raw>(); args.add(s1); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:293:11: ( ',' sn= unaliasedSelector )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:293:11: ( ',' sn= unaliasedSelector )*
                     loop15:
                     do {
                         int alt15=2;
@@ -1380,7 +1380,7 @@ public class CqlParser extends Parser {
 
                         switch (alt15) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:293:13: ',' sn= unaliasedSelector
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:293:13: ',' sn= unaliasedSelector
                     	    {
                     	    match(input,139,FOLLOW_139_in_selectionFunctionArgs1123); 
                     	    pushFollow(FOLLOW_unaliasedSelector_in_selectionFunctionArgs1127);
@@ -1418,14 +1418,14 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "selectCountClause"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:297:1: selectCountClause returns [List<RawSelector> expr] : ( '\\*' | i= INTEGER );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:297:1: selectCountClause returns [List<RawSelector> expr] : ( '\\*' | i= INTEGER );
     public final List<RawSelector> selectCountClause() throws RecognitionException {
         List<RawSelector> expr = null;
 
         Token i=null;
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:298:5: ( '\\*' | i= INTEGER )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:298:5: ( '\\*' | i= INTEGER )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -1443,7 +1443,7 @@ public class CqlParser extends Parser {
             }
             switch (alt17) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:298:7: '\\*'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:298:7: '\\*'
                     {
                     match(input,140,FOLLOW_140_in_selectCountClause1164); 
                      expr = Collections.<RawSelector>emptyList();
@@ -1451,7 +1451,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:299:7: i= INTEGER
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:299:7: i= INTEGER
                     {
                     i=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_selectCountClause1186); 
                      if (!i.getText().equals("1")) addRecognitionError("Only COUNT(1) is supported, got COUNT(" + i.getText() + ")"); expr = Collections.<RawSelector>emptyList();
@@ -1473,21 +1473,21 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "whereClause"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:302:1: whereClause returns [List<Relation> clause] : relation[$clause] ( K_AND relation[$clause] )* ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:302:1: whereClause returns [List<Relation> clause] : relation[$clause] ( K_AND relation[$clause] )* ;
     public final List<Relation> whereClause() throws RecognitionException {
         List<Relation> clause = null;
 
          clause = new ArrayList<Relation>(); 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:304:5: ( relation[$clause] ( K_AND relation[$clause] )* )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:304:7: relation[$clause] ( K_AND relation[$clause] )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:304:5: ( relation[$clause] ( K_AND relation[$clause] )* )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:304:7: relation[$clause] ( K_AND relation[$clause] )*
             {
             pushFollow(FOLLOW_relation_in_whereClause1222);
             relation(clause);
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:304:25: ( K_AND relation[$clause] )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:304:25: ( K_AND relation[$clause] )*
             loop18:
             do {
                 int alt18=2;
@@ -1500,7 +1500,7 @@ public class CqlParser extends Parser {
 
                 switch (alt18) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:304:26: K_AND relation[$clause]
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:304:26: K_AND relation[$clause]
             	    {
             	    match(input,K_AND,FOLLOW_K_AND_in_whereClause1226); 
             	    pushFollow(FOLLOW_relation_in_whereClause1228);
@@ -1533,7 +1533,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "orderByClause"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:307:1: orderByClause[Map<ColumnIdentifier.Raw, Boolean> orderings] : c= cident ( K_ASC | K_DESC )? ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:307:1: orderByClause[Map<ColumnIdentifier.Raw, Boolean> orderings] : c= cident ( K_ASC | K_DESC )? ;
     public final void orderByClause(Map<ColumnIdentifier.Raw, Boolean> orderings) throws RecognitionException {
         ColumnIdentifier.Raw c = null;
 
@@ -1543,8 +1543,8 @@ public class CqlParser extends Parser {
                 boolean reversed = false;
             
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:312:5: (c= cident ( K_ASC | K_DESC )? )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:312:7: c= cident ( K_ASC | K_DESC )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:312:5: (c= cident ( K_ASC | K_DESC )? )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:312:7: c= cident ( K_ASC | K_DESC )?
             {
             pushFollow(FOLLOW_cident_in_orderByClause1259);
             c=cident();
@@ -1552,7 +1552,7 @@ public class CqlParser extends Parser {
             state._fsp--;
 
              orderBy = c; 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:312:33: ( K_ASC | K_DESC )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:312:33: ( K_ASC | K_DESC )?
             int alt19=3;
             int LA19_0 = input.LA(1);
 
@@ -1564,14 +1564,14 @@ public class CqlParser extends Parser {
             }
             switch (alt19) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:312:34: K_ASC
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:312:34: K_ASC
                     {
                     match(input,K_ASC,FOLLOW_K_ASC_in_orderByClause1264); 
 
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:312:42: K_DESC
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:312:42: K_DESC
                     {
                     match(input,K_DESC,FOLLOW_K_DESC_in_orderByClause1268); 
                      reversed = true; 
@@ -1598,7 +1598,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "insertStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:315:1: insertStatement returns [UpdateStatement.ParsedInsert expr] : K_INSERT K_INTO cf= columnFamilyName '(' c1= cident ( ',' cn= cident )* ')' K_VALUES '(' v1= term ( ',' vn= term )* ')' ( K_IF K_NOT K_EXISTS )? ( usingClause[attrs] )? ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:315:1: insertStatement returns [UpdateStatement.ParsedInsert expr] : K_INSERT K_INTO cf= columnFamilyName '(' c1= cident ( ',' cn= cident )* ')' K_VALUES '(' v1= term ( ',' vn= term )* ')' ( K_IF K_NOT K_EXISTS )? ( usingClause[attrs] )? ;
     public final UpdateStatement.ParsedInsert insertStatement() throws RecognitionException {
         UpdateStatement.ParsedInsert expr = null;
 
@@ -1620,8 +1620,8 @@ public class CqlParser extends Parser {
                 boolean ifNotExists = false;
             
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:328:5: ( K_INSERT K_INTO cf= columnFamilyName '(' c1= cident ( ',' cn= cident )* ')' K_VALUES '(' v1= term ( ',' vn= term )* ')' ( K_IF K_NOT K_EXISTS )? ( usingClause[attrs] )? )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:328:7: K_INSERT K_INTO cf= columnFamilyName '(' c1= cident ( ',' cn= cident )* ')' K_VALUES '(' v1= term ( ',' vn= term )* ')' ( K_IF K_NOT K_EXISTS )? ( usingClause[attrs] )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:328:5: ( K_INSERT K_INTO cf= columnFamilyName '(' c1= cident ( ',' cn= cident )* ')' K_VALUES '(' v1= term ( ',' vn= term )* ')' ( K_IF K_NOT K_EXISTS )? ( usingClause[attrs] )? )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:328:7: K_INSERT K_INTO cf= columnFamilyName '(' c1= cident ( ',' cn= cident )* ')' K_VALUES '(' v1= term ( ',' vn= term )* ')' ( K_IF K_NOT K_EXISTS )? ( usingClause[attrs] )?
             {
             match(input,K_INSERT,FOLLOW_K_INSERT_in_insertStatement1306); 
             match(input,K_INTO,FOLLOW_K_INTO_in_insertStatement1308); 
@@ -1637,7 +1637,7 @@ public class CqlParser extends Parser {
             state._fsp--;
 
              columnNames.add(c1); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:329:51: ( ',' cn= cident )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:329:51: ( ',' cn= cident )*
             loop20:
             do {
                 int alt20=2;
@@ -1650,7 +1650,7 @@ public class CqlParser extends Parser {
 
                 switch (alt20) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:329:53: ',' cn= cident
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:329:53: ',' cn= cident
             	    {
             	    match(input,139,FOLLOW_139_in_insertStatement1335); 
             	    pushFollow(FOLLOW_cident_in_insertStatement1339);
@@ -1677,7 +1677,7 @@ public class CqlParser extends Parser {
             state._fsp--;
 
              values.add(v1); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:331:43: ( ',' vn= term )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:331:43: ( ',' vn= term )*
             loop21:
             do {
                 int alt21=2;
@@ -1690,7 +1690,7 @@ public class CqlParser extends Parser {
 
                 switch (alt21) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:331:45: ',' vn= term
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:331:45: ',' vn= term
             	    {
             	    match(input,139,FOLLOW_139_in_insertStatement1378); 
             	    pushFollow(FOLLOW_term_in_insertStatement1382);
@@ -1709,7 +1709,7 @@ public class CqlParser extends Parser {
             } while (true);
 
             match(input,138,FOLLOW_138_in_insertStatement1389); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:333:9: ( K_IF K_NOT K_EXISTS )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:333:9: ( K_IF K_NOT K_EXISTS )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -1718,7 +1718,7 @@ public class CqlParser extends Parser {
             }
             switch (alt22) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:333:11: K_IF K_NOT K_EXISTS
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:333:11: K_IF K_NOT K_EXISTS
                     {
                     match(input,K_IF,FOLLOW_K_IF_in_insertStatement1402); 
                     match(input,K_NOT,FOLLOW_K_NOT_in_insertStatement1404); 
@@ -1730,7 +1730,7 @@ public class CqlParser extends Parser {
 
             }
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:334:9: ( usingClause[attrs] )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:334:9: ( usingClause[attrs] )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -1739,7 +1739,7 @@ public class CqlParser extends Parser {
             }
             switch (alt23) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:334:11: usingClause[attrs]
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:334:11: usingClause[attrs]
                     {
                     pushFollow(FOLLOW_usingClause_in_insertStatement1423);
                     usingClause(attrs);
@@ -1775,11 +1775,11 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "usingClause"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:344:1: usingClause[Attributes.Raw attrs] : K_USING usingClauseObjective[attrs] ( K_AND usingClauseObjective[attrs] )* ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:344:1: usingClause[Attributes.Raw attrs] : K_USING usingClauseObjective[attrs] ( K_AND usingClauseObjective[attrs] )* ;
     public final void usingClause(Attributes.Raw attrs) throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:345:5: ( K_USING usingClauseObjective[attrs] ( K_AND usingClauseObjective[attrs] )* )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:345:7: K_USING usingClauseObjective[attrs] ( K_AND usingClauseObjective[attrs] )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:345:5: ( K_USING usingClauseObjective[attrs] ( K_AND usingClauseObjective[attrs] )* )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:345:7: K_USING usingClauseObjective[attrs] ( K_AND usingClauseObjective[attrs] )*
             {
             match(input,K_USING,FOLLOW_K_USING_in_usingClause1453); 
             pushFollow(FOLLOW_usingClauseObjective_in_usingClause1455);
@@ -1787,7 +1787,7 @@ public class CqlParser extends Parser {
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:345:43: ( K_AND usingClauseObjective[attrs] )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:345:43: ( K_AND usingClauseObjective[attrs] )*
             loop24:
             do {
                 int alt24=2;
@@ -1800,7 +1800,7 @@ public class CqlParser extends Parser {
 
                 switch (alt24) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:345:45: K_AND usingClauseObjective[attrs]
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:345:45: K_AND usingClauseObjective[attrs]
             	    {
             	    match(input,K_AND,FOLLOW_K_AND_in_usingClause1460); 
             	    pushFollow(FOLLOW_usingClauseObjective_in_usingClause1462);
@@ -1833,7 +1833,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "usingClauseObjective"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:348:1: usingClauseObjective[Attributes.Raw attrs] : ( K_TIMESTAMP ts= intValue | K_TTL t= intValue );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:348:1: usingClauseObjective[Attributes.Raw attrs] : ( K_TIMESTAMP ts= intValue | K_TTL t= intValue );
     public final void usingClauseObjective(Attributes.Raw attrs) throws RecognitionException {
         Term.Raw ts = null;
 
@@ -1841,7 +1841,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:349:5: ( K_TIMESTAMP ts= intValue | K_TTL t= intValue )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:349:5: ( K_TIMESTAMP ts= intValue | K_TTL t= intValue )
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -1859,7 +1859,7 @@ public class CqlParser extends Parser {
             }
             switch (alt25) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:349:7: K_TIMESTAMP ts= intValue
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:349:7: K_TIMESTAMP ts= intValue
                     {
                     match(input,K_TIMESTAMP,FOLLOW_K_TIMESTAMP_in_usingClauseObjective1484); 
                     pushFollow(FOLLOW_intValue_in_usingClauseObjective1488);
@@ -1872,7 +1872,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:350:7: K_TTL t= intValue
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:350:7: K_TTL t= intValue
                     {
                     match(input,K_TTL,FOLLOW_K_TTL_in_usingClauseObjective1498); 
                     pushFollow(FOLLOW_intValue_in_usingClauseObjective1502);
@@ -1899,7 +1899,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "updateStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:353:1: updateStatement returns [UpdateStatement.ParsedUpdate expr] : K_UPDATE cf= columnFamilyName ( usingClause[attrs] )? K_SET columnOperation[operations] ( ',' columnOperation[operations] )* K_WHERE wclause= whereClause ( K_IF ( K_EXISTS | conditions= updateConditions ) )? ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:353:1: updateStatement returns [UpdateStatement.ParsedUpdate expr] : K_UPDATE cf= columnFamilyName ( usingClause[attrs] )? K_SET columnOperation[operations] ( ',' columnOperation[operations] )* K_WHERE wclause= whereClause ( K_IF ( K_EXISTS | conditions= updateConditions ) )? ;
     public final UpdateStatement.ParsedUpdate updateStatement() throws RecognitionException {
         UpdateStatement.ParsedUpdate expr = null;
 
@@ -1916,8 +1916,8 @@ public class CqlParser extends Parser {
                 boolean ifExists = false;
             
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:366:5: ( K_UPDATE cf= columnFamilyName ( usingClause[attrs] )? K_SET columnOperation[operations] ( ',' columnOperation[operations] )* K_WHERE wclause= whereClause ( K_IF ( K_EXISTS | conditions= updateConditions ) )? )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:366:7: K_UPDATE cf= columnFamilyName ( usingClause[attrs] )? K_SET columnOperation[operations] ( ',' columnOperation[operations] )* K_WHERE wclause= whereClause ( K_IF ( K_EXISTS | conditions= updateConditions ) )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:366:5: ( K_UPDATE cf= columnFamilyName ( usingClause[attrs] )? K_SET columnOperation[operations] ( ',' columnOperation[operations] )* K_WHERE wclause= whereClause ( K_IF ( K_EXISTS | conditions= updateConditions ) )? )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:366:7: K_UPDATE cf= columnFamilyName ( usingClause[attrs] )? K_SET columnOperation[operations] ( ',' columnOperation[operations] )* K_WHERE wclause= whereClause ( K_IF ( K_EXISTS | conditions= updateConditions ) )?
             {
             match(input,K_UPDATE,FOLLOW_K_UPDATE_in_updateStatement1536); 
             pushFollow(FOLLOW_columnFamilyName_in_updateStatement1540);
@@ -1925,7 +1925,7 @@ public class CqlParser extends Parser {
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:367:7: ( usingClause[attrs] )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:367:7: ( usingClause[attrs] )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -1934,7 +1934,7 @@ public class CqlParser extends Parser {
             }
             switch (alt26) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:367:9: usingClause[attrs]
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:367:9: usingClause[attrs]
                     {
                     pushFollow(FOLLOW_usingClause_in_updateStatement1550);
                     usingClause(attrs);
@@ -1953,7 +1953,7 @@ public class CqlParser extends Parser {
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:368:41: ( ',' columnOperation[operations] )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:368:41: ( ',' columnOperation[operations] )*
             loop27:
             do {
                 int alt27=2;
@@ -1966,7 +1966,7 @@ public class CqlParser extends Parser {
 
                 switch (alt27) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:368:42: ',' columnOperation[operations]
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:368:42: ',' columnOperation[operations]
             	    {
             	    match(input,139,FOLLOW_139_in_updateStatement1568); 
             	    pushFollow(FOLLOW_columnOperation_in_updateStatement1570);
@@ -1989,7 +1989,7 @@ public class CqlParser extends Parser {
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:370:7: ( K_IF ( K_EXISTS | conditions= updateConditions ) )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:370:7: ( K_IF ( K_EXISTS | conditions= updateConditions ) )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -1998,10 +1998,10 @@ public class CqlParser extends Parser {
             }
             switch (alt29) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:370:9: K_IF ( K_EXISTS | conditions= updateConditions )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:370:9: K_IF ( K_EXISTS | conditions= updateConditions )
                     {
                     match(input,K_IF,FOLLOW_K_IF_in_updateStatement1595); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:370:14: ( K_EXISTS | conditions= updateConditions )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:370:14: ( K_EXISTS | conditions= updateConditions )
                     int alt28=2;
                     int LA28_0 = input.LA(1);
 
@@ -2032,7 +2032,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt28) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:370:16: K_EXISTS
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:370:16: K_EXISTS
                             {
                             match(input,K_EXISTS,FOLLOW_K_EXISTS_in_updateStatement1599); 
                              ifExists = true; 
@@ -2040,7 +2040,7 @@ public class CqlParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:370:48: conditions= updateConditions
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:370:48: conditions= updateConditions
                             {
                             pushFollow(FOLLOW_updateConditions_in_updateStatement1607);
                             conditions=updateConditions();
@@ -2083,21 +2083,21 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "updateConditions"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:381:1: updateConditions returns [List<Pair<ColumnIdentifier.Raw, ColumnCondition.Raw>> conditions] : columnCondition[conditions] ( K_AND columnCondition[conditions] )* ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:381:1: updateConditions returns [List<Pair<ColumnIdentifier.Raw, ColumnCondition.Raw>> conditions] : columnCondition[conditions] ( K_AND columnCondition[conditions] )* ;
     public final List<Pair<ColumnIdentifier.Raw, ColumnCondition.Raw>> updateConditions() throws RecognitionException {
         List<Pair<ColumnIdentifier.Raw, ColumnCondition.Raw>> conditions = null;
 
          conditions = new ArrayList<Pair<ColumnIdentifier.Raw, ColumnCondition.Raw>>(); 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:383:5: ( columnCondition[conditions] ( K_AND columnCondition[conditions] )* )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:383:7: columnCondition[conditions] ( K_AND columnCondition[conditions] )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:383:5: ( columnCondition[conditions] ( K_AND columnCondition[conditions] )* )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:383:7: columnCondition[conditions] ( K_AND columnCondition[conditions] )*
             {
             pushFollow(FOLLOW_columnCondition_in_updateConditions1649);
             columnCondition(conditions);
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:383:35: ( K_AND columnCondition[conditions] )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:383:35: ( K_AND columnCondition[conditions] )*
             loop30:
             do {
                 int alt30=2;
@@ -2110,7 +2110,7 @@ public class CqlParser extends Parser {
 
                 switch (alt30) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:383:37: K_AND columnCondition[conditions]
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:383:37: K_AND columnCondition[conditions]
             	    {
             	    match(input,K_AND,FOLLOW_K_AND_in_updateConditions1654); 
             	    pushFollow(FOLLOW_columnCondition_in_updateConditions1656);
@@ -2143,7 +2143,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "deleteStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:387:1: deleteStatement returns [DeleteStatement.Parsed expr] : K_DELETE (dels= deleteSelection )? K_FROM cf= columnFamilyName ( usingClauseDelete[attrs] )? K_WHERE wclause= whereClause ( K_IF ( K_EXISTS | conditions= updateConditions ) )? ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:387:1: deleteStatement returns [DeleteStatement.Parsed expr] : K_DELETE (dels= deleteSelection )? K_FROM cf= columnFamilyName ( usingClauseDelete[attrs] )? K_WHERE wclause= whereClause ( K_IF ( K_EXISTS | conditions= updateConditions ) )? ;
     public final DeleteStatement.Parsed deleteStatement() throws RecognitionException {
         DeleteStatement.Parsed expr = null;
 
@@ -2162,11 +2162,11 @@ public class CqlParser extends Parser {
                 boolean ifExists = false;
             
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:400:5: ( K_DELETE (dels= deleteSelection )? K_FROM cf= columnFamilyName ( usingClauseDelete[attrs] )? K_WHERE wclause= whereClause ( K_IF ( K_EXISTS | conditions= updateConditions ) )? )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:400:7: K_DELETE (dels= deleteSelection )? K_FROM cf= columnFamilyName ( usingClauseDelete[attrs] )? K_WHERE wclause= whereClause ( K_IF ( K_EXISTS | conditions= updateConditions ) )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:400:5: ( K_DELETE (dels= deleteSelection )? K_FROM cf= columnFamilyName ( usingClauseDelete[attrs] )? K_WHERE wclause= whereClause ( K_IF ( K_EXISTS | conditions= updateConditions ) )? )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:400:7: K_DELETE (dels= deleteSelection )? K_FROM cf= columnFamilyName ( usingClauseDelete[attrs] )? K_WHERE wclause= whereClause ( K_IF ( K_EXISTS | conditions= updateConditions ) )?
             {
             match(input,K_DELETE,FOLLOW_K_DELETE_in_deleteStatement1693); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:400:16: (dels= deleteSelection )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:400:16: (dels= deleteSelection )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -2175,7 +2175,7 @@ public class CqlParser extends Parser {
             }
             switch (alt31) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:400:18: dels= deleteSelection
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:400:18: dels= deleteSelection
                     {
                     pushFollow(FOLLOW_deleteSelection_in_deleteStatement1699);
                     dels=deleteSelection();
@@ -2195,7 +2195,7 @@ public class CqlParser extends Parser {
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:402:7: ( usingClauseDelete[attrs] )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:402:7: ( usingClauseDelete[attrs] )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -2204,7 +2204,7 @@ public class CqlParser extends Parser {
             }
             switch (alt32) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:402:9: usingClauseDelete[attrs]
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:402:9: usingClauseDelete[attrs]
                     {
                     pushFollow(FOLLOW_usingClauseDelete_in_deleteStatement1726);
                     usingClauseDelete(attrs);
@@ -2223,7 +2223,7 @@ public class CqlParser extends Parser {
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:404:7: ( K_IF ( K_EXISTS | conditions= updateConditions ) )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:404:7: ( K_IF ( K_EXISTS | conditions= updateConditions ) )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -2232,10 +2232,10 @@ public class CqlParser extends Parser {
             }
             switch (alt34) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:404:9: K_IF ( K_EXISTS | conditions= updateConditions )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:404:9: K_IF ( K_EXISTS | conditions= updateConditions )
                     {
                     match(input,K_IF,FOLLOW_K_IF_in_deleteStatement1752); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:404:14: ( K_EXISTS | conditions= updateConditions )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:404:14: ( K_EXISTS | conditions= updateConditions )
                     int alt33=2;
                     int LA33_0 = input.LA(1);
 
@@ -2266,7 +2266,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt33) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:404:16: K_EXISTS
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:404:16: K_EXISTS
                             {
                             match(input,K_EXISTS,FOLLOW_K_EXISTS_in_deleteStatement1756); 
                              ifExists = true; 
@@ -2274,7 +2274,7 @@ public class CqlParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:404:48: conditions= updateConditions
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:404:48: conditions= updateConditions
                             {
                             pushFollow(FOLLOW_updateConditions_in_deleteStatement1764);
                             conditions=updateConditions();
@@ -2317,7 +2317,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "deleteSelection"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:415:1: deleteSelection returns [List<Operation.RawDeletion> operations] : t1= deleteOp ( ',' tN= deleteOp )* ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:415:1: deleteSelection returns [List<Operation.RawDeletion> operations] : t1= deleteOp ( ',' tN= deleteOp )* ;
     public final List<Operation.RawDeletion> deleteSelection() throws RecognitionException {
         List<Operation.RawDeletion> operations = null;
 
@@ -2327,8 +2327,8 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:416:5: (t1= deleteOp ( ',' tN= deleteOp )* )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:416:7: t1= deleteOp ( ',' tN= deleteOp )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:416:5: (t1= deleteOp ( ',' tN= deleteOp )* )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:416:7: t1= deleteOp ( ',' tN= deleteOp )*
             {
              operations = new ArrayList<Operation.RawDeletion>(); 
             pushFollow(FOLLOW_deleteOp_in_deleteSelection1811);
@@ -2337,7 +2337,7 @@ public class CqlParser extends Parser {
             state._fsp--;
 
              operations.add(t1); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:418:11: ( ',' tN= deleteOp )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:418:11: ( ',' tN= deleteOp )*
             loop35:
             do {
                 int alt35=2;
@@ -2350,7 +2350,7 @@ public class CqlParser extends Parser {
 
                 switch (alt35) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:418:12: ',' tN= deleteOp
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:418:12: ',' tN= deleteOp
             	    {
             	    match(input,139,FOLLOW_139_in_deleteSelection1826); 
             	    pushFollow(FOLLOW_deleteOp_in_deleteSelection1830);
@@ -2384,7 +2384,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "deleteOp"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:421:1: deleteOp returns [Operation.RawDeletion op] : (c= cident | c= cident '[' t= term ']' );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:421:1: deleteOp returns [Operation.RawDeletion op] : (c= cident | c= cident '[' t= term ']' );
     public final Operation.RawDeletion deleteOp() throws RecognitionException {
         Operation.RawDeletion op = null;
 
@@ -2394,12 +2394,12 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:422:5: (c= cident | c= cident '[' t= term ']' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:422:5: (c= cident | c= cident '[' t= term ']' )
             int alt36=2;
             alt36 = dfa36.predict(input);
             switch (alt36) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:422:7: c= cident
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:422:7: c= cident
                     {
                     pushFollow(FOLLOW_cident_in_deleteOp1857);
                     c=cident();
@@ -2411,7 +2411,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:423:7: c= cident '[' t= term ']'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:423:7: c= cident '[' t= term ']'
                     {
                     pushFollow(FOLLOW_cident_in_deleteOp1884);
                     c=cident();
@@ -2444,14 +2444,14 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "usingClauseDelete"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:426:1: usingClauseDelete[Attributes.Raw attrs] : K_USING K_TIMESTAMP ts= intValue ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:426:1: usingClauseDelete[Attributes.Raw attrs] : K_USING K_TIMESTAMP ts= intValue ;
     public final void usingClauseDelete(Attributes.Raw attrs) throws RecognitionException {
         Term.Raw ts = null;
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:427:5: ( K_USING K_TIMESTAMP ts= intValue )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:427:7: K_USING K_TIMESTAMP ts= intValue
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:427:5: ( K_USING K_TIMESTAMP ts= intValue )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:427:7: K_USING K_TIMESTAMP ts= intValue
             {
             match(input,K_USING,FOLLOW_K_USING_in_usingClauseDelete1912); 
             match(input,K_TIMESTAMP,FOLLOW_K_TIMESTAMP_in_usingClauseDelete1914); 
@@ -2477,7 +2477,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "batchStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:430:1: batchStatement returns [BatchStatement.Parsed expr] : K_BEGIN ( K_UNLOGGED | K_COUNTER )? K_BATCH ( usingClause[attrs] )? (s= batchStatementObjective ( ';' )? )* K_APPLY K_BATCH ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:430:1: batchStatement returns [BatchStatement.Parsed expr] : K_BEGIN ( K_UNLOGGED | K_COUNTER )? K_BATCH ( usingClause[attrs] )? (s= batchStatementObjective ( ';' )? )* K_APPLY K_BATCH ;
     public final BatchStatement.Parsed batchStatement() throws RecognitionException {
         BatchStatement.Parsed expr = null;
 
@@ -2490,11 +2490,11 @@ public class CqlParser extends Parser {
                 Attributes.Raw attrs = new Attributes.Raw();
             
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:460:5: ( K_BEGIN ( K_UNLOGGED | K_COUNTER )? K_BATCH ( usingClause[attrs] )? (s= batchStatementObjective ( ';' )? )* K_APPLY K_BATCH )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:460:7: K_BEGIN ( K_UNLOGGED | K_COUNTER )? K_BATCH ( usingClause[attrs] )? (s= batchStatementObjective ( ';' )? )* K_APPLY K_BATCH
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:460:5: ( K_BEGIN ( K_UNLOGGED | K_COUNTER )? K_BATCH ( usingClause[attrs] )? (s= batchStatementObjective ( ';' )? )* K_APPLY K_BATCH )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:460:7: K_BEGIN ( K_UNLOGGED | K_COUNTER )? K_BATCH ( usingClause[attrs] )? (s= batchStatementObjective ( ';' )? )* K_APPLY K_BATCH
             {
             match(input,K_BEGIN,FOLLOW_K_BEGIN_in_batchStatement1952); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:461:7: ( K_UNLOGGED | K_COUNTER )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:461:7: ( K_UNLOGGED | K_COUNTER )?
             int alt37=3;
             int LA37_0 = input.LA(1);
 
@@ -2506,7 +2506,7 @@ public class CqlParser extends Parser {
             }
             switch (alt37) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:461:9: K_UNLOGGED
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:461:9: K_UNLOGGED
                     {
                     match(input,K_UNLOGGED,FOLLOW_K_UNLOGGED_in_batchStatement1962); 
                      type = BatchStatement.Type.UNLOGGED; 
@@ -2514,7 +2514,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:461:63: K_COUNTER
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:461:63: K_COUNTER
                     {
                     match(input,K_COUNTER,FOLLOW_K_COUNTER_in_batchStatement1968); 
                      type = BatchStatement.Type.COUNTER; 
@@ -2525,7 +2525,7 @@ public class CqlParser extends Parser {
             }
 
             match(input,K_BATCH,FOLLOW_K_BATCH_in_batchStatement1981); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:462:15: ( usingClause[attrs] )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:462:15: ( usingClause[attrs] )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -2534,7 +2534,7 @@ public class CqlParser extends Parser {
             }
             switch (alt38) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:462:17: usingClause[attrs]
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:462:17: usingClause[attrs]
                     {
                     pushFollow(FOLLOW_usingClause_in_batchStatement1985);
                     usingClause(attrs);
@@ -2547,7 +2547,7 @@ public class CqlParser extends Parser {
 
             }
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:463:11: (s= batchStatementObjective ( ';' )? )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:463:11: (s= batchStatementObjective ( ';' )? )*
             loop40:
             do {
                 int alt40=2;
@@ -2560,14 +2560,14 @@ public class CqlParser extends Parser {
 
                 switch (alt40) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:463:13: s= batchStatementObjective ( ';' )?
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:463:13: s= batchStatementObjective ( ';' )?
             	    {
             	    pushFollow(FOLLOW_batchStatementObjective_in_batchStatement2005);
             	    s=batchStatementObjective();
 
             	    state._fsp--;
 
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:463:39: ( ';' )?
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:463:39: ( ';' )?
             	    int alt39=2;
             	    int LA39_0 = input.LA(1);
 
@@ -2576,7 +2576,7 @@ public class CqlParser extends Parser {
             	    }
             	    switch (alt39) {
             	        case 1 :
-            	            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:463:39: ';'
+            	            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:463:39: ';'
             	            {
             	            match(input,136,FOLLOW_136_in_batchStatement2007); 
 
@@ -2616,7 +2616,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "batchStatementObjective"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:470:1: batchStatementObjective returns [ModificationStatement.Parsed statement] : (i= insertStatement | u= updateStatement | d= deleteStatement );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:470:1: batchStatementObjective returns [ModificationStatement.Parsed statement] : (i= insertStatement | u= updateStatement | d= deleteStatement );
     public final ModificationStatement.Parsed batchStatementObjective() throws RecognitionException {
         ModificationStatement.Parsed statement = null;
 
@@ -2628,7 +2628,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:471:5: (i= insertStatement | u= updateStatement | d= deleteStatement )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:471:5: (i= insertStatement | u= updateStatement | d= deleteStatement )
             int alt41=3;
             switch ( input.LA(1) ) {
             case K_INSERT:
@@ -2655,7 +2655,7 @@ public class CqlParser extends Parser {
 
             switch (alt41) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:471:7: i= insertStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:471:7: i= insertStatement
                     {
                     pushFollow(FOLLOW_insertStatement_in_batchStatementObjective2054);
                     i=insertStatement();
@@ -2667,7 +2667,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:472:7: u= updateStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:472:7: u= updateStatement
                     {
                     pushFollow(FOLLOW_updateStatement_in_batchStatementObjective2067);
                     u=updateStatement();
@@ -2679,7 +2679,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:473:7: d= deleteStatement
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:473:7: d= deleteStatement
                     {
                     pushFollow(FOLLOW_deleteStatement_in_batchStatementObjective2080);
                     d=deleteStatement();
@@ -2705,7 +2705,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "createKeyspaceStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:476:1: createKeyspaceStatement returns [CreateKeyspaceStatement expr] : K_CREATE K_KEYSPACE ( K_IF K_NOT K_EXISTS )? ks= keyspaceName K_WITH properties[attrs] ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:476:1: createKeyspaceStatement returns [CreateKeyspaceStatement expr] : K_CREATE K_KEYSPACE ( K_IF K_NOT K_EXISTS )? ks= keyspaceName K_WITH properties[attrs] ;
     public final CreateKeyspaceStatement createKeyspaceStatement() throws RecognitionException {
         CreateKeyspaceStatement expr = null;
 
@@ -2717,12 +2717,12 @@ public class CqlParser extends Parser {
                 boolean ifNotExists = false;
             
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:484:5: ( K_CREATE K_KEYSPACE ( K_IF K_NOT K_EXISTS )? ks= keyspaceName K_WITH properties[attrs] )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:484:7: K_CREATE K_KEYSPACE ( K_IF K_NOT K_EXISTS )? ks= keyspaceName K_WITH properties[attrs]
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:484:5: ( K_CREATE K_KEYSPACE ( K_IF K_NOT K_EXISTS )? ks= keyspaceName K_WITH properties[attrs] )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:484:7: K_CREATE K_KEYSPACE ( K_IF K_NOT K_EXISTS )? ks= keyspaceName K_WITH properties[attrs]
             {
             match(input,K_CREATE,FOLLOW_K_CREATE_in_createKeyspaceStatement2115); 
             match(input,K_KEYSPACE,FOLLOW_K_KEYSPACE_in_createKeyspaceStatement2117); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:484:27: ( K_IF K_NOT K_EXISTS )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:484:27: ( K_IF K_NOT K_EXISTS )?
             int alt42=2;
             int LA42_0 = input.LA(1);
 
@@ -2731,7 +2731,7 @@ public class CqlParser extends Parser {
             }
             switch (alt42) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:484:28: K_IF K_NOT K_EXISTS
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:484:28: K_IF K_NOT K_EXISTS
                     {
                     match(input,K_IF,FOLLOW_K_IF_in_createKeyspaceStatement2120); 
                     match(input,K_NOT,FOLLOW_K_NOT_in_createKeyspaceStatement2122); 
@@ -2771,7 +2771,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "createTableStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:488:1: createTableStatement returns [CreateTableStatement.RawStatement expr] : K_CREATE K_COLUMNFAMILY ( K_IF K_NOT K_EXISTS )? cf= columnFamilyName cfamDefinition[expr] ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:488:1: createTableStatement returns [CreateTableStatement.RawStatement expr] : K_CREATE K_COLUMNFAMILY ( K_IF K_NOT K_EXISTS )? cf= columnFamilyName cfamDefinition[expr] ;
     public final CreateTableStatement.RawStatement createTableStatement() throws RecognitionException {
         CreateTableStatement.RawStatement expr = null;
 
@@ -2780,12 +2780,12 @@ public class CqlParser extends Parser {
 
          boolean ifNotExists = false; 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:497:5: ( K_CREATE K_COLUMNFAMILY ( K_IF K_NOT K_EXISTS )? cf= columnFamilyName cfamDefinition[expr] )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:497:7: K_CREATE K_COLUMNFAMILY ( K_IF K_NOT K_EXISTS )? cf= columnFamilyName cfamDefinition[expr]
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:497:5: ( K_CREATE K_COLUMNFAMILY ( K_IF K_NOT K_EXISTS )? cf= columnFamilyName cfamDefinition[expr] )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:497:7: K_CREATE K_COLUMNFAMILY ( K_IF K_NOT K_EXISTS )? cf= columnFamilyName cfamDefinition[expr]
             {
             match(input,K_CREATE,FOLLOW_K_CREATE_in_createTableStatement2178); 
             match(input,K_COLUMNFAMILY,FOLLOW_K_COLUMNFAMILY_in_createTableStatement2180); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:497:31: ( K_IF K_NOT K_EXISTS )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:497:31: ( K_IF K_NOT K_EXISTS )?
             int alt43=2;
             int LA43_0 = input.LA(1);
 
@@ -2794,7 +2794,7 @@ public class CqlParser extends Parser {
             }
             switch (alt43) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:497:32: K_IF K_NOT K_EXISTS
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:497:32: K_IF K_NOT K_EXISTS
                     {
                     match(input,K_IF,FOLLOW_K_IF_in_createTableStatement2183); 
                     match(input,K_NOT,FOLLOW_K_NOT_in_createTableStatement2185); 
@@ -2833,11 +2833,11 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "cfamDefinition"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:502:1: cfamDefinition[CreateTableStatement.RawStatement expr] : '(' cfamColumns[expr] ( ',' ( cfamColumns[expr] )? )* ')' ( K_WITH cfamProperty[expr] ( K_AND cfamProperty[expr] )* )? ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:502:1: cfamDefinition[CreateTableStatement.RawStatement expr] : '(' cfamColumns[expr] ( ',' ( cfamColumns[expr] )? )* ')' ( K_WITH cfamProperty[expr] ( K_AND cfamProperty[expr] )* )? ;
     public final void cfamDefinition(CreateTableStatement.RawStatement expr) throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:503:5: ( '(' cfamColumns[expr] ( ',' ( cfamColumns[expr] )? )* ')' ( K_WITH cfamProperty[expr] ( K_AND cfamProperty[expr] )* )? )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:503:7: '(' cfamColumns[expr] ( ',' ( cfamColumns[expr] )? )* ')' ( K_WITH cfamProperty[expr] ( K_AND cfamProperty[expr] )* )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:503:5: ( '(' cfamColumns[expr] ( ',' ( cfamColumns[expr] )? )* ')' ( K_WITH cfamProperty[expr] ( K_AND cfamProperty[expr] )* )? )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:503:7: '(' cfamColumns[expr] ( ',' ( cfamColumns[expr] )? )* ')' ( K_WITH cfamProperty[expr] ( K_AND cfamProperty[expr] )* )?
             {
             match(input,137,FOLLOW_137_in_cfamDefinition2231); 
             pushFollow(FOLLOW_cfamColumns_in_cfamDefinition2233);
@@ -2845,7 +2845,7 @@ public class CqlParser extends Parser {
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:503:29: ( ',' ( cfamColumns[expr] )? )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:503:29: ( ',' ( cfamColumns[expr] )? )*
             loop45:
             do {
                 int alt45=2;
@@ -2858,10 +2858,10 @@ public class CqlParser extends Parser {
 
                 switch (alt45) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:503:31: ',' ( cfamColumns[expr] )?
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:503:31: ',' ( cfamColumns[expr] )?
             	    {
             	    match(input,139,FOLLOW_139_in_cfamDefinition2238); 
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:503:35: ( cfamColumns[expr] )?
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:503:35: ( cfamColumns[expr] )?
             	    int alt44=2;
             	    int LA44_0 = input.LA(1);
 
@@ -2870,7 +2870,7 @@ public class CqlParser extends Parser {
             	    }
             	    switch (alt44) {
             	        case 1 :
-            	            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:503:35: cfamColumns[expr]
+            	            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:503:35: cfamColumns[expr]
             	            {
             	            pushFollow(FOLLOW_cfamColumns_in_cfamDefinition2240);
             	            cfamColumns(expr);
@@ -2893,7 +2893,7 @@ public class CqlParser extends Parser {
             } while (true);
 
             match(input,138,FOLLOW_138_in_cfamDefinition2247); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:504:7: ( K_WITH cfamProperty[expr] ( K_AND cfamProperty[expr] )* )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:504:7: ( K_WITH cfamProperty[expr] ( K_AND cfamProperty[expr] )* )?
             int alt47=2;
             int LA47_0 = input.LA(1);
 
@@ -2902,7 +2902,7 @@ public class CqlParser extends Parser {
             }
             switch (alt47) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:504:9: K_WITH cfamProperty[expr] ( K_AND cfamProperty[expr] )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:504:9: K_WITH cfamProperty[expr] ( K_AND cfamProperty[expr] )*
                     {
                     match(input,K_WITH,FOLLOW_K_WITH_in_cfamDefinition2257); 
                     pushFollow(FOLLOW_cfamProperty_in_cfamDefinition2259);
@@ -2910,7 +2910,7 @@ public class CqlParser extends Parser {
 
                     state._fsp--;
 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:504:35: ( K_AND cfamProperty[expr] )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:504:35: ( K_AND cfamProperty[expr] )*
                     loop46:
                     do {
                         int alt46=2;
@@ -2923,7 +2923,7 @@ public class CqlParser extends Parser {
 
                         switch (alt46) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:504:37: K_AND cfamProperty[expr]
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:504:37: K_AND cfamProperty[expr]
                     	    {
                     	    match(input,K_AND,FOLLOW_K_AND_in_cfamDefinition2264); 
                     	    pushFollow(FOLLOW_cfamProperty_in_cfamDefinition2266);
@@ -2962,7 +2962,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "cfamColumns"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:507:1: cfamColumns[CreateTableStatement.RawStatement expr] : (k= ident v= comparatorType ( K_STATIC )? ( K_PRIMARY K_KEY )? | K_PRIMARY K_KEY '(' pkDef[expr] ( ',' c= ident )* ')' );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:507:1: cfamColumns[CreateTableStatement.RawStatement expr] : (k= ident v= comparatorType ( K_STATIC )? ( K_PRIMARY K_KEY )? | K_PRIMARY K_KEY '(' pkDef[expr] ( ',' c= ident )* ')' );
     public final void cfamColumns(CreateTableStatement.RawStatement expr) throws RecognitionException {
         ColumnIdentifier k = null;
 
@@ -2972,7 +2972,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:508:5: (k= ident v= comparatorType ( K_STATIC )? ( K_PRIMARY K_KEY )? | K_PRIMARY K_KEY '(' pkDef[expr] ( ',' c= ident )* ')' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:508:5: (k= ident v= comparatorType ( K_STATIC )? ( K_PRIMARY K_KEY )? | K_PRIMARY K_KEY '(' pkDef[expr] ( ',' c= ident )* ')' )
             int alt51=2;
             int LA51_0 = input.LA(1);
 
@@ -2990,7 +2990,7 @@ public class CqlParser extends Parser {
             }
             switch (alt51) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:508:7: k= ident v= comparatorType ( K_STATIC )? ( K_PRIMARY K_KEY )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:508:7: k= ident v= comparatorType ( K_STATIC )? ( K_PRIMARY K_KEY )?
                     {
                     pushFollow(FOLLOW_ident_in_cfamColumns2292);
                     k=ident();
@@ -3003,7 +3003,7 @@ public class CqlParser extends Parser {
                     state._fsp--;
 
                      boolean isStatic=false; 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:508:60: ( K_STATIC )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:508:60: ( K_STATIC )?
                     int alt48=2;
                     int LA48_0 = input.LA(1);
 
@@ -3012,7 +3012,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt48) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:508:61: K_STATIC
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:508:61: K_STATIC
                             {
                             match(input,K_STATIC,FOLLOW_K_STATIC_in_cfamColumns2301); 
                             isStatic = true;
@@ -3023,7 +3023,7 @@ public class CqlParser extends Parser {
                     }
 
                      expr.addDefinition(k, v, isStatic); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:509:9: ( K_PRIMARY K_KEY )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:509:9: ( K_PRIMARY K_KEY )?
                     int alt49=2;
                     int LA49_0 = input.LA(1);
 
@@ -3032,7 +3032,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt49) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:509:10: K_PRIMARY K_KEY
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:509:10: K_PRIMARY K_KEY
                             {
                             match(input,K_PRIMARY,FOLLOW_K_PRIMARY_in_cfamColumns2318); 
                             match(input,K_KEY,FOLLOW_K_KEY_in_cfamColumns2320); 
@@ -3047,7 +3047,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:510:7: K_PRIMARY K_KEY '(' pkDef[expr] ( ',' c= ident )* ')'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:510:7: K_PRIMARY K_KEY '(' pkDef[expr] ( ',' c= ident )* ')'
                     {
                     match(input,K_PRIMARY,FOLLOW_K_PRIMARY_in_cfamColumns2332); 
                     match(input,K_KEY,FOLLOW_K_KEY_in_cfamColumns2334); 
@@ -3057,7 +3057,7 @@ public class CqlParser extends Parser {
 
                     state._fsp--;
 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:510:39: ( ',' c= ident )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:510:39: ( ',' c= ident )*
                     loop50:
                     do {
                         int alt50=2;
@@ -3070,7 +3070,7 @@ public class CqlParser extends Parser {
 
                         switch (alt50) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:510:40: ',' c= ident
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:510:40: ',' c= ident
                     	    {
                     	    match(input,139,FOLLOW_139_in_cfamColumns2342); 
                     	    pushFollow(FOLLOW_ident_in_cfamColumns2346);
@@ -3107,7 +3107,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "pkDef"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:513:1: pkDef[CreateTableStatement.RawStatement expr] : (k= ident | '(' k1= ident ( ',' kn= ident )* ')' );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:513:1: pkDef[CreateTableStatement.RawStatement expr] : (k= ident | '(' k1= ident ( ',' kn= ident )* ')' );
     public final void pkDef(CreateTableStatement.RawStatement expr) throws RecognitionException {
         ColumnIdentifier k = null;
 
@@ -3117,7 +3117,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:514:5: (k= ident | '(' k1= ident ( ',' kn= ident )* ')' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:514:5: (k= ident | '(' k1= ident ( ',' kn= ident )* ')' )
             int alt53=2;
             int LA53_0 = input.LA(1);
 
@@ -3135,7 +3135,7 @@ public class CqlParser extends Parser {
             }
             switch (alt53) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:514:7: k= ident
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:514:7: k= ident
                     {
                     pushFollow(FOLLOW_ident_in_pkDef2373);
                     k=ident();
@@ -3147,7 +3147,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:515:7: '(' k1= ident ( ',' kn= ident )* ')'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:515:7: '(' k1= ident ( ',' kn= ident )* ')'
                     {
                     match(input,137,FOLLOW_137_in_pkDef2383); 
                      List<ColumnIdentifier> l = new ArrayList<ColumnIdentifier>(); 
@@ -3157,7 +3157,7 @@ public class CqlParser extends Parser {
                     state._fsp--;
 
                      l.add(k1); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:515:101: ( ',' kn= ident )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:515:101: ( ',' kn= ident )*
                     loop52:
                     do {
                         int alt52=2;
@@ -3170,7 +3170,7 @@ public class CqlParser extends Parser {
 
                         switch (alt52) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:515:103: ',' kn= ident
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:515:103: ',' kn= ident
                     	    {
                     	    match(input,139,FOLLOW_139_in_pkDef2395); 
                     	    pushFollow(FOLLOW_ident_in_pkDef2399);
@@ -3208,10 +3208,10 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "cfamProperty"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:518:1: cfamProperty[CreateTableStatement.RawStatement expr] : ( property[expr.properties] | K_COMPACT K_STORAGE | K_CLUSTERING K_ORDER K_BY '(' cfamOrdering[expr] ( ',' cfamOrdering[expr] )* ')' );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:518:1: cfamProperty[CreateTableStatement.RawStatement expr] : ( property[expr.properties] | K_COMPACT K_STORAGE | K_CLUSTERING K_ORDER K_BY '(' cfamOrdering[expr] ( ',' cfamOrdering[expr] )* ')' );
     public final void cfamProperty(CreateTableStatement.RawStatement expr) throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:519:5: ( property[expr.properties] | K_COMPACT K_STORAGE | K_CLUSTERING K_ORDER K_BY '(' cfamOrdering[expr] ( ',' cfamOrdering[expr] )* ')' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:519:5: ( property[expr.properties] | K_COMPACT K_STORAGE | K_CLUSTERING K_ORDER K_BY '(' cfamOrdering[expr] ( ',' cfamOrdering[expr] )* ')' )
             int alt55=3;
             switch ( input.LA(1) ) {
             case K_DISTINCT:
@@ -3306,7 +3306,7 @@ public class CqlParser extends Parser {
 
             switch (alt55) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:519:7: property[expr.properties]
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:519:7: property[expr.properties]
                     {
                     pushFollow(FOLLOW_property_in_cfamProperty2426);
                     property(expr.properties);
@@ -3317,7 +3317,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:520:7: K_COMPACT K_STORAGE
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:520:7: K_COMPACT K_STORAGE
                     {
                     match(input,K_COMPACT,FOLLOW_K_COMPACT_in_cfamProperty2435); 
                     match(input,K_STORAGE,FOLLOW_K_STORAGE_in_cfamProperty2437); 
@@ -3326,7 +3326,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:521:7: K_CLUSTERING K_ORDER K_BY '(' cfamOrdering[expr] ( ',' cfamOrdering[expr] )* ')'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:521:7: K_CLUSTERING K_ORDER K_BY '(' cfamOrdering[expr] ( ',' cfamOrdering[expr] )* ')'
                     {
                     match(input,K_CLUSTERING,FOLLOW_K_CLUSTERING_in_cfamProperty2447); 
                     match(input,K_ORDER,FOLLOW_K_ORDER_in_cfamProperty2449); 
@@ -3337,7 +3337,7 @@ public class CqlParser extends Parser {
 
                     state._fsp--;
 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:521:56: ( ',' cfamOrdering[expr] )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:521:56: ( ',' cfamOrdering[expr] )*
                     loop54:
                     do {
                         int alt54=2;
@@ -3350,7 +3350,7 @@ public class CqlParser extends Parser {
 
                         switch (alt54) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:521:57: ',' cfamOrdering[expr]
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:521:57: ',' cfamOrdering[expr]
                     	    {
                     	    match(input,139,FOLLOW_139_in_cfamProperty2459); 
                     	    pushFollow(FOLLOW_cfamOrdering_in_cfamProperty2461);
@@ -3386,22 +3386,22 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "cfamOrdering"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:524:1: cfamOrdering[CreateTableStatement.RawStatement expr] : k= ident ( K_ASC | K_DESC ) ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:524:1: cfamOrdering[CreateTableStatement.RawStatement expr] : k= ident ( K_ASC | K_DESC ) ;
     public final void cfamOrdering(CreateTableStatement.RawStatement expr) throws RecognitionException {
         ColumnIdentifier k = null;
 
 
          boolean reversed=false; 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:526:5: (k= ident ( K_ASC | K_DESC ) )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:526:7: k= ident ( K_ASC | K_DESC )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:526:5: (k= ident ( K_ASC | K_DESC ) )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:526:7: k= ident ( K_ASC | K_DESC )
             {
             pushFollow(FOLLOW_ident_in_cfamOrdering2494);
             k=ident();
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:526:15: ( K_ASC | K_DESC )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:526:15: ( K_ASC | K_DESC )
             int alt56=2;
             int LA56_0 = input.LA(1);
 
@@ -3419,14 +3419,14 @@ public class CqlParser extends Parser {
             }
             switch (alt56) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:526:16: K_ASC
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:526:16: K_ASC
                     {
                     match(input,K_ASC,FOLLOW_K_ASC_in_cfamOrdering2497); 
 
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:526:24: K_DESC
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:526:24: K_DESC
                     {
                     match(input,K_DESC,FOLLOW_K_DESC_in_cfamOrdering2501); 
                      reversed=true;
@@ -3453,7 +3453,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "createIndexStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:529:1: createIndexStatement returns [CreateIndexStatement expr] : K_CREATE ( K_CUSTOM )? K_INDEX ( K_IF K_NOT K_EXISTS )? (idxName= IDENT )? K_ON cf= columnFamilyName '(' id= cident ')' ( K_USING cls= STRING_LITERAL )? ( K_WITH properties[props] )? ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:529:1: createIndexStatement returns [CreateIndexStatement expr] : K_CREATE ( K_CUSTOM )? K_INDEX ( K_IF K_NOT K_EXISTS )? (idxName= IDENT )? K_ON cf= columnFamilyName '(' id= cident ')' ( K_USING cls= STRING_LITERAL )? ( K_WITH properties[props] )? ;
     public final CreateIndexStatement createIndexStatement() throws RecognitionException {
         CreateIndexStatement expr = null;
 
@@ -3469,11 +3469,11 @@ public class CqlParser extends Parser {
                 boolean ifNotExists = false;
             
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:538:5: ( K_CREATE ( K_CUSTOM )? K_INDEX ( K_IF K_NOT K_EXISTS )? (idxName= IDENT )? K_ON cf= columnFamilyName '(' id= cident ')' ( K_USING cls= STRING_LITERAL )? ( K_WITH properties[props] )? )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:538:7: K_CREATE ( K_CUSTOM )? K_INDEX ( K_IF K_NOT K_EXISTS )? (idxName= IDENT )? K_ON cf= columnFamilyName '(' id= cident ')' ( K_USING cls= STRING_LITERAL )? ( K_WITH properties[props] )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:538:5: ( K_CREATE ( K_CUSTOM )? K_INDEX ( K_IF K_NOT K_EXISTS )? (idxName= IDENT )? K_ON cf= columnFamilyName '(' id= cident ')' ( K_USING cls= STRING_LITERAL )? ( K_WITH properties[props] )? )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:538:7: K_CREATE ( K_CUSTOM )? K_INDEX ( K_IF K_NOT K_EXISTS )? (idxName= IDENT )? K_ON cf= columnFamilyName '(' id= cident ')' ( K_USING cls= STRING_LITERAL )? ( K_WITH properties[props] )?
             {
             match(input,K_CREATE,FOLLOW_K_CREATE_in_createIndexStatement2539); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:538:16: ( K_CUSTOM )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:538:16: ( K_CUSTOM )?
             int alt57=2;
             int LA57_0 = input.LA(1);
 
@@ -3482,7 +3482,7 @@ public class CqlParser extends Parser {
             }
             switch (alt57) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:538:17: K_CUSTOM
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:538:17: K_CUSTOM
                     {
                     match(input,K_CUSTOM,FOLLOW_K_CUSTOM_in_createIndexStatement2542); 
                      props.isCustom = true; 
@@ -3493,7 +3493,7 @@ public class CqlParser extends Parser {
             }
 
             match(input,K_INDEX,FOLLOW_K_INDEX_in_createIndexStatement2548); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:538:63: ( K_IF K_NOT K_EXISTS )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:538:63: ( K_IF K_NOT K_EXISTS )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
@@ -3502,7 +3502,7 @@ public class CqlParser extends Parser {
             }
             switch (alt58) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:538:64: K_IF K_NOT K_EXISTS
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:538:64: K_IF K_NOT K_EXISTS
                     {
                     match(input,K_IF,FOLLOW_K_IF_in_createIndexStatement2551); 
                     match(input,K_NOT,FOLLOW_K_NOT_in_createIndexStatement2553); 
@@ -3514,7 +3514,7 @@ public class CqlParser extends Parser {
 
             }
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:539:9: (idxName= IDENT )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:539:9: (idxName= IDENT )?
             int alt59=2;
             int LA59_0 = input.LA(1);
 
@@ -3523,7 +3523,7 @@ public class CqlParser extends Parser {
             }
             switch (alt59) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:539:10: idxName= IDENT
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:539:10: idxName= IDENT
                     {
                     idxName=(Token)match(input,IDENT,FOLLOW_IDENT_in_createIndexStatement2573); 
 
@@ -3545,7 +3545,7 @@ public class CqlParser extends Parser {
             state._fsp--;
 
             match(input,138,FOLLOW_138_in_createIndexStatement2589); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:540:9: ( K_USING cls= STRING_LITERAL )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:540:9: ( K_USING cls= STRING_LITERAL )?
             int alt60=2;
             int LA60_0 = input.LA(1);
 
@@ -3554,7 +3554,7 @@ public class CqlParser extends Parser {
             }
             switch (alt60) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:540:10: K_USING cls= STRING_LITERAL
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:540:10: K_USING cls= STRING_LITERAL
                     {
                     match(input,K_USING,FOLLOW_K_USING_in_createIndexStatement2600); 
                     cls=(Token)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_createIndexStatement2604); 
@@ -3565,7 +3565,7 @@ public class CqlParser extends Parser {
 
             }
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:541:9: ( K_WITH properties[props] )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:541:9: ( K_WITH properties[props] )?
             int alt61=2;
             int LA61_0 = input.LA(1);
 
@@ -3574,7 +3574,7 @@ public class CqlParser extends Parser {
             }
             switch (alt61) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:541:10: K_WITH properties[props]
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:541:10: K_WITH properties[props]
                     {
                     match(input,K_WITH,FOLLOW_K_WITH_in_createIndexStatement2619); 
                     pushFollow(FOLLOW_properties_in_createIndexStatement2621);
@@ -3605,7 +3605,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "createTriggerStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:545:1: createTriggerStatement returns [CreateTriggerStatement expr] : K_CREATE K_TRIGGER (name= IDENT ) K_ON cf= columnFamilyName K_USING cls= STRING_LITERAL ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:545:1: createTriggerStatement returns [CreateTriggerStatement expr] : K_CREATE K_TRIGGER (name= IDENT ) K_ON cf= columnFamilyName K_USING cls= STRING_LITERAL ;
     public final CreateTriggerStatement createTriggerStatement() throws RecognitionException {
         CreateTriggerStatement expr = null;
 
@@ -3615,13 +3615,13 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:549:5: ( K_CREATE K_TRIGGER (name= IDENT ) K_ON cf= columnFamilyName K_USING cls= STRING_LITERAL )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:549:7: K_CREATE K_TRIGGER (name= IDENT ) K_ON cf= columnFamilyName K_USING cls= STRING_LITERAL
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:549:5: ( K_CREATE K_TRIGGER (name= IDENT ) K_ON cf= columnFamilyName K_USING cls= STRING_LITERAL )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:549:7: K_CREATE K_TRIGGER (name= IDENT ) K_ON cf= columnFamilyName K_USING cls= STRING_LITERAL
             {
             match(input,K_CREATE,FOLLOW_K_CREATE_in_createTriggerStatement2655); 
             match(input,K_TRIGGER,FOLLOW_K_TRIGGER_in_createTriggerStatement2657); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:549:26: (name= IDENT )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:549:27: name= IDENT
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:549:26: (name= IDENT )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:549:27: name= IDENT
             {
             name=(Token)match(input,IDENT,FOLLOW_IDENT_in_createTriggerStatement2662); 
 
@@ -3652,7 +3652,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "dropTriggerStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:553:1: dropTriggerStatement returns [DropTriggerStatement expr] : K_DROP K_TRIGGER (name= IDENT ) K_ON cf= columnFamilyName ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:553:1: dropTriggerStatement returns [DropTriggerStatement expr] : K_DROP K_TRIGGER (name= IDENT ) K_ON cf= columnFamilyName ;
     public final DropTriggerStatement dropTriggerStatement() throws RecognitionException {
         DropTriggerStatement expr = null;
 
@@ -3661,13 +3661,13 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:557:5: ( K_DROP K_TRIGGER (name= IDENT ) K_ON cf= columnFamilyName )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:557:7: K_DROP K_TRIGGER (name= IDENT ) K_ON cf= columnFamilyName
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:557:5: ( K_DROP K_TRIGGER (name= IDENT ) K_ON cf= columnFamilyName )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:557:7: K_DROP K_TRIGGER (name= IDENT ) K_ON cf= columnFamilyName
             {
             match(input,K_DROP,FOLLOW_K_DROP_in_dropTriggerStatement2706); 
             match(input,K_TRIGGER,FOLLOW_K_TRIGGER_in_dropTriggerStatement2708); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:557:24: (name= IDENT )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:557:25: name= IDENT
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:557:24: (name= IDENT )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:557:25: name= IDENT
             {
             name=(Token)match(input,IDENT,FOLLOW_IDENT_in_dropTriggerStatement2713); 
 
@@ -3696,7 +3696,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "alterKeyspaceStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:561:1: alterKeyspaceStatement returns [AlterKeyspaceStatement expr] : K_ALTER K_KEYSPACE ks= keyspaceName K_WITH properties[attrs] ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:561:1: alterKeyspaceStatement returns [AlterKeyspaceStatement expr] : K_ALTER K_KEYSPACE ks= keyspaceName K_WITH properties[attrs] ;
     public final AlterKeyspaceStatement alterKeyspaceStatement() throws RecognitionException {
         AlterKeyspaceStatement expr = null;
 
@@ -3705,8 +3705,8 @@ public class CqlParser extends Parser {
 
          KSPropDefs attrs = new KSPropDefs(); 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:566:5: ( K_ALTER K_KEYSPACE ks= keyspaceName K_WITH properties[attrs] )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:566:7: K_ALTER K_KEYSPACE ks= keyspaceName K_WITH properties[attrs]
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:566:5: ( K_ALTER K_KEYSPACE ks= keyspaceName K_WITH properties[attrs] )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:566:7: K_ALTER K_KEYSPACE ks= keyspaceName K_WITH properties[attrs]
             {
             match(input,K_ALTER,FOLLOW_K_ALTER_in_alterKeyspaceStatement2760); 
             match(input,K_KEYSPACE,FOLLOW_K_KEYSPACE_in_alterKeyspaceStatement2762); 
@@ -3738,7 +3738,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "alterTableStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:571:1: alterTableStatement returns [AlterTableStatement expr] : K_ALTER K_COLUMNFAMILY cf= columnFamilyName ( K_ALTER id= cident K_TYPE v= comparatorType | K_ADD id= cident v= comparatorType ( K_STATIC )? | K_DROP id= cident | K_WITH properties[props] | K_RENAME id1= cident K_TO toId1= cident ( K_AND idn= cident K_TO toIdn= cident )* ) ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:571:1: alterTableStatement returns [AlterTableStatement expr] : K_ALTER K_COLUMNFAMILY cf= columnFamilyName ( K_ALTER id= cident K_TYPE v= comparatorType | K_ADD id= cident v= comparatorType ( K_STATIC )? | K_DROP id= cident | K_WITH properties[props] | K_RENAME id1= cident K_TO toId1= cident ( K_AND idn= cident K_TO toIdn= cident )* ) ;
     public final AlterTableStatement alterTableStatement() throws RecognitionException {
         AlterTableStatement expr = null;
 
@@ -3764,8 +3764,8 @@ public class CqlParser extends Parser {
                 boolean isStatic = false;
             
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:585:5: ( K_ALTER K_COLUMNFAMILY cf= columnFamilyName ( K_ALTER id= cident K_TYPE v= comparatorType | K_ADD id= cident v= comparatorType ( K_STATIC )? | K_DROP id= cident | K_WITH properties[props] | K_RENAME id1= cident K_TO toId1= cident ( K_AND idn= cident K_TO toIdn= cident )* ) )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:585:7: K_ALTER K_COLUMNFAMILY cf= columnFamilyName ( K_ALTER id= cident K_TYPE v= comparatorType | K_ADD id= cident v= comparatorType ( K_STATIC )? | K_DROP id= cident | K_WITH properties[props] | K_RENAME id1= cident K_TO toId1= cident ( K_AND idn= cident K_TO toIdn= cident )* )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:585:5: ( K_ALTER K_COLUMNFAMILY cf= columnFamilyName ( K_ALTER id= cident K_TYPE v= comparatorType | K_ADD id= cident v= comparatorType ( K_STATIC )? | K_DROP id= cident | K_WITH properties[props] | K_RENAME id1= cident K_TO toId1= cident ( K_AND idn= cident K_TO toIdn= cident )* ) )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:585:7: K_ALTER K_COLUMNFAMILY cf= columnFamilyName ( K_ALTER id= cident K_TYPE v= comparatorType | K_ADD id= cident v= comparatorType ( K_STATIC )? | K_DROP id= cident | K_WITH properties[props] | K_RENAME id1= cident K_TO toId1= cident ( K_AND idn= cident K_TO toIdn= cident )* )
             {
             match(input,K_ALTER,FOLLOW_K_ALTER_in_alterTableStatement2814); 
             match(input,K_COLUMNFAMILY,FOLLOW_K_COLUMNFAMILY_in_alterTableStatement2816); 
@@ -3774,7 +3774,7 @@ public class CqlParser extends Parser {
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:586:11: ( K_ALTER id= cident K_TYPE v= comparatorType | K_ADD id= cident v= comparatorType ( K_STATIC )? | K_DROP id= cident | K_WITH properties[props] | K_RENAME id1= cident K_TO toId1= cident ( K_AND idn= cident K_TO toIdn= cident )* )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:586:11: ( K_ALTER id= cident K_TYPE v= comparatorType | K_ADD id= cident v= comparatorType ( K_STATIC )? | K_DROP id= cident | K_WITH properties[props] | K_RENAME id1= cident K_TO toId1= cident ( K_AND idn= cident K_TO toIdn= cident )* )
             int alt64=5;
             switch ( input.LA(1) ) {
             case K_ALTER:
@@ -3811,7 +3811,7 @@ public class CqlParser extends Parser {
 
             switch (alt64) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:586:13: K_ALTER id= cident K_TYPE v= comparatorType
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:586:13: K_ALTER id= cident K_TYPE v= comparatorType
                     {
                     match(input,K_ALTER,FOLLOW_K_ALTER_in_alterTableStatement2834); 
                     pushFollow(FOLLOW_cident_in_alterTableStatement2838);
@@ -3830,7 +3830,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:587:13: K_ADD id= cident v= comparatorType ( K_STATIC )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:587:13: K_ADD id= cident v= comparatorType ( K_STATIC )?
                     {
                     match(input,K_ADD,FOLLOW_K_ADD_in_alterTableStatement2860); 
                     pushFollow(FOLLOW_cident_in_alterTableStatement2866);
@@ -3843,7 +3843,7 @@ public class CqlParser extends Parser {
 
                     state._fsp--;
 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:587:48: ( K_STATIC )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:587:48: ( K_STATIC )?
                     int alt62=2;
                     int LA62_0 = input.LA(1);
 
@@ -3852,7 +3852,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt62) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:587:49: K_STATIC
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:587:49: K_STATIC
                             {
                              isStatic=true; 
                             match(input,K_STATIC,FOLLOW_K_STATIC_in_alterTableStatement2875); 
@@ -3867,7 +3867,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:588:13: K_DROP id= cident
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:588:13: K_DROP id= cident
                     {
                     match(input,K_DROP,FOLLOW_K_DROP_in_alterTableStatement2893); 
                     pushFollow(FOLLOW_cident_in_alterTableStatement2898);
@@ -3880,7 +3880,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:589:13: K_WITH properties[props]
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:589:13: K_WITH properties[props]
                     {
                     match(input,K_WITH,FOLLOW_K_WITH_in_alterTableStatement2938); 
                     pushFollow(FOLLOW_properties_in_alterTableStatement2941);
@@ -3893,7 +3893,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:590:13: K_RENAME id1= cident K_TO toId1= cident ( K_AND idn= cident K_TO toIdn= cident )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:590:13: K_RENAME id1= cident K_TO toId1= cident ( K_AND idn= cident K_TO toIdn= cident )*
                     {
                     match(input,K_RENAME,FOLLOW_K_RENAME_in_alterTableStatement2974); 
                      type = AlterTableStatement.Type.RENAME; 
@@ -3909,7 +3909,7 @@ public class CqlParser extends Parser {
                     state._fsp--;
 
                      renames.put(id1, toId1); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:592:16: ( K_AND idn= cident K_TO toIdn= cident )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:592:16: ( K_AND idn= cident K_TO toIdn= cident )*
                     loop63:
                     do {
                         int alt63=2;
@@ -3922,7 +3922,7 @@ public class CqlParser extends Parser {
 
                         switch (alt63) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:592:18: K_AND idn= cident K_TO toIdn= cident
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:592:18: K_AND idn= cident K_TO toIdn= cident
                     	    {
                     	    match(input,K_AND,FOLLOW_K_AND_in_alterTableStatement3055); 
                     	    pushFollow(FOLLOW_cident_in_alterTableStatement3059);
@@ -3971,7 +3971,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "dropKeyspaceStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:599:1: dropKeyspaceStatement returns [DropKeyspaceStatement ksp] : K_DROP K_KEYSPACE ( K_IF K_EXISTS )? ks= keyspaceName ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:599:1: dropKeyspaceStatement returns [DropKeyspaceStatement ksp] : K_DROP K_KEYSPACE ( K_IF K_EXISTS )? ks= keyspaceName ;
     public final DropKeyspaceStatement dropKeyspaceStatement() throws RecognitionException {
         DropKeyspaceStatement ksp = null;
 
@@ -3980,12 +3980,12 @@ public class CqlParser extends Parser {
 
          boolean ifExists = false; 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:604:5: ( K_DROP K_KEYSPACE ( K_IF K_EXISTS )? ks= keyspaceName )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:604:7: K_DROP K_KEYSPACE ( K_IF K_EXISTS )? ks= keyspaceName
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:604:5: ( K_DROP K_KEYSPACE ( K_IF K_EXISTS )? ks= keyspaceName )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:604:7: K_DROP K_KEYSPACE ( K_IF K_EXISTS )? ks= keyspaceName
             {
             match(input,K_DROP,FOLLOW_K_DROP_in_dropKeyspaceStatement3120); 
             match(input,K_KEYSPACE,FOLLOW_K_KEYSPACE_in_dropKeyspaceStatement3122); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:604:25: ( K_IF K_EXISTS )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:604:25: ( K_IF K_EXISTS )?
             int alt65=2;
             int LA65_0 = input.LA(1);
 
@@ -3994,7 +3994,7 @@ public class CqlParser extends Parser {
             }
             switch (alt65) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:604:26: K_IF K_EXISTS
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:604:26: K_IF K_EXISTS
                     {
                     match(input,K_IF,FOLLOW_K_IF_in_dropKeyspaceStatement3125); 
                     match(input,K_EXISTS,FOLLOW_K_EXISTS_in_dropKeyspaceStatement3127); 
@@ -4027,7 +4027,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "dropTableStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:607:1: dropTableStatement returns [DropTableStatement stmt] : K_DROP K_COLUMNFAMILY ( K_IF K_EXISTS )? cf= columnFamilyName ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:607:1: dropTableStatement returns [DropTableStatement stmt] : K_DROP K_COLUMNFAMILY ( K_IF K_EXISTS )? cf= columnFamilyName ;
     public final DropTableStatement dropTableStatement() throws RecognitionException {
         DropTableStatement stmt = null;
 
@@ -4036,12 +4036,12 @@ public class CqlParser extends Parser {
 
          boolean ifExists = false; 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:612:5: ( K_DROP K_COLUMNFAMILY ( K_IF K_EXISTS )? cf= columnFamilyName )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:612:7: K_DROP K_COLUMNFAMILY ( K_IF K_EXISTS )? cf= columnFamilyName
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:612:5: ( K_DROP K_COLUMNFAMILY ( K_IF K_EXISTS )? cf= columnFamilyName )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:612:7: K_DROP K_COLUMNFAMILY ( K_IF K_EXISTS )? cf= columnFamilyName
             {
             match(input,K_DROP,FOLLOW_K_DROP_in_dropTableStatement3170); 
             match(input,K_COLUMNFAMILY,FOLLOW_K_COLUMNFAMILY_in_dropTableStatement3172); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:612:29: ( K_IF K_EXISTS )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:612:29: ( K_IF K_EXISTS )?
             int alt66=2;
             int LA66_0 = input.LA(1);
 
@@ -4050,7 +4050,7 @@ public class CqlParser extends Parser {
             }
             switch (alt66) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:612:30: K_IF K_EXISTS
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:612:30: K_IF K_EXISTS
                     {
                     match(input,K_IF,FOLLOW_K_IF_in_dropTableStatement3175); 
                     match(input,K_EXISTS,FOLLOW_K_EXISTS_in_dropTableStatement3177); 
@@ -4083,7 +4083,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "dropIndexStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:615:1: dropIndexStatement returns [DropIndexStatement expr] : K_DROP K_INDEX ( K_IF K_EXISTS )? index= IDENT ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:615:1: dropIndexStatement returns [DropIndexStatement expr] : K_DROP K_INDEX ( K_IF K_EXISTS )? index= IDENT ;
     public final DropIndexStatement dropIndexStatement() throws RecognitionException {
         DropIndexStatement expr = null;
 
@@ -4091,12 +4091,12 @@ public class CqlParser extends Parser {
 
          boolean ifExists = false; 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:620:5: ( K_DROP K_INDEX ( K_IF K_EXISTS )? index= IDENT )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:620:7: K_DROP K_INDEX ( K_IF K_EXISTS )? index= IDENT
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:620:5: ( K_DROP K_INDEX ( K_IF K_EXISTS )? index= IDENT )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:620:7: K_DROP K_INDEX ( K_IF K_EXISTS )? index= IDENT
             {
             match(input,K_DROP,FOLLOW_K_DROP_in_dropIndexStatement3220); 
             match(input,K_INDEX,FOLLOW_K_INDEX_in_dropIndexStatement3222); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:620:22: ( K_IF K_EXISTS )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:620:22: ( K_IF K_EXISTS )?
             int alt67=2;
             int LA67_0 = input.LA(1);
 
@@ -4105,7 +4105,7 @@ public class CqlParser extends Parser {
             }
             switch (alt67) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:620:23: K_IF K_EXISTS
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:620:23: K_IF K_EXISTS
                     {
                     match(input,K_IF,FOLLOW_K_IF_in_dropIndexStatement3225); 
                     match(input,K_EXISTS,FOLLOW_K_EXISTS_in_dropIndexStatement3227); 
@@ -4134,7 +4134,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "truncateStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:624:1: truncateStatement returns [TruncateStatement stmt] : K_TRUNCATE cf= columnFamilyName ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:624:1: truncateStatement returns [TruncateStatement stmt] : K_TRUNCATE cf= columnFamilyName ;
     public final TruncateStatement truncateStatement() throws RecognitionException {
         TruncateStatement stmt = null;
 
@@ -4142,8 +4142,8 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:628:5: ( K_TRUNCATE cf= columnFamilyName )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:628:7: K_TRUNCATE cf= columnFamilyName
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:628:5: ( K_TRUNCATE cf= columnFamilyName )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:628:7: K_TRUNCATE cf= columnFamilyName
             {
             match(input,K_TRUNCATE,FOLLOW_K_TRUNCATE_in_truncateStatement3267); 
             pushFollow(FOLLOW_columnFamilyName_in_truncateStatement3271);
@@ -4168,7 +4168,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "grantStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:631:1: grantStatement returns [GrantStatement stmt] : K_GRANT permissionOrAll K_ON resource K_TO username ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:631:1: grantStatement returns [GrantStatement stmt] : K_GRANT permissionOrAll K_ON resource K_TO username ;
     public final GrantStatement grantStatement() throws RecognitionException {
         GrantStatement stmt = null;
 
@@ -4180,8 +4180,8 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:635:5: ( K_GRANT permissionOrAll K_ON resource K_TO username )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:635:7: K_GRANT permissionOrAll K_ON resource K_TO username
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:635:5: ( K_GRANT permissionOrAll K_ON resource K_TO username )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:635:7: K_GRANT permissionOrAll K_ON resource K_TO username
             {
             match(input,K_GRANT,FOLLOW_K_GRANT_in_grantStatement3296); 
             pushFollow(FOLLOW_permissionOrAll_in_grantStatement3308);
@@ -4218,7 +4218,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "revokeStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:644:1: revokeStatement returns [RevokeStatement stmt] : K_REVOKE permissionOrAll K_ON resource K_FROM username ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:644:1: revokeStatement returns [RevokeStatement stmt] : K_REVOKE permissionOrAll K_ON resource K_FROM username ;
     public final RevokeStatement revokeStatement() throws RecognitionException {
         RevokeStatement stmt = null;
 
@@ -4230,8 +4230,8 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:648:5: ( K_REVOKE permissionOrAll K_ON resource K_FROM username )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:648:7: K_REVOKE permissionOrAll K_ON resource K_FROM username
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:648:5: ( K_REVOKE permissionOrAll K_ON resource K_FROM username )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:648:7: K_REVOKE permissionOrAll K_ON resource K_FROM username
             {
             match(input,K_REVOKE,FOLLOW_K_REVOKE_in_revokeStatement3379); 
             pushFollow(FOLLOW_permissionOrAll_in_revokeStatement3391);
@@ -4268,7 +4268,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "listPermissionsStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:657:1: listPermissionsStatement returns [ListPermissionsStatement stmt] : K_LIST permissionOrAll ( K_ON resource )? ( K_OF username )? ( K_NORECURSIVE )? ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:657:1: listPermissionsStatement returns [ListPermissionsStatement stmt] : K_LIST permissionOrAll ( K_ON resource )? ( K_OF username )? ( K_NORECURSIVE )? ;
     public final ListPermissionsStatement listPermissionsStatement() throws RecognitionException {
         ListPermissionsStatement stmt = null;
 
@@ -4285,8 +4285,8 @@ public class CqlParser extends Parser {
                 boolean recursive = true;
             
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:663:5: ( K_LIST permissionOrAll ( K_ON resource )? ( K_OF username )? ( K_NORECURSIVE )? )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:663:7: K_LIST permissionOrAll ( K_ON resource )? ( K_OF username )? ( K_NORECURSIVE )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:663:5: ( K_LIST permissionOrAll ( K_ON resource )? ( K_OF username )? ( K_NORECURSIVE )? )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:663:7: K_LIST permissionOrAll ( K_ON resource )? ( K_OF username )? ( K_NORECURSIVE )?
             {
             match(input,K_LIST,FOLLOW_K_LIST_in_listPermissionsStatement3469); 
             pushFollow(FOLLOW_permissionOrAll_in_listPermissionsStatement3481);
@@ -4294,7 +4294,7 @@ public class CqlParser extends Parser {
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:665:7: ( K_ON resource )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:665:7: ( K_ON resource )?
             int alt68=2;
             int LA68_0 = input.LA(1);
 
@@ -4303,7 +4303,7 @@ public class CqlParser extends Parser {
             }
             switch (alt68) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:665:9: K_ON resource
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:665:9: K_ON resource
                     {
                     match(input,K_ON,FOLLOW_K_ON_in_listPermissionsStatement3491); 
                     pushFollow(FOLLOW_resource_in_listPermissionsStatement3493);
@@ -4318,7 +4318,7 @@ public class CqlParser extends Parser {
 
             }
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:666:7: ( K_OF username )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:666:7: ( K_OF username )?
             int alt69=2;
             int LA69_0 = input.LA(1);
 
@@ -4327,7 +4327,7 @@ public class CqlParser extends Parser {
             }
             switch (alt69) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:666:9: K_OF username
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:666:9: K_OF username
                     {
                     match(input,K_OF,FOLLOW_K_OF_in_listPermissionsStatement3508); 
                     pushFollow(FOLLOW_username_in_listPermissionsStatement3510);
@@ -4342,7 +4342,7 @@ public class CqlParser extends Parser {
 
             }
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:667:7: ( K_NORECURSIVE )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:667:7: ( K_NORECURSIVE )?
             int alt70=2;
             int LA70_0 = input.LA(1);
 
@@ -4351,7 +4351,7 @@ public class CqlParser extends Parser {
             }
             switch (alt70) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:667:9: K_NORECURSIVE
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:667:9: K_NORECURSIVE
                     {
                     match(input,K_NORECURSIVE,FOLLOW_K_NORECURSIVE_in_listPermissionsStatement3525); 
                      recursive = false; 
@@ -4378,15 +4378,15 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "permission"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:671:1: permission returns [Permission perm] : p= ( K_CREATE | K_ALTER | K_DROP | K_SELECT | K_MODIFY | K_AUTHORIZE ) ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:671:1: permission returns [Permission perm] : p= ( K_CREATE | K_ALTER | K_DROP | K_SELECT | K_MODIFY | K_AUTHORIZE ) ;
     public final Permission permission() throws RecognitionException {
         Permission perm = null;
 
         Token p=null;
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:672:5: (p= ( K_CREATE | K_ALTER | K_DROP | K_SELECT | K_MODIFY | K_AUTHORIZE ) )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:672:7: p= ( K_CREATE | K_ALTER | K_DROP | K_SELECT | K_MODIFY | K_AUTHORIZE )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:672:5: (p= ( K_CREATE | K_ALTER | K_DROP | K_SELECT | K_MODIFY | K_AUTHORIZE ) )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:672:7: p= ( K_CREATE | K_ALTER | K_DROP | K_SELECT | K_MODIFY | K_AUTHORIZE )
             {
             p=(Token)input.LT(1);
             if ( input.LA(1)==K_SELECT||input.LA(1)==K_CREATE||(input.LA(1)>=K_DROP && input.LA(1)<=K_ALTER)||(input.LA(1)>=K_MODIFY && input.LA(1)<=K_AUTHORIZE) ) {
@@ -4415,7 +4415,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "permissionOrAll"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:676:1: permissionOrAll returns [Set<Permission> perms] : ( K_ALL ( K_PERMISSIONS )? | p= permission ( K_PERMISSION )? );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:676:1: permissionOrAll returns [Set<Permission> perms] : ( K_ALL ( K_PERMISSIONS )? | p= permission ( K_PERMISSION )? );
     public final Set<Permission> permissionOrAll() throws RecognitionException {
         Set<Permission> perms = null;
 
@@ -4423,7 +4423,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:677:5: ( K_ALL ( K_PERMISSIONS )? | p= permission ( K_PERMISSION )? )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:677:5: ( K_ALL ( K_PERMISSIONS )? | p= permission ( K_PERMISSION )? )
             int alt73=2;
             int LA73_0 = input.LA(1);
 
@@ -4441,10 +4441,10 @@ public class CqlParser extends Parser {
             }
             switch (alt73) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:677:7: K_ALL ( K_PERMISSIONS )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:677:7: K_ALL ( K_PERMISSIONS )?
                     {
                     match(input,K_ALL,FOLLOW_K_ALL_in_permissionOrAll3610); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:677:13: ( K_PERMISSIONS )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:677:13: ( K_PERMISSIONS )?
                     int alt71=2;
                     int LA71_0 = input.LA(1);
 
@@ -4453,7 +4453,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt71) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:677:15: K_PERMISSIONS
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:677:15: K_PERMISSIONS
                             {
                             match(input,K_PERMISSIONS,FOLLOW_K_PERMISSIONS_in_permissionOrAll3614); 
 
@@ -4467,14 +4467,14 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:678:7: p= permission ( K_PERMISSION )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:678:7: p= permission ( K_PERMISSION )?
                     {
                     pushFollow(FOLLOW_permission_in_permissionOrAll3635);
                     p=permission();
 
                     state._fsp--;
 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:678:20: ( K_PERMISSION )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:678:20: ( K_PERMISSION )?
                     int alt72=2;
                     int LA72_0 = input.LA(1);
 
@@ -4483,7 +4483,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt72) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:678:22: K_PERMISSION
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:678:22: K_PERMISSION
                             {
                             match(input,K_PERMISSION,FOLLOW_K_PERMISSION_in_permissionOrAll3639); 
 
@@ -4511,7 +4511,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "resource"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:681:1: resource returns [IResource res] : r= dataResource ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:681:1: resource returns [IResource res] : r= dataResource ;
     public final IResource resource() throws RecognitionException {
         IResource res = null;
 
@@ -4519,8 +4519,8 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:682:5: (r= dataResource )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:682:7: r= dataResource
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:682:5: (r= dataResource )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:682:7: r= dataResource
             {
             pushFollow(FOLLOW_dataResource_in_resource3667);
             r=dataResource();
@@ -4544,7 +4544,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "dataResource"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:685:1: dataResource returns [DataResource res] : ( K_ALL K_KEYSPACES | K_KEYSPACE ks= keyspaceName | ( K_COLUMNFAMILY )? cf= columnFamilyName );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:685:1: dataResource returns [DataResource res] : ( K_ALL K_KEYSPACES | K_KEYSPACE ks= keyspaceName | ( K_COLUMNFAMILY )? cf= columnFamilyName );
     public final DataResource dataResource() throws RecognitionException {
         DataResource res = null;
 
@@ -4554,7 +4554,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:686:5: ( K_ALL K_KEYSPACES | K_KEYSPACE ks= keyspaceName | ( K_COLUMNFAMILY )? cf= columnFamilyName )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:686:5: ( K_ALL K_KEYSPACES | K_KEYSPACE ks= keyspaceName | ( K_COLUMNFAMILY )? cf= columnFamilyName )
             int alt75=3;
             switch ( input.LA(1) ) {
             case K_ALL:
@@ -4639,7 +4639,7 @@ public class CqlParser extends Parser {
 
             switch (alt75) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:686:7: K_ALL K_KEYSPACES
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:686:7: K_ALL K_KEYSPACES
                     {
                     match(input,K_ALL,FOLLOW_K_ALL_in_dataResource3690); 
                     match(input,K_KEYSPACES,FOLLOW_K_KEYSPACES_in_dataResource3692); 
@@ -4648,7 +4648,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:687:7: K_KEYSPACE ks= keyspaceName
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:687:7: K_KEYSPACE ks= keyspaceName
                     {
                     match(input,K_KEYSPACE,FOLLOW_K_KEYSPACE_in_dataResource3702); 
                     pushFollow(FOLLOW_keyspaceName_in_dataResource3708);
@@ -4661,9 +4661,9 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:688:7: ( K_COLUMNFAMILY )? cf= columnFamilyName
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:688:7: ( K_COLUMNFAMILY )? cf= columnFamilyName
                     {
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:688:7: ( K_COLUMNFAMILY )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:688:7: ( K_COLUMNFAMILY )?
                     int alt74=2;
                     int LA74_0 = input.LA(1);
 
@@ -4672,7 +4672,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt74) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:688:9: K_COLUMNFAMILY
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:688:9: K_COLUMNFAMILY
                             {
                             match(input,K_COLUMNFAMILY,FOLLOW_K_COLUMNFAMILY_in_dataResource3720); 
 
@@ -4705,7 +4705,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "createUserStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:692:1: createUserStatement returns [CreateUserStatement stmt] : K_CREATE K_USER ( K_IF K_NOT K_EXISTS )? username ( K_WITH userOptions[opts] )? ( K_SUPERUSER | K_NOSUPERUSER )? ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:692:1: createUserStatement returns [CreateUserStatement stmt] : K_CREATE K_USER ( K_IF K_NOT K_EXISTS )? username ( K_WITH userOptions[opts] )? ( K_SUPERUSER | K_NOSUPERUSER )? ;
     public final CreateUserStatement createUserStatement() throws RecognitionException {
         CreateUserStatement stmt = null;
 
@@ -4718,12 +4718,12 @@ public class CqlParser extends Parser {
                 boolean ifNotExists = false;
             
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:701:5: ( K_CREATE K_USER ( K_IF K_NOT K_EXISTS )? username ( K_WITH userOptions[opts] )? ( K_SUPERUSER | K_NOSUPERUSER )? )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:701:7: K_CREATE K_USER ( K_IF K_NOT K_EXISTS )? username ( K_WITH userOptions[opts] )? ( K_SUPERUSER | K_NOSUPERUSER )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:701:5: ( K_CREATE K_USER ( K_IF K_NOT K_EXISTS )? username ( K_WITH userOptions[opts] )? ( K_SUPERUSER | K_NOSUPERUSER )? )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:701:7: K_CREATE K_USER ( K_IF K_NOT K_EXISTS )? username ( K_WITH userOptions[opts] )? ( K_SUPERUSER | K_NOSUPERUSER )?
             {
             match(input,K_CREATE,FOLLOW_K_CREATE_in_createUserStatement3769); 
             match(input,K_USER,FOLLOW_K_USER_in_createUserStatement3771); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:701:23: ( K_IF K_NOT K_EXISTS )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:701:23: ( K_IF K_NOT K_EXISTS )?
             int alt76=2;
             int LA76_0 = input.LA(1);
 
@@ -4732,7 +4732,7 @@ public class CqlParser extends Parser {
             }
             switch (alt76) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:701:24: K_IF K_NOT K_EXISTS
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:701:24: K_IF K_NOT K_EXISTS
                     {
                     match(input,K_IF,FOLLOW_K_IF_in_createUserStatement3774); 
                     match(input,K_NOT,FOLLOW_K_NOT_in_createUserStatement3776); 
@@ -4749,7 +4749,7 @@ public class CqlParser extends Parser {
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:702:7: ( K_WITH userOptions[opts] )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:702:7: ( K_WITH userOptions[opts] )?
             int alt77=2;
             int LA77_0 = input.LA(1);
 
@@ -4758,7 +4758,7 @@ public class CqlParser extends Parser {
             }
             switch (alt77) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:702:9: K_WITH userOptions[opts]
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:702:9: K_WITH userOptions[opts]
                     {
                     match(input,K_WITH,FOLLOW_K_WITH_in_createUserStatement3794); 
                     pushFollow(FOLLOW_userOptions_in_createUserStatement3796);
@@ -4772,7 +4772,7 @@ public class CqlParser extends Parser {
 
             }
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:703:7: ( K_SUPERUSER | K_NOSUPERUSER )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:703:7: ( K_SUPERUSER | K_NOSUPERUSER )?
             int alt78=3;
             int LA78_0 = input.LA(1);
 
@@ -4784,7 +4784,7 @@ public class CqlParser extends Parser {
             }
             switch (alt78) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:703:9: K_SUPERUSER
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:703:9: K_SUPERUSER
                     {
                     match(input,K_SUPERUSER,FOLLOW_K_SUPERUSER_in_createUserStatement3810); 
                      superuser = true; 
@@ -4792,7 +4792,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:703:45: K_NOSUPERUSER
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:703:45: K_NOSUPERUSER
                     {
                     match(input,K_NOSUPERUSER,FOLLOW_K_NOSUPERUSER_in_createUserStatement3816); 
                      superuser = false; 
@@ -4819,7 +4819,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "alterUserStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:707:1: alterUserStatement returns [AlterUserStatement stmt] : K_ALTER K_USER username ( K_WITH userOptions[opts] )? ( K_SUPERUSER | K_NOSUPERUSER )? ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:707:1: alterUserStatement returns [AlterUserStatement stmt] : K_ALTER K_USER username ( K_WITH userOptions[opts] )? ( K_SUPERUSER | K_NOSUPERUSER )? ;
     public final AlterUserStatement alterUserStatement() throws RecognitionException {
         AlterUserStatement stmt = null;
 
@@ -4831,8 +4831,8 @@ public class CqlParser extends Parser {
                 Boolean superuser = null;
             
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:715:5: ( K_ALTER K_USER username ( K_WITH userOptions[opts] )? ( K_SUPERUSER | K_NOSUPERUSER )? )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:715:7: K_ALTER K_USER username ( K_WITH userOptions[opts] )? ( K_SUPERUSER | K_NOSUPERUSER )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:715:5: ( K_ALTER K_USER username ( K_WITH userOptions[opts] )? ( K_SUPERUSER | K_NOSUPERUSER )? )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:715:7: K_ALTER K_USER username ( K_WITH userOptions[opts] )? ( K_SUPERUSER | K_NOSUPERUSER )?
             {
             match(input,K_ALTER,FOLLOW_K_ALTER_in_alterUserStatement3861); 
             match(input,K_USER,FOLLOW_K_USER_in_alterUserStatement3863); 
@@ -4841,7 +4841,7 @@ public class CqlParser extends Parser {
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:716:7: ( K_WITH userOptions[opts] )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:716:7: ( K_WITH userOptions[opts] )?
             int alt79=2;
             int LA79_0 = input.LA(1);
 
@@ -4850,7 +4850,7 @@ public class CqlParser extends Parser {
             }
             switch (alt79) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:716:9: K_WITH userOptions[opts]
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:716:9: K_WITH userOptions[opts]
                     {
                     match(input,K_WITH,FOLLOW_K_WITH_in_alterUserStatement3875); 
                     pushFollow(FOLLOW_userOptions_in_alterUserStatement3877);
@@ -4864,7 +4864,7 @@ public class CqlParser extends Parser {
 
             }
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:717:7: ( K_SUPERUSER | K_NOSUPERUSER )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:717:7: ( K_SUPERUSER | K_NOSUPERUSER )?
             int alt80=3;
             int LA80_0 = input.LA(1);
 
@@ -4876,7 +4876,7 @@ public class CqlParser extends Parser {
             }
             switch (alt80) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:717:9: K_SUPERUSER
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:717:9: K_SUPERUSER
                     {
                     match(input,K_SUPERUSER,FOLLOW_K_SUPERUSER_in_alterUserStatement3891); 
                      superuser = true; 
@@ -4884,7 +4884,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:717:45: K_NOSUPERUSER
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:717:45: K_NOSUPERUSER
                     {
                     match(input,K_NOSUPERUSER,FOLLOW_K_NOSUPERUSER_in_alterUserStatement3897); 
                      superuser = false; 
@@ -4911,7 +4911,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "dropUserStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:721:1: dropUserStatement returns [DropUserStatement stmt] : K_DROP K_USER ( K_IF K_EXISTS )? username ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:721:1: dropUserStatement returns [DropUserStatement stmt] : K_DROP K_USER ( K_IF K_EXISTS )? username ;
     public final DropUserStatement dropUserStatement() throws RecognitionException {
         DropUserStatement stmt = null;
 
@@ -4920,12 +4920,12 @@ public class CqlParser extends Parser {
 
          boolean ifExists = false; 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:726:5: ( K_DROP K_USER ( K_IF K_EXISTS )? username )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:726:7: K_DROP K_USER ( K_IF K_EXISTS )? username
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:726:5: ( K_DROP K_USER ( K_IF K_EXISTS )? username )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:726:7: K_DROP K_USER ( K_IF K_EXISTS )? username
             {
             match(input,K_DROP,FOLLOW_K_DROP_in_dropUserStatement3942); 
             match(input,K_USER,FOLLOW_K_USER_in_dropUserStatement3944); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:726:21: ( K_IF K_EXISTS )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:726:21: ( K_IF K_EXISTS )?
             int alt81=2;
             int LA81_0 = input.LA(1);
 
@@ -4934,7 +4934,7 @@ public class CqlParser extends Parser {
             }
             switch (alt81) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:726:22: K_IF K_EXISTS
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:726:22: K_IF K_EXISTS
                     {
                     match(input,K_IF,FOLLOW_K_IF_in_dropUserStatement3947); 
                     match(input,K_EXISTS,FOLLOW_K_EXISTS_in_dropUserStatement3949); 
@@ -4967,13 +4967,13 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "listUsersStatement"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:729:1: listUsersStatement returns [ListUsersStatement stmt] : K_LIST K_USERS ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:729:1: listUsersStatement returns [ListUsersStatement stmt] : K_LIST K_USERS ;
     public final ListUsersStatement listUsersStatement() throws RecognitionException {
         ListUsersStatement stmt = null;
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:733:5: ( K_LIST K_USERS )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:733:7: K_LIST K_USERS
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:733:5: ( K_LIST K_USERS )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:733:7: K_LIST K_USERS
             {
             match(input,K_LIST,FOLLOW_K_LIST_in_listUsersStatement3980); 
             match(input,K_USERS,FOLLOW_K_USERS_in_listUsersStatement3982); 
@@ -4994,11 +4994,11 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "userOptions"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:736:1: userOptions[UserOptions opts] : userOption[opts] ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:736:1: userOptions[UserOptions opts] : userOption[opts] ;
     public final void userOptions(UserOptions opts) throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:737:5: ( userOption[opts] )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:737:7: userOption[opts]
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:737:5: ( userOption[opts] )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:737:7: userOption[opts]
             {
             pushFollow(FOLLOW_userOption_in_userOptions4002);
             userOption(opts);
@@ -5021,14 +5021,14 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "userOption"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:740:1: userOption[UserOptions opts] : k= K_PASSWORD v= STRING_LITERAL ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:740:1: userOption[UserOptions opts] : k= K_PASSWORD v= STRING_LITERAL ;
     public final void userOption(UserOptions opts) throws RecognitionException {
         Token k=null;
         Token v=null;
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:741:5: (k= K_PASSWORD v= STRING_LITERAL )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:741:7: k= K_PASSWORD v= STRING_LITERAL
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:741:5: (k= K_PASSWORD v= STRING_LITERAL )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:741:7: k= K_PASSWORD v= STRING_LITERAL
             {
             k=(Token)match(input,K_PASSWORD,FOLLOW_K_PASSWORD_in_userOption4023); 
             v=(Token)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_userOption4027); 
@@ -5049,7 +5049,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "cident"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:744:1: cident returns [ColumnIdentifier.Raw id] : (t= IDENT | t= QUOTED_NAME | k= unreserved_keyword );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:744:1: cident returns [ColumnIdentifier.Raw id] : (t= IDENT | t= QUOTED_NAME | k= unreserved_keyword );
     public final ColumnIdentifier.Raw cident() throws RecognitionException {
         ColumnIdentifier.Raw id = null;
 
@@ -5058,7 +5058,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:750:5: (t= IDENT | t= QUOTED_NAME | k= unreserved_keyword )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:750:5: (t= IDENT | t= QUOTED_NAME | k= unreserved_keyword )
             int alt82=3;
             switch ( input.LA(1) ) {
             case IDENT:
@@ -5127,7 +5127,7 @@ public class CqlParser extends Parser {
 
             switch (alt82) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:750:7: t= IDENT
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:750:7: t= IDENT
                     {
                     t=(Token)match(input,IDENT,FOLLOW_IDENT_in_cident4058); 
                      id = new ColumnIdentifier.Raw((t!=null?t.getText():null), false); 
@@ -5135,7 +5135,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:751:7: t= QUOTED_NAME
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:751:7: t= QUOTED_NAME
                     {
                     t=(Token)match(input,QUOTED_NAME,FOLLOW_QUOTED_NAME_in_cident4083); 
                      id = new ColumnIdentifier.Raw((t!=null?t.getText():null), true); 
@@ -5143,7 +5143,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:752:7: k= unreserved_keyword
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:752:7: k= unreserved_keyword
                     {
                     pushFollow(FOLLOW_unreserved_keyword_in_cident4102);
                     k=unreserved_keyword();
@@ -5169,7 +5169,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "ident"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:756:1: ident returns [ColumnIdentifier id] : (t= IDENT | t= QUOTED_NAME | k= unreserved_keyword );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:756:1: ident returns [ColumnIdentifier id] : (t= IDENT | t= QUOTED_NAME | k= unreserved_keyword );
     public final ColumnIdentifier ident() throws RecognitionException {
         ColumnIdentifier id = null;
 
@@ -5178,7 +5178,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:757:5: (t= IDENT | t= QUOTED_NAME | k= unreserved_keyword )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:757:5: (t= IDENT | t= QUOTED_NAME | k= unreserved_keyword )
             int alt83=3;
             switch ( input.LA(1) ) {
             case IDENT:
@@ -5247,7 +5247,7 @@ public class CqlParser extends Parser {
 
             switch (alt83) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:757:7: t= IDENT
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:757:7: t= IDENT
                     {
                     t=(Token)match(input,IDENT,FOLLOW_IDENT_in_ident4128); 
                      id = new ColumnIdentifier((t!=null?t.getText():null), false); 
@@ -5255,7 +5255,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:758:7: t= QUOTED_NAME
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:758:7: t= QUOTED_NAME
                     {
                     t=(Token)match(input,QUOTED_NAME,FOLLOW_QUOTED_NAME_in_ident4153); 
                      id = new ColumnIdentifier((t!=null?t.getText():null), true); 
@@ -5263,7 +5263,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:759:7: k= unreserved_keyword
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:759:7: k= unreserved_keyword
                     {
                     pushFollow(FOLLOW_unreserved_keyword_in_ident4172);
                     k=unreserved_keyword();
@@ -5289,14 +5289,14 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "keyspaceName"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:763:1: keyspaceName returns [String id] : cfOrKsName[name, true] ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:763:1: keyspaceName returns [String id] : cfOrKsName[name, true] ;
     public final String keyspaceName() throws RecognitionException {
         String id = null;
 
          CFName name = new CFName(); 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:765:5: ( cfOrKsName[name, true] )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:765:7: cfOrKsName[name, true]
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:765:5: ( cfOrKsName[name, true] )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:765:7: cfOrKsName[name, true]
             {
             pushFollow(FOLLOW_cfOrKsName_in_keyspaceName4205);
             cfOrKsName(name, true);
@@ -5320,21 +5320,21 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "columnFamilyName"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:768:1: columnFamilyName returns [CFName name] : ( cfOrKsName[name, true] '.' )? cfOrKsName[name, false] ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:768:1: columnFamilyName returns [CFName name] : ( cfOrKsName[name, true] '.' )? cfOrKsName[name, false] ;
     public final CFName columnFamilyName() throws RecognitionException {
         CFName name = null;
 
          name = new CFName(); 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:770:5: ( ( cfOrKsName[name, true] '.' )? cfOrKsName[name, false] )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:770:7: ( cfOrKsName[name, true] '.' )? cfOrKsName[name, false]
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:770:5: ( ( cfOrKsName[name, true] '.' )? cfOrKsName[name, false] )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:770:7: ( cfOrKsName[name, true] '.' )? cfOrKsName[name, false]
             {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:770:7: ( cfOrKsName[name, true] '.' )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:770:7: ( cfOrKsName[name, true] '.' )?
             int alt84=2;
             alt84 = dfa84.predict(input);
             switch (alt84) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:770:8: cfOrKsName[name, true] '.'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:770:8: cfOrKsName[name, true] '.'
                     {
                     pushFollow(FOLLOW_cfOrKsName_in_columnFamilyName4239);
                     cfOrKsName(name, true);
@@ -5369,14 +5369,14 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "cfOrKsName"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:773:1: cfOrKsName[CFName name, boolean isKs] : (t= IDENT | t= QUOTED_NAME | k= unreserved_keyword | QMARK );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:773:1: cfOrKsName[CFName name, boolean isKs] : (t= IDENT | t= QUOTED_NAME | k= unreserved_keyword | QMARK );
     public final void cfOrKsName(CFName name, boolean isKs) throws RecognitionException {
         Token t=null;
         String k = null;
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:774:5: (t= IDENT | t= QUOTED_NAME | k= unreserved_keyword | QMARK )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:774:5: (t= IDENT | t= QUOTED_NAME | k= unreserved_keyword | QMARK )
             int alt85=4;
             switch ( input.LA(1) ) {
             case IDENT:
@@ -5450,7 +5450,7 @@ public class CqlParser extends Parser {
 
             switch (alt85) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:774:7: t= IDENT
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:774:7: t= IDENT
                     {
                     t=(Token)match(input,IDENT,FOLLOW_IDENT_in_cfOrKsName4267); 
                      if (isKs) name.setKeyspace((t!=null?t.getText():null), false); else name.setColumnFamily((t!=null?t.getText():null), false); 
@@ -5458,7 +5458,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:775:7: t= QUOTED_NAME
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:775:7: t= QUOTED_NAME
                     {
                     t=(Token)match(input,QUOTED_NAME,FOLLOW_QUOTED_NAME_in_cfOrKsName4292); 
                      if (isKs) name.setKeyspace((t!=null?t.getText():null), true); else name.setColumnFamily((t!=null?t.getText():null), true); 
@@ -5466,7 +5466,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:776:7: k= unreserved_keyword
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:776:7: k= unreserved_keyword
                     {
                     pushFollow(FOLLOW_unreserved_keyword_in_cfOrKsName4311);
                     k=unreserved_keyword();
@@ -5478,7 +5478,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:777:7: QMARK
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:777:7: QMARK
                     {
                     match(input,QMARK,FOLLOW_QMARK_in_cfOrKsName4321); 
                     addRecognitionError("Bind variables cannot be used for keyspace or table names");
@@ -5500,14 +5500,14 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "constant"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:780:1: constant returns [Constants.Literal constant] : (t= STRING_LITERAL | t= INTEGER | t= FLOAT | t= BOOLEAN | t= UUID | t= HEXNUMBER | ( '-' )? t= ( K_NAN | K_INFINITY ) );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:780:1: constant returns [Constants.Literal constant] : (t= STRING_LITERAL | t= INTEGER | t= FLOAT | t= BOOLEAN | t= UUID | t= HEXNUMBER | ( '-' )? t= ( K_NAN | K_INFINITY ) );
     public final Constants.Literal constant() throws RecognitionException {
         Constants.Literal constant = null;
 
         Token t=null;
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:781:5: (t= STRING_LITERAL | t= INTEGER | t= FLOAT | t= BOOLEAN | t= UUID | t= HEXNUMBER | ( '-' )? t= ( K_NAN | K_INFINITY ) )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:781:5: (t= STRING_LITERAL | t= INTEGER | t= FLOAT | t= BOOLEAN | t= UUID | t= HEXNUMBER | ( '-' )? t= ( K_NAN | K_INFINITY ) )
             int alt87=7;
             switch ( input.LA(1) ) {
             case STRING_LITERAL:
@@ -5556,7 +5556,7 @@ public class CqlParser extends Parser {
 
             switch (alt87) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:781:7: t= STRING_LITERAL
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:781:7: t= STRING_LITERAL
                     {
                     t=(Token)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_constant4346); 
                      constant = Constants.Literal.string((t!=null?t.getText():null)); 
@@ -5564,7 +5564,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:782:7: t= INTEGER
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:782:7: t= INTEGER
                     {
                     t=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_constant4358); 
                      constant = Constants.Literal.integer((t!=null?t.getText():null)); 
@@ -5572,7 +5572,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:783:7: t= FLOAT
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:783:7: t= FLOAT
                     {
                     t=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_constant4377); 
                      constant = Constants.Literal.floatingPoint((t!=null?t.getText():null)); 
@@ -5580,7 +5580,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:784:7: t= BOOLEAN
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:784:7: t= BOOLEAN
                     {
                     t=(Token)match(input,BOOLEAN,FOLLOW_BOOLEAN_in_constant4398); 
                      constant = Constants.Literal.bool((t!=null?t.getText():null)); 
@@ -5588,7 +5588,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:785:7: t= UUID
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:785:7: t= UUID
                     {
                     t=(Token)match(input,UUID,FOLLOW_UUID_in_constant4417); 
                      constant = Constants.Literal.uuid((t!=null?t.getText():null)); 
@@ -5596,7 +5596,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:786:7: t= HEXNUMBER
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:786:7: t= HEXNUMBER
                     {
                     t=(Token)match(input,HEXNUMBER,FOLLOW_HEXNUMBER_in_constant4439); 
                      constant = Constants.Literal.hex((t!=null?t.getText():null)); 
@@ -5604,10 +5604,10 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:787:7: ( '-' )? t= ( K_NAN | K_INFINITY )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:787:7: ( '-' )? t= ( K_NAN | K_INFINITY )
                     {
                      String sign=""; 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:787:27: ( '-' )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:787:27: ( '-' )?
                     int alt86=2;
                     int LA86_0 = input.LA(1);
 
@@ -5616,7 +5616,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt86) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:787:28: '-'
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:787:28: '-'
                             {
                             match(input,144,FOLLOW_144_in_constant4457); 
                             sign = "-"; 
@@ -5655,7 +5655,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "map_literal"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:790:1: map_literal returns [Maps.Literal map] : '{' (k1= term ':' v1= term ( ',' kn= term ':' vn= term )* )? '}' ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:790:1: map_literal returns [Maps.Literal map] : '{' (k1= term ':' v1= term ( ',' kn= term ':' vn= term )* )? '}' ;
     public final Maps.Literal map_literal() throws RecognitionException {
         Maps.Literal map = null;
 
@@ -5669,12 +5669,12 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:791:5: ( '{' (k1= term ':' v1= term ( ',' kn= term ':' vn= term )* )? '}' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:791:7: '{' (k1= term ':' v1= term ( ',' kn= term ':' vn= term )* )? '}'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:791:5: ( '{' (k1= term ':' v1= term ( ',' kn= term ':' vn= term )* )? '}' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:791:7: '{' (k1= term ':' v1= term ( ',' kn= term ':' vn= term )* )? '}'
             {
             match(input,145,FOLLOW_145_in_map_literal4495); 
              List<Pair<Term.Raw, Term.Raw>> m = new ArrayList<Pair<Term.Raw, Term.Raw>>(); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:792:11: (k1= term ':' v1= term ( ',' kn= term ':' vn= term )* )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:792:11: (k1= term ':' v1= term ( ',' kn= term ':' vn= term )* )?
             int alt89=2;
             int LA89_0 = input.LA(1);
 
@@ -5683,7 +5683,7 @@ public class CqlParser extends Parser {
             }
             switch (alt89) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:792:13: k1= term ':' v1= term ( ',' kn= term ':' vn= term )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:792:13: k1= term ':' v1= term ( ',' kn= term ':' vn= term )*
                     {
                     pushFollow(FOLLOW_term_in_map_literal4513);
                     k1=term();
@@ -5697,7 +5697,7 @@ public class CqlParser extends Parser {
                     state._fsp--;
 
                      m.add(Pair.create(k1, v1)); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:792:65: ( ',' kn= term ':' vn= term )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:792:65: ( ',' kn= term ':' vn= term )*
                     loop88:
                     do {
                         int alt88=2;
@@ -5710,7 +5710,7 @@ public class CqlParser extends Parser {
 
                         switch (alt88) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:792:67: ',' kn= term ':' vn= term
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:792:67: ',' kn= term ':' vn= term
                     	    {
                     	    match(input,139,FOLLOW_139_in_map_literal4525); 
                     	    pushFollow(FOLLOW_term_in_map_literal4529);
@@ -5758,7 +5758,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "set_or_map"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:796:1: set_or_map[Term.Raw t] returns [Term.Raw value] : ( ':' v= term ( ',' kn= term ':' vn= term )* | ( ',' tn= term )* );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:796:1: set_or_map[Term.Raw t] returns [Term.Raw value] : ( ':' v= term ( ',' kn= term ':' vn= term )* | ( ',' tn= term )* );
     public final Term.Raw set_or_map(Term.Raw t) throws RecognitionException {
         Term.Raw value = null;
 
@@ -5772,7 +5772,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:797:5: ( ':' v= term ( ',' kn= term ':' vn= term )* | ( ',' tn= term )* )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:797:5: ( ':' v= term ( ',' kn= term ':' vn= term )* | ( ',' tn= term )* )
             int alt92=2;
             int LA92_0 = input.LA(1);
 
@@ -5790,7 +5790,7 @@ public class CqlParser extends Parser {
             }
             switch (alt92) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:797:7: ':' v= term ( ',' kn= term ':' vn= term )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:797:7: ':' v= term ( ',' kn= term ':' vn= term )*
                     {
                     match(input,146,FOLLOW_146_in_set_or_map4575); 
                     pushFollow(FOLLOW_term_in_set_or_map4579);
@@ -5799,7 +5799,7 @@ public class CqlParser extends Parser {
                     state._fsp--;
 
                      List<Pair<Term.Raw, Term.Raw>> m = new ArrayList<Pair<Term.Raw, Term.Raw>>(); m.add(Pair.create(t, v)); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:798:11: ( ',' kn= term ':' vn= term )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:798:11: ( ',' kn= term ':' vn= term )*
                     loop90:
                     do {
                         int alt90=2;
@@ -5812,7 +5812,7 @@ public class CqlParser extends Parser {
 
                         switch (alt90) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:798:13: ',' kn= term ':' vn= term
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:798:13: ',' kn= term ':' vn= term
                     	    {
                     	    match(input,139,FOLLOW_139_in_set_or_map4595); 
                     	    pushFollow(FOLLOW_term_in_set_or_map4599);
@@ -5841,10 +5841,10 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:800:7: ( ',' tn= term )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:800:7: ( ',' tn= term )*
                     {
                      List<Term.Raw> s = new ArrayList<Term.Raw>(); s.add(t); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:801:11: ( ',' tn= term )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:801:11: ( ',' tn= term )*
                     loop91:
                     do {
                         int alt91=2;
@@ -5857,7 +5857,7 @@ public class CqlParser extends Parser {
 
                         switch (alt91) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:801:13: ',' tn= term
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:801:13: ',' tn= term
                     	    {
                     	    match(input,139,FOLLOW_139_in_set_or_map4640); 
                     	    pushFollow(FOLLOW_term_in_set_or_map4644);
@@ -5894,7 +5894,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "collection_literal"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:805:1: collection_literal returns [Term.Raw value] : ( '[' (t1= term ( ',' tn= term )* )? ']' | '{' t= term v= set_or_map[t] '}' | '{' '}' );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:805:1: collection_literal returns [Term.Raw value] : ( '[' (t1= term ( ',' tn= term )* )? ']' | '{' t= term v= set_or_map[t] '}' | '{' '}' );
     public final Term.Raw collection_literal() throws RecognitionException {
         Term.Raw value = null;
 
@@ -5908,7 +5908,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:806:5: ( '[' (t1= term ( ',' tn= term )* )? ']' | '{' t= term v= set_or_map[t] '}' | '{' '}' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:806:5: ( '[' (t1= term ( ',' tn= term )* )? ']' | '{' t= term v= set_or_map[t] '}' | '{' '}' )
             int alt95=3;
             int LA95_0 = input.LA(1);
 
@@ -5939,11 +5939,11 @@ public class CqlParser extends Parser {
             }
             switch (alt95) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:806:7: '[' (t1= term ( ',' tn= term )* )? ']'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:806:7: '[' (t1= term ( ',' tn= term )* )? ']'
                     {
                     match(input,141,FOLLOW_141_in_collection_literal4678); 
                      List<Term.Raw> l = new ArrayList<Term.Raw>(); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:807:11: (t1= term ( ',' tn= term )* )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:807:11: (t1= term ( ',' tn= term )* )?
                     int alt94=2;
                     int LA94_0 = input.LA(1);
 
@@ -5952,7 +5952,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt94) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:807:13: t1= term ( ',' tn= term )*
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:807:13: t1= term ( ',' tn= term )*
                             {
                             pushFollow(FOLLOW_term_in_collection_literal4696);
                             t1=term();
@@ -5960,7 +5960,7 @@ public class CqlParser extends Parser {
                             state._fsp--;
 
                              l.add(t1); 
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:807:36: ( ',' tn= term )*
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:807:36: ( ',' tn= term )*
                             loop93:
                             do {
                                 int alt93=2;
@@ -5973,7 +5973,7 @@ public class CqlParser extends Parser {
 
                                 switch (alt93) {
                             	case 1 :
-                            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:807:38: ',' tn= term
+                            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:807:38: ',' tn= term
                             	    {
                             	    match(input,139,FOLLOW_139_in_collection_literal4702); 
                             	    pushFollow(FOLLOW_term_in_collection_literal4706);
@@ -6003,7 +6003,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:809:7: '{' t= term v= set_or_map[t] '}'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:809:7: '{' t= term v= set_or_map[t] '}'
                     {
                     match(input,145,FOLLOW_145_in_collection_literal4732); 
                     pushFollow(FOLLOW_term_in_collection_literal4736);
@@ -6022,7 +6022,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:812:7: '{' '}'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:812:7: '{' '}'
                     {
                     match(input,145,FOLLOW_145_in_collection_literal4763); 
                     match(input,147,FOLLOW_147_in_collection_literal4765); 
@@ -6045,7 +6045,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "value"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:815:1: value returns [Term.Raw value] : (c= constant | l= collection_literal | K_NULL | ':' id= ident | QMARK );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:815:1: value returns [Term.Raw value] : (c= constant | l= collection_literal | K_NULL | ':' id= ident | QMARK );
     public final Term.Raw value() throws RecognitionException {
         Term.Raw value = null;
 
@@ -6057,7 +6057,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:816:5: (c= constant | l= collection_literal | K_NULL | ':' id= ident | QMARK )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:816:5: (c= constant | l= collection_literal | K_NULL | ':' id= ident | QMARK )
             int alt96=5;
             switch ( input.LA(1) ) {
             case INTEGER:
@@ -6103,7 +6103,7 @@ public class CqlParser extends Parser {
 
             switch (alt96) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:816:7: c= constant
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:816:7: c= constant
                     {
                     pushFollow(FOLLOW_constant_in_value4790);
                     c=constant();
@@ -6115,7 +6115,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:817:7: l= collection_literal
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:817:7: l= collection_literal
                     {
                     pushFollow(FOLLOW_collection_literal_in_value4812);
                     l=collection_literal();
@@ -6127,7 +6127,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:818:7: K_NULL
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:818:7: K_NULL
                     {
                     match(input,K_NULL,FOLLOW_K_NULL_in_value4822); 
                      value = Constants.NULL_LITERAL; 
@@ -6135,7 +6135,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:819:7: ':' id= ident
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:819:7: ':' id= ident
                     {
                     match(input,146,FOLLOW_146_in_value4846); 
                     pushFollow(FOLLOW_ident_in_value4850);
@@ -6148,7 +6148,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:820:7: QMARK
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:820:7: QMARK
                     {
                     match(input,QMARK,FOLLOW_QMARK_in_value4868); 
                      value = newBindVariables(null); 
@@ -6170,7 +6170,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "intValue"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:823:1: intValue returns [Term.Raw value] : ( | t= INTEGER | ':' id= ident | QMARK );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:823:1: intValue returns [Term.Raw value] : ( | t= INTEGER | ':' id= ident | QMARK );
     public final Term.Raw intValue() throws RecognitionException {
         Term.Raw value = null;
 
@@ -6179,7 +6179,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:824:5: ( | t= INTEGER | ':' id= ident | QMARK )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:824:5: ( | t= INTEGER | ':' id= ident | QMARK )
             int alt97=4;
             switch ( input.LA(1) ) {
             case EOF:
@@ -6220,12 +6220,12 @@ public class CqlParser extends Parser {
 
             switch (alt97) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:825:5: 
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:825:5: 
                     {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:825:7: t= INTEGER
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:825:7: t= INTEGER
                     {
                     t=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_intValue4914); 
                      value = Constants.Literal.integer((t!=null?t.getText():null)); 
@@ -6233,7 +6233,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:826:7: ':' id= ident
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:826:7: ':' id= ident
                     {
                     match(input,146,FOLLOW_146_in_intValue4928); 
                     pushFollow(FOLLOW_ident_in_intValue4932);
@@ -6246,7 +6246,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:827:7: QMARK
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:827:7: QMARK
                     {
                     match(input,QMARK,FOLLOW_QMARK_in_intValue4943); 
                      value = newBindVariables(null); 
@@ -6268,7 +6268,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "functionName"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:830:1: functionName returns [String s] : (f= IDENT | u= unreserved_function_keyword | K_TOKEN );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:830:1: functionName returns [String s] : (f= IDENT | u= unreserved_function_keyword | K_TOKEN );
     public final String functionName() throws RecognitionException {
         String s = null;
 
@@ -6277,7 +6277,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:831:5: (f= IDENT | u= unreserved_function_keyword | K_TOKEN )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:831:5: (f= IDENT | u= unreserved_function_keyword | K_TOKEN )
             int alt98=3;
             switch ( input.LA(1) ) {
             case IDENT:
@@ -6343,7 +6343,7 @@ public class CqlParser extends Parser {
 
             switch (alt98) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:831:7: f= IDENT
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:831:7: f= IDENT
                     {
                     f=(Token)match(input,IDENT,FOLLOW_IDENT_in_functionName4976); 
                      s = (f!=null?f.getText():null); 
@@ -6351,7 +6351,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:832:7: u= unreserved_function_keyword
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:832:7: u= unreserved_function_keyword
                     {
                     pushFollow(FOLLOW_unreserved_function_keyword_in_functionName5010);
                     u=unreserved_function_keyword();
@@ -6363,7 +6363,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:833:7: K_TOKEN
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:833:7: K_TOKEN
                     {
                     match(input,K_TOKEN,FOLLOW_K_TOKEN_in_functionName5020); 
                      s = "token"; 
@@ -6385,7 +6385,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "functionArgs"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:836:1: functionArgs returns [List<Term.Raw> a] : ( '(' ')' | '(' t1= term ( ',' tn= term )* ')' );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:836:1: functionArgs returns [List<Term.Raw> a] : ( '(' ')' | '(' t1= term ( ',' tn= term )* ')' );
     public final List<Term.Raw> functionArgs() throws RecognitionException {
         List<Term.Raw> a = null;
 
@@ -6395,7 +6395,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:837:5: ( '(' ')' | '(' t1= term ( ',' tn= term )* ')' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:837:5: ( '(' ')' | '(' t1= term ( ',' tn= term )* ')' )
             int alt100=2;
             int LA100_0 = input.LA(1);
 
@@ -6423,7 +6423,7 @@ public class CqlParser extends Parser {
             }
             switch (alt100) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:837:7: '(' ')'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:837:7: '(' ')'
                     {
                     match(input,137,FOLLOW_137_in_functionArgs5065); 
                     match(input,138,FOLLOW_138_in_functionArgs5067); 
@@ -6432,7 +6432,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:838:7: '(' t1= term ( ',' tn= term )* ')'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:838:7: '(' t1= term ( ',' tn= term )* ')'
                     {
                     match(input,137,FOLLOW_137_in_functionArgs5077); 
                     pushFollow(FOLLOW_term_in_functionArgs5081);
@@ -6441,7 +6441,7 @@ public class CqlParser extends Parser {
                     state._fsp--;
 
                      List<Term.Raw> args = new ArrayList<Term.Raw>(); args.add(t1); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:839:11: ( ',' tn= term )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:839:11: ( ',' tn= term )*
                     loop99:
                     do {
                         int alt99=2;
@@ -6454,7 +6454,7 @@ public class CqlParser extends Parser {
 
                         switch (alt99) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:839:13: ',' tn= term
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:839:13: ',' tn= term
                     	    {
                     	    match(input,139,FOLLOW_139_in_functionArgs5097); 
                     	    pushFollow(FOLLOW_term_in_functionArgs5101);
@@ -6492,7 +6492,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "term"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:843:1: term returns [Term.Raw term] : (v= value | f= functionName args= functionArgs | '(' c= comparatorType ')' t= term );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:843:1: term returns [Term.Raw term] : (v= value | f= functionName args= functionArgs | '(' c= comparatorType ')' t= term );
     public final Term.Raw term() throws RecognitionException {
         Term.Raw term = null;
 
@@ -6508,7 +6508,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:844:5: (v= value | f= functionName args= functionArgs | '(' c= comparatorType ')' t= term )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:844:5: (v= value | f= functionName args= functionArgs | '(' c= comparatorType ')' t= term )
             int alt101=3;
             switch ( input.LA(1) ) {
             case INTEGER:
@@ -6589,7 +6589,7 @@ public class CqlParser extends Parser {
 
             switch (alt101) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:844:7: v= value
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:844:7: v= value
                     {
                     pushFollow(FOLLOW_value_in_term5140);
                     v=value();
@@ -6601,7 +6601,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:845:7: f= functionName args= functionArgs
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:845:7: f= functionName args= functionArgs
                     {
                     pushFollow(FOLLOW_functionName_in_term5177);
                     f=functionName();
@@ -6618,7 +6618,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:846:7: '(' c= comparatorType ')' t= term
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:846:7: '(' c= comparatorType ')' t= term
                     {
                     match(input,137,FOLLOW_137_in_term5191); 
                     pushFollow(FOLLOW_comparatorType_in_term5195);
@@ -6651,7 +6651,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "columnOperation"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:849:1: columnOperation[List<Pair<ColumnIdentifier.Raw, Operation.RawUpdate>> operations] : (key= cident '=' t= term ( '+' c= cident )? | key= cident '=' c= cident sig= ( '+' | '-' ) t= term | key= cident '=' c= cident i= INTEGER | key= cident '[' k= term ']' '=' t= term );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:849:1: columnOperation[List<Pair<ColumnIdentifier.Raw, Operation.RawUpdate>> operations] : (key= cident '=' t= term ( '+' c= cident )? | key= cident '=' c= cident sig= ( '+' | '-' ) t= term | key= cident '=' c= cident i= INTEGER | key= cident '[' k= term ']' '=' t= term );
     public final void columnOperation(List<Pair<ColumnIdentifier.Raw, Operation.RawUpdate>> operations) throws RecognitionException {
         Token sig=null;
         Token i=null;
@@ -6665,12 +6665,12 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:850:5: (key= cident '=' t= term ( '+' c= cident )? | key= cident '=' c= cident sig= ( '+' | '-' ) t= term | key= cident '=' c= cident i= INTEGER | key= cident '[' k= term ']' '=' t= term )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:850:5: (key= cident '=' t= term ( '+' c= cident )? | key= cident '=' c= cident sig= ( '+' | '-' ) t= term | key= cident '=' c= cident i= INTEGER | key= cident '[' k= term ']' '=' t= term )
             int alt103=4;
             alt103 = dfa103.predict(input);
             switch (alt103) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:850:7: key= cident '=' t= term ( '+' c= cident )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:850:7: key= cident '=' t= term ( '+' c= cident )?
                     {
                     pushFollow(FOLLOW_cident_in_columnOperation5224);
                     key=cident();
@@ -6683,7 +6683,7 @@ public class CqlParser extends Parser {
 
                     state._fsp--;
 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:850:29: ( '+' c= cident )?
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:850:29: ( '+' c= cident )?
                     int alt102=2;
                     int LA102_0 = input.LA(1);
 
@@ -6692,7 +6692,7 @@ public class CqlParser extends Parser {
                     }
                     switch (alt102) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:850:30: '+' c= cident
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:850:30: '+' c= cident
                             {
                             match(input,149,FOLLOW_149_in_columnOperation5233); 
                             pushFollow(FOLLOW_cident_in_columnOperation5237);
@@ -6722,7 +6722,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:863:7: key= cident '=' c= cident sig= ( '+' | '-' ) t= term
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:863:7: key= cident '=' c= cident sig= ( '+' | '-' ) t= term
                     {
                     pushFollow(FOLLOW_cident_in_columnOperation5258);
                     key=cident();
@@ -6759,7 +6759,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:869:7: key= cident '=' c= cident i= INTEGER
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:869:7: key= cident '=' c= cident i= INTEGER
                     {
                     pushFollow(FOLLOW_cident_in_columnOperation5296);
                     key=cident();
@@ -6784,7 +6784,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:877:7: key= cident '[' k= term ']' '=' t= term
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:877:7: key= cident '[' k= term ']' '=' t= term
                     {
                     pushFollow(FOLLOW_cident_in_columnOperation5324);
                     key=cident();
@@ -6825,7 +6825,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "columnCondition"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:883:1: columnCondition[List<Pair<ColumnIdentifier.Raw, ColumnCondition.Raw>> conditions] : (key= cident '=' t= term | key= cident '[' element= term ']' '=' t= term );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:883:1: columnCondition[List<Pair<ColumnIdentifier.Raw, ColumnCondition.Raw>> conditions] : (key= cident '=' t= term | key= cident '[' element= term ']' '=' t= term );
     public final void columnCondition(List<Pair<ColumnIdentifier.Raw, ColumnCondition.Raw>> conditions) throws RecognitionException {
         ColumnIdentifier.Raw key = null;
 
@@ -6835,12 +6835,12 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:885:5: (key= cident '=' t= term | key= cident '[' element= term ']' '=' t= term )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:885:5: (key= cident '=' t= term | key= cident '[' element= term ']' '=' t= term )
             int alt104=2;
             alt104 = dfa104.predict(input);
             switch (alt104) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:885:7: key= cident '=' t= term
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:885:7: key= cident '=' t= term
                     {
                     pushFollow(FOLLOW_cident_in_columnCondition5371);
                     key=cident();
@@ -6858,7 +6858,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:886:7: key= cident '[' element= term ']' '=' t= term
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:886:7: key= cident '[' element= term ']' '=' t= term
                     {
                     pushFollow(FOLLOW_cident_in_columnCondition5389);
                     key=cident();
@@ -6897,18 +6897,18 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "properties"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:889:1: properties[PropertyDefinitions props] : property[props] ( K_AND property[props] )* ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:889:1: properties[PropertyDefinitions props] : property[props] ( K_AND property[props] )* ;
     public final void properties(PropertyDefinitions props) throws RecognitionException {
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:890:5: ( property[props] ( K_AND property[props] )* )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:890:7: property[props] ( K_AND property[props] )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:890:5: ( property[props] ( K_AND property[props] )* )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:890:7: property[props] ( K_AND property[props] )*
             {
             pushFollow(FOLLOW_property_in_properties5424);
             property(props);
 
             state._fsp--;
 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:890:23: ( K_AND property[props] )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:890:23: ( K_AND property[props] )*
             loop105:
             do {
                 int alt105=2;
@@ -6921,7 +6921,7 @@ public class CqlParser extends Parser {
 
                 switch (alt105) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:890:24: K_AND property[props]
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:890:24: K_AND property[props]
             	    {
             	    match(input,K_AND,FOLLOW_K_AND_in_properties5428); 
             	    pushFollow(FOLLOW_property_in_properties5430);
@@ -6954,7 +6954,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "property"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:893:1: property[PropertyDefinitions props] : (k= ident '=' simple= propertyValue | k= ident '=' map= map_literal );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:893:1: property[PropertyDefinitions props] : (k= ident '=' simple= propertyValue | k= ident '=' map= map_literal );
     public final void property(PropertyDefinitions props) throws RecognitionException {
         ColumnIdentifier k = null;
 
@@ -6964,12 +6964,12 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:894:5: (k= ident '=' simple= propertyValue | k= ident '=' map= map_literal )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:894:5: (k= ident '=' simple= propertyValue | k= ident '=' map= map_literal )
             int alt106=2;
             alt106 = dfa106.predict(input);
             switch (alt106) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:894:7: k= ident '=' simple= propertyValue
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:894:7: k= ident '=' simple= propertyValue
                     {
                     pushFollow(FOLLOW_ident_in_property5453);
                     k=ident();
@@ -6987,7 +6987,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:895:7: k= ident '=' map= map_literal
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:895:7: k= ident '=' map= map_literal
                     {
                     pushFollow(FOLLOW_ident_in_property5471);
                     k=ident();
@@ -7019,7 +7019,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "propertyValue"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:898:1: propertyValue returns [String str] : (c= constant | u= unreserved_keyword );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:898:1: propertyValue returns [String str] : (c= constant | u= unreserved_keyword );
     public final String propertyValue() throws RecognitionException {
         String str = null;
 
@@ -7029,7 +7029,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:899:5: (c= constant | u= unreserved_keyword )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:899:5: (c= constant | u= unreserved_keyword )
             int alt107=2;
             int LA107_0 = input.LA(1);
 
@@ -7047,7 +7047,7 @@ public class CqlParser extends Parser {
             }
             switch (alt107) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:899:7: c= constant
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:899:7: c= constant
                     {
                     pushFollow(FOLLOW_constant_in_propertyValue5502);
                     c=constant();
@@ -7059,7 +7059,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:900:7: u= unreserved_keyword
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:900:7: u= unreserved_keyword
                     {
                     pushFollow(FOLLOW_unreserved_keyword_in_propertyValue5524);
                     u=unreserved_keyword();
@@ -7085,12 +7085,12 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "relationType"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:903:1: relationType returns [Relation.Type op] : ( '=' | '<' | '<=' | '>' | '>=' );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:903:1: relationType returns [Relation.Type op] : ( '=' | '<' | '<=' | '>' | '>=' );
     public final Relation.Type relationType() throws RecognitionException {
         Relation.Type op = null;
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:904:5: ( '=' | '<' | '<=' | '>' | '>=' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:904:5: ( '=' | '<' | '<=' | '>' | '>=' )
             int alt108=5;
             switch ( input.LA(1) ) {
             case 148:
@@ -7127,7 +7127,7 @@ public class CqlParser extends Parser {
 
             switch (alt108) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:904:7: '='
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:904:7: '='
                     {
                     match(input,148,FOLLOW_148_in_relationType5547); 
                      op = Relation.Type.EQ; 
@@ -7135,7 +7135,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:905:7: '<'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:905:7: '<'
                     {
                     match(input,150,FOLLOW_150_in_relationType5558); 
                      op = Relation.Type.LT; 
@@ -7143,7 +7143,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:906:7: '<='
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:906:7: '<='
                     {
                     match(input,151,FOLLOW_151_in_relationType5569); 
                      op = Relation.Type.LTE; 
@@ -7151,7 +7151,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:907:7: '>'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:907:7: '>'
                     {
                     match(input,152,FOLLOW_152_in_relationType5579); 
                      op = Relation.Type.GT; 
@@ -7159,7 +7159,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:908:7: '>='
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:908:7: '>='
                     {
                     match(input,153,FOLLOW_153_in_relationType5590); 
                      op = Relation.Type.GTE; 
@@ -7181,7 +7181,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "relation"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:911:1: relation[List<Relation> clauses] : (name= cident type= relationType t= term | K_TOKEN l= tupleOfIdentifiers type= relationType t= term | name= cident K_IN marker= inMarker | name= cident K_IN inValues= singleColumnInValues | ids= tupleOfIdentifiers ( K_IN ( '(' ')' | tupleInMarker= inMarkerForTuple | literals= tupleOfTupleLiterals | markers= tupleOfMarkersForTuples ) | type= relationType literal= tupleLiteral | type= relationType tupleMarker= markerForTuple ) | '(' relation[$clauses] ')' );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:911:1: relation[List<Relation> clauses] : (name= cident type= relationType t= term | K_TOKEN l= tupleOfIdentifiers type= relationType t= term | name= cident K_IN marker= inMarker | name= cident K_IN inValues= singleColumnInValues | ids= tupleOfIdentifiers ( K_IN ( '(' ')' | tupleInMarker= inMarkerForTuple | literals= tupleOfTupleLiterals | markers= tupleOfMarkersForTuples ) | type= relationType literal= tupleLiteral | type= relationType tupleMarker= markerForTuple ) | '(' relation[$clauses] ')' );
     public final void relation(List<Relation> clauses) throws RecognitionException {
         ColumnIdentifier.Raw name = null;
 
@@ -7209,12 +7209,12 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:912:5: (name= cident type= relationType t= term | K_TOKEN l= tupleOfIdentifiers type= relationType t= term | name= cident K_IN marker= inMarker | name= cident K_IN inValues= singleColumnInValues | ids= tupleOfIdentifiers ( K_IN ( '(' ')' | tupleInMarker= inMarkerForTuple | literals= tupleOfTupleLiterals | markers= tupleOfMarkersForTuples ) | type= relationType literal= tupleLiteral | type= relationType tupleMarker= markerForTuple ) | '(' relation[$clauses] ')' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:912:5: (name= cident type= relationType t= term | K_TOKEN l= tupleOfIdentifiers type= relationType t= term | name= cident K_IN marker= inMarker | name= cident K_IN inValues= singleColumnInValues | ids= tupleOfIdentifiers ( K_IN ( '(' ')' | tupleInMarker= inMarkerForTuple | literals= tupleOfTupleLiterals | markers= tupleOfMarkersForTuples ) | type= relationType literal= tupleLiteral | type= relationType tupleMarker= markerForTuple ) | '(' relation[$clauses] ')' )
             int alt111=6;
             alt111 = dfa111.predict(input);
             switch (alt111) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:912:7: name= cident type= relationType t= term
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:912:7: name= cident type= relationType t= term
                     {
                     pushFollow(FOLLOW_cident_in_relation5612);
                     name=cident();
@@ -7236,7 +7236,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:913:7: K_TOKEN l= tupleOfIdentifiers type= relationType t= term
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:913:7: K_TOKEN l= tupleOfIdentifiers type= relationType t= term
                     {
                     match(input,K_TOKEN,FOLLOW_K_TOKEN_in_relation5630); 
                     pushFollow(FOLLOW_tupleOfIdentifiers_in_relation5634);
@@ -7262,7 +7262,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:918:7: name= cident K_IN marker= inMarker
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:918:7: name= cident K_IN marker= inMarker
                     {
                     pushFollow(FOLLOW_cident_in_relation5662);
                     name=cident();
@@ -7280,7 +7280,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:920:7: name= cident K_IN inValues= singleColumnInValues
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:920:7: name= cident K_IN inValues= singleColumnInValues
                     {
                     pushFollow(FOLLOW_cident_in_relation5688);
                     name=cident();
@@ -7298,14 +7298,14 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:922:7: ids= tupleOfIdentifiers ( K_IN ( '(' ')' | tupleInMarker= inMarkerForTuple | literals= tupleOfTupleLiterals | markers= tupleOfMarkersForTuples ) | type= relationType literal= tupleLiteral | type= relationType tupleMarker= markerForTuple )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:922:7: ids= tupleOfIdentifiers ( K_IN ( '(' ')' | tupleInMarker= inMarkerForTuple | literals= tupleOfTupleLiterals | markers= tupleOfMarkersForTuples ) | type= relationType literal= tupleLiteral | type= relationType tupleMarker= markerForTuple )
                     {
                     pushFollow(FOLLOW_tupleOfIdentifiers_in_relation5714);
                     ids=tupleOfIdentifiers();
 
                     state._fsp--;
 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:923:7: ( K_IN ( '(' ')' | tupleInMarker= inMarkerForTuple | literals= tupleOfTupleLiterals | markers= tupleOfMarkersForTuples ) | type= relationType literal= tupleLiteral | type= relationType tupleMarker= markerForTuple )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:923:7: ( K_IN ( '(' ')' | tupleInMarker= inMarkerForTuple | literals= tupleOfTupleLiterals | markers= tupleOfMarkersForTuples ) | type= relationType literal= tupleLiteral | type= relationType tupleMarker= markerForTuple )
                     int alt110=3;
                     switch ( input.LA(1) ) {
                     case K_IN:
@@ -7412,10 +7412,10 @@ public class CqlParser extends Parser {
 
                     switch (alt110) {
                         case 1 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:923:9: K_IN ( '(' ')' | tupleInMarker= inMarkerForTuple | literals= tupleOfTupleLiterals | markers= tupleOfMarkersForTuples )
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:923:9: K_IN ( '(' ')' | tupleInMarker= inMarkerForTuple | literals= tupleOfTupleLiterals | markers= tupleOfMarkersForTuples )
                             {
                             match(input,K_IN,FOLLOW_K_IN_in_relation5724); 
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:924:11: ( '(' ')' | tupleInMarker= inMarkerForTuple | literals= tupleOfTupleLiterals | markers= tupleOfMarkersForTuples )
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:924:11: ( '(' ')' | tupleInMarker= inMarkerForTuple | literals= tupleOfTupleLiterals | markers= tupleOfMarkersForTuples )
                             int alt109=4;
                             int LA109_0 = input.LA(1);
 
@@ -7456,7 +7456,7 @@ public class CqlParser extends Parser {
                             }
                             switch (alt109) {
                                 case 1 :
-                                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:924:13: '(' ')'
+                                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:924:13: '(' ')'
                                     {
                                     match(input,137,FOLLOW_137_in_relation5738); 
                                     match(input,138,FOLLOW_138_in_relation5740); 
@@ -7465,7 +7465,7 @@ public class CqlParser extends Parser {
                                     }
                                     break;
                                 case 2 :
-                                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:926:13: tupleInMarker= inMarkerForTuple
+                                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:926:13: tupleInMarker= inMarkerForTuple
                                     {
                                     pushFollow(FOLLOW_inMarkerForTuple_in_relation5772);
                                     tupleInMarker=inMarkerForTuple();
@@ -7477,7 +7477,7 @@ public class CqlParser extends Parser {
                                     }
                                     break;
                                 case 3 :
-                                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:928:13: literals= tupleOfTupleLiterals
+                                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:928:13: literals= tupleOfTupleLiterals
                                     {
                                     pushFollow(FOLLOW_tupleOfTupleLiterals_in_relation5806);
                                     literals=tupleOfTupleLiterals();
@@ -7491,7 +7491,7 @@ public class CqlParser extends Parser {
                                     }
                                     break;
                                 case 4 :
-                                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:932:13: markers= tupleOfMarkersForTuples
+                                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:932:13: markers= tupleOfMarkersForTuples
                                     {
                                     pushFollow(FOLLOW_tupleOfMarkersForTuples_in_relation5840);
                                     markers=tupleOfMarkersForTuples();
@@ -7509,7 +7509,7 @@ public class CqlParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:935:9: type= relationType literal= tupleLiteral
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:935:9: type= relationType literal= tupleLiteral
                             {
                             pushFollow(FOLLOW_relationType_in_relation5882);
                             type=relationType();
@@ -7528,7 +7528,7 @@ public class CqlParser extends Parser {
                             }
                             break;
                         case 3 :
-                            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:939:9: type= relationType tupleMarker= markerForTuple
+                            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:939:9: type= relationType tupleMarker= markerForTuple
                             {
                             pushFollow(FOLLOW_relationType_in_relation5912);
                             type=relationType();
@@ -7551,7 +7551,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:942:7: '(' relation[$clauses] ')'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:942:7: '(' relation[$clauses] ')'
                     {
                     match(input,137,FOLLOW_137_in_relation5946); 
                     pushFollow(FOLLOW_relation_in_relation5948);
@@ -7578,7 +7578,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "inMarker"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:945:1: inMarker returns [AbstractMarker.INRaw marker] : ( QMARK | ':' name= ident );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:945:1: inMarker returns [AbstractMarker.INRaw marker] : ( QMARK | ':' name= ident );
     public final AbstractMarker.INRaw inMarker() throws RecognitionException {
         AbstractMarker.INRaw marker = null;
 
@@ -7586,7 +7586,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:946:5: ( QMARK | ':' name= ident )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:946:5: ( QMARK | ':' name= ident )
             int alt112=2;
             int LA112_0 = input.LA(1);
 
@@ -7604,7 +7604,7 @@ public class CqlParser extends Parser {
             }
             switch (alt112) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:946:7: QMARK
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:946:7: QMARK
                     {
                     match(input,QMARK,FOLLOW_QMARK_in_inMarker5972); 
                      marker = newINBindVariables(null); 
@@ -7612,7 +7612,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:947:7: ':' name= ident
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:947:7: ':' name= ident
                     {
                     match(input,146,FOLLOW_146_in_inMarker5982); 
                     pushFollow(FOLLOW_ident_in_inMarker5986);
@@ -7639,7 +7639,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "tupleOfIdentifiers"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:950:1: tupleOfIdentifiers returns [List<ColumnIdentifier.Raw> ids] : '(' n1= cident ( ',' ni= cident )* ')' ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:950:1: tupleOfIdentifiers returns [List<ColumnIdentifier.Raw> ids] : '(' n1= cident ( ',' ni= cident )* ')' ;
     public final List<ColumnIdentifier.Raw> tupleOfIdentifiers() throws RecognitionException {
         List<ColumnIdentifier.Raw> ids = null;
 
@@ -7650,8 +7650,8 @@ public class CqlParser extends Parser {
 
          ids = new ArrayList<ColumnIdentifier.Raw>(); 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:952:5: ( '(' n1= cident ( ',' ni= cident )* ')' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:952:7: '(' n1= cident ( ',' ni= cident )* ')'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:952:5: ( '(' n1= cident ( ',' ni= cident )* ')' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:952:7: '(' n1= cident ( ',' ni= cident )* ')'
             {
             match(input,137,FOLLOW_137_in_tupleOfIdentifiers6018); 
             pushFollow(FOLLOW_cident_in_tupleOfIdentifiers6022);
@@ -7660,7 +7660,7 @@ public class CqlParser extends Parser {
             state._fsp--;
 
              ids.add(n1); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:952:39: ( ',' ni= cident )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:952:39: ( ',' ni= cident )*
             loop113:
             do {
                 int alt113=2;
@@ -7673,7 +7673,7 @@ public class CqlParser extends Parser {
 
                 switch (alt113) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:952:40: ',' ni= cident
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:952:40: ',' ni= cident
             	    {
             	    match(input,139,FOLLOW_139_in_tupleOfIdentifiers6027); 
             	    pushFollow(FOLLOW_cident_in_tupleOfIdentifiers6031);
@@ -7708,7 +7708,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "singleColumnInValues"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:955:1: singleColumnInValues returns [List<Term.Raw> terms] : '(' (t1= term ( ',' ti= term )* )? ')' ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:955:1: singleColumnInValues returns [List<Term.Raw> terms] : '(' (t1= term ( ',' ti= term )* )? ')' ;
     public final List<Term.Raw> singleColumnInValues() throws RecognitionException {
         List<Term.Raw> terms = null;
 
@@ -7719,11 +7719,11 @@ public class CqlParser extends Parser {
 
          terms = new ArrayList<Term.Raw>(); 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:957:5: ( '(' (t1= term ( ',' ti= term )* )? ')' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:957:7: '(' (t1= term ( ',' ti= term )* )? ')'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:957:5: ( '(' (t1= term ( ',' ti= term )* )? ')' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:957:7: '(' (t1= term ( ',' ti= term )* )? ')'
             {
             match(input,137,FOLLOW_137_in_singleColumnInValues6067); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:957:11: (t1= term ( ',' ti= term )* )?
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:957:11: (t1= term ( ',' ti= term )* )?
             int alt115=2;
             int LA115_0 = input.LA(1);
 
@@ -7732,7 +7732,7 @@ public class CqlParser extends Parser {
             }
             switch (alt115) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:957:13: t1= term ( ',' ti= term )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:957:13: t1= term ( ',' ti= term )*
                     {
                     pushFollow(FOLLOW_term_in_singleColumnInValues6075);
                     t1=term();
@@ -7740,7 +7740,7 @@ public class CqlParser extends Parser {
                     state._fsp--;
 
                      terms.add(t1); 
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:957:43: ( ',' ti= term )*
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:957:43: ( ',' ti= term )*
                     loop114:
                     do {
                         int alt114=2;
@@ -7753,7 +7753,7 @@ public class CqlParser extends Parser {
 
                         switch (alt114) {
                     	case 1 :
-                    	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:957:44: ',' ti= term
+                    	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:957:44: ',' ti= term
                     	    {
                     	    match(input,139,FOLLOW_139_in_singleColumnInValues6080); 
                     	    pushFollow(FOLLOW_term_in_singleColumnInValues6084);
@@ -7794,7 +7794,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "tupleLiteral"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:960:1: tupleLiteral returns [Tuples.Literal literal] : '(' t1= term ( ',' ti= term )* ')' ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:960:1: tupleLiteral returns [Tuples.Literal literal] : '(' t1= term ( ',' ti= term )* ')' ;
     public final Tuples.Literal tupleLiteral() throws RecognitionException {
         Tuples.Literal literal = null;
 
@@ -7805,8 +7805,8 @@ public class CqlParser extends Parser {
 
          List<Term.Raw> terms = new ArrayList<>(); 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:962:5: ( '(' t1= term ( ',' ti= term )* ')' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:962:7: '(' t1= term ( ',' ti= term )* ')'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:962:5: ( '(' t1= term ( ',' ti= term )* ')' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:962:7: '(' t1= term ( ',' ti= term )* ')'
             {
             match(input,137,FOLLOW_137_in_tupleLiteral6123); 
             pushFollow(FOLLOW_term_in_tupleLiteral6127);
@@ -7815,7 +7815,7 @@ public class CqlParser extends Parser {
             state._fsp--;
 
              terms.add(t1); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:962:38: ( ',' ti= term )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:962:38: ( ',' ti= term )*
             loop116:
             do {
                 int alt116=2;
@@ -7828,7 +7828,7 @@ public class CqlParser extends Parser {
 
                 switch (alt116) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:962:39: ',' ti= term
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:962:39: ',' ti= term
             	    {
             	    match(input,139,FOLLOW_139_in_tupleLiteral6132); 
             	    pushFollow(FOLLOW_term_in_tupleLiteral6136);
@@ -7864,7 +7864,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "tupleOfTupleLiterals"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:965:1: tupleOfTupleLiterals returns [List<Tuples.Literal> literals] : '(' t1= tupleLiteral ( ',' ti= tupleLiteral )* ')' ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:965:1: tupleOfTupleLiterals returns [List<Tuples.Literal> literals] : '(' t1= tupleLiteral ( ',' ti= tupleLiteral )* ')' ;
     public final List<Tuples.Literal> tupleOfTupleLiterals() throws RecognitionException {
         List<Tuples.Literal> literals = null;
 
@@ -7875,8 +7875,8 @@ public class CqlParser extends Parser {
 
          literals = new ArrayList<>(); 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:967:5: ( '(' t1= tupleLiteral ( ',' ti= tupleLiteral )* ')' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:967:7: '(' t1= tupleLiteral ( ',' ti= tupleLiteral )* ')'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:967:5: ( '(' t1= tupleLiteral ( ',' ti= tupleLiteral )* ')' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:967:7: '(' t1= tupleLiteral ( ',' ti= tupleLiteral )* ')'
             {
             match(input,137,FOLLOW_137_in_tupleOfTupleLiterals6174); 
             pushFollow(FOLLOW_tupleLiteral_in_tupleOfTupleLiterals6178);
@@ -7885,7 +7885,7 @@ public class CqlParser extends Parser {
             state._fsp--;
 
              literals.add(t1); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:967:50: ( ',' ti= tupleLiteral )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:967:50: ( ',' ti= tupleLiteral )*
             loop117:
             do {
                 int alt117=2;
@@ -7898,7 +7898,7 @@ public class CqlParser extends Parser {
 
                 switch (alt117) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:967:51: ',' ti= tupleLiteral
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:967:51: ',' ti= tupleLiteral
             	    {
             	    match(input,139,FOLLOW_139_in_tupleOfTupleLiterals6183); 
             	    pushFollow(FOLLOW_tupleLiteral_in_tupleOfTupleLiterals6187);
@@ -7933,7 +7933,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "markerForTuple"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:970:1: markerForTuple returns [Tuples.Raw marker] : ( QMARK | ':' name= ident );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:970:1: markerForTuple returns [Tuples.Raw marker] : ( QMARK | ':' name= ident );
     public final Tuples.Raw markerForTuple() throws RecognitionException {
         Tuples.Raw marker = null;
 
@@ -7941,7 +7941,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:971:5: ( QMARK | ':' name= ident )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:971:5: ( QMARK | ':' name= ident )
             int alt118=2;
             int LA118_0 = input.LA(1);
 
@@ -7959,7 +7959,7 @@ public class CqlParser extends Parser {
             }
             switch (alt118) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:971:7: QMARK
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:971:7: QMARK
                     {
                     match(input,QMARK,FOLLOW_QMARK_in_markerForTuple6214); 
                      marker = newTupleBindVariables(null); 
@@ -7967,7 +7967,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:972:7: ':' name= ident
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:972:7: ':' name= ident
                     {
                     match(input,146,FOLLOW_146_in_markerForTuple6224); 
                     pushFollow(FOLLOW_ident_in_markerForTuple6228);
@@ -7994,7 +7994,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "tupleOfMarkersForTuples"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:975:1: tupleOfMarkersForTuples returns [List<Tuples.Raw> markers] : '(' m1= markerForTuple ( ',' mi= markerForTuple )* ')' ;
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:975:1: tupleOfMarkersForTuples returns [List<Tuples.Raw> markers] : '(' m1= markerForTuple ( ',' mi= markerForTuple )* ')' ;
     public final List<Tuples.Raw> tupleOfMarkersForTuples() throws RecognitionException {
         List<Tuples.Raw> markers = null;
 
@@ -8005,8 +8005,8 @@ public class CqlParser extends Parser {
 
          markers = new ArrayList<Tuples.Raw>(); 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:977:5: ( '(' m1= markerForTuple ( ',' mi= markerForTuple )* ')' )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:977:7: '(' m1= markerForTuple ( ',' mi= markerForTuple )* ')'
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:977:5: ( '(' m1= markerForTuple ( ',' mi= markerForTuple )* ')' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:977:7: '(' m1= markerForTuple ( ',' mi= markerForTuple )* ')'
             {
             match(input,137,FOLLOW_137_in_tupleOfMarkersForTuples6260); 
             pushFollow(FOLLOW_markerForTuple_in_tupleOfMarkersForTuples6264);
@@ -8015,7 +8015,7 @@ public class CqlParser extends Parser {
             state._fsp--;
 
              markers.add(m1); 
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:977:51: ( ',' mi= markerForTuple )*
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:977:51: ( ',' mi= markerForTuple )*
             loop119:
             do {
                 int alt119=2;
@@ -8028,7 +8028,7 @@ public class CqlParser extends Parser {
 
                 switch (alt119) {
             	case 1 :
-            	    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:977:52: ',' mi= markerForTuple
+            	    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:977:52: ',' mi= markerForTuple
             	    {
             	    match(input,139,FOLLOW_139_in_tupleOfMarkersForTuples6269); 
             	    pushFollow(FOLLOW_markerForTuple_in_tupleOfMarkersForTuples6273);
@@ -8063,7 +8063,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "inMarkerForTuple"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:980:1: inMarkerForTuple returns [Tuples.INRaw marker] : ( QMARK | ':' name= ident );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:980:1: inMarkerForTuple returns [Tuples.INRaw marker] : ( QMARK | ':' name= ident );
     public final Tuples.INRaw inMarkerForTuple() throws RecognitionException {
         Tuples.INRaw marker = null;
 
@@ -8071,7 +8071,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:981:5: ( QMARK | ':' name= ident )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:981:5: ( QMARK | ':' name= ident )
             int alt120=2;
             int LA120_0 = input.LA(1);
 
@@ -8089,7 +8089,7 @@ public class CqlParser extends Parser {
             }
             switch (alt120) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:981:7: QMARK
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:981:7: QMARK
                     {
                     match(input,QMARK,FOLLOW_QMARK_in_inMarkerForTuple6300); 
                      marker = newTupleINBindVariables(null); 
@@ -8097,7 +8097,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:982:7: ':' name= ident
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:982:7: ':' name= ident
                     {
                     match(input,146,FOLLOW_146_in_inMarkerForTuple6310); 
                     pushFollow(FOLLOW_ident_in_inMarkerForTuple6314);
@@ -8124,7 +8124,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "comparatorType"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:985:1: comparatorType returns [CQL3Type t] : (c= native_type | c= collection_type | s= STRING_LITERAL );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:985:1: comparatorType returns [CQL3Type t] : (c= native_type | c= collection_type | s= STRING_LITERAL );
     public final CQL3Type comparatorType() throws RecognitionException {
         CQL3Type t = null;
 
@@ -8133,7 +8133,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:986:5: (c= native_type | c= collection_type | s= STRING_LITERAL )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:986:5: (c= native_type | c= collection_type | s= STRING_LITERAL )
             int alt121=3;
             switch ( input.LA(1) ) {
             case K_TIMESTAMP:
@@ -8177,7 +8177,7 @@ public class CqlParser extends Parser {
 
             switch (alt121) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:986:7: c= native_type
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:986:7: c= native_type
                     {
                     pushFollow(FOLLOW_native_type_in_comparatorType6339);
                     c=native_type();
@@ -8189,7 +8189,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:987:7: c= collection_type
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:987:7: c= collection_type
                     {
                     pushFollow(FOLLOW_collection_type_in_comparatorType6355);
                     c=collection_type();
@@ -8201,7 +8201,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:988:7: s= STRING_LITERAL
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:988:7: s= STRING_LITERAL
                     {
                     s=(Token)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_comparatorType6367); 
 
@@ -8231,12 +8231,12 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "native_type"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1000:1: native_type returns [CQL3Type t] : ( K_ASCII | K_BIGINT | K_BLOB | K_BOOLEAN | K_COUNTER | K_DECIMAL | K_DOUBLE | K_FLOAT | K_INET | K_INT | K_TEXT | K_TIMESTAMP | K_UUID | K_VARCHAR | K_VARINT | K_TIMEUUID );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1000:1: native_type returns [CQL3Type t] : ( K_ASCII | K_BIGINT | K_BLOB | K_BOOLEAN | K_COUNTER | K_DECIMAL | K_DOUBLE | K_FLOAT | K_INET | K_INT | K_TEXT | K_TIMESTAMP | K_UUID | K_VARCHAR | K_VARINT | K_TIMEUUID );
     public final CQL3Type native_type() throws RecognitionException {
         CQL3Type t = null;
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1001:5: ( K_ASCII | K_BIGINT | K_BLOB | K_BOOLEAN | K_COUNTER | K_DECIMAL | K_DOUBLE | K_FLOAT | K_INET | K_INT | K_TEXT | K_TIMESTAMP | K_UUID | K_VARCHAR | K_VARINT | K_TIMEUUID )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1001:5: ( K_ASCII | K_BIGINT | K_BLOB | K_BOOLEAN | K_COUNTER | K_DECIMAL | K_DOUBLE | K_FLOAT | K_INET | K_INT | K_TEXT | K_TIMESTAMP | K_UUID | K_VARCHAR | K_VARINT | K_TIMEUUID )
             int alt122=16;
             switch ( input.LA(1) ) {
             case K_ASCII:
@@ -8328,7 +8328,7 @@ public class CqlParser extends Parser {
 
             switch (alt122) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1001:7: K_ASCII
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1001:7: K_ASCII
                     {
                     match(input,K_ASCII,FOLLOW_K_ASCII_in_native_type6396); 
                      t = CQL3Type.Native.ASCII; 
@@ -8336,7 +8336,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1002:7: K_BIGINT
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1002:7: K_BIGINT
                     {
                     match(input,K_BIGINT,FOLLOW_K_BIGINT_in_native_type6410); 
                      t = CQL3Type.Native.BIGINT; 
@@ -8344,7 +8344,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1003:7: K_BLOB
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1003:7: K_BLOB
                     {
                     match(input,K_BLOB,FOLLOW_K_BLOB_in_native_type6423); 
                      t = CQL3Type.Native.BLOB; 
@@ -8352,7 +8352,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1004:7: K_BOOLEAN
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1004:7: K_BOOLEAN
                     {
                     match(input,K_BOOLEAN,FOLLOW_K_BOOLEAN_in_native_type6438); 
                      t = CQL3Type.Native.BOOLEAN; 
@@ -8360,7 +8360,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1005:7: K_COUNTER
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1005:7: K_COUNTER
                     {
                     match(input,K_COUNTER,FOLLOW_K_COUNTER_in_native_type6450); 
                      t = CQL3Type.Native.COUNTER; 
@@ -8368,7 +8368,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1006:7: K_DECIMAL
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1006:7: K_DECIMAL
                     {
                     match(input,K_DECIMAL,FOLLOW_K_DECIMAL_in_native_type6462); 
                      t = CQL3Type.Native.DECIMAL; 
@@ -8376,7 +8376,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1007:7: K_DOUBLE
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1007:7: K_DOUBLE
                     {
                     match(input,K_DOUBLE,FOLLOW_K_DOUBLE_in_native_type6474); 
                      t = CQL3Type.Native.DOUBLE; 
@@ -8384,7 +8384,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1008:7: K_FLOAT
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1008:7: K_FLOAT
                     {
                     match(input,K_FLOAT,FOLLOW_K_FLOAT_in_native_type6487); 
                      t = CQL3Type.Native.FLOAT; 
@@ -8392,7 +8392,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1009:7: K_INET
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1009:7: K_INET
                     {
                     match(input,K_INET,FOLLOW_K_INET_in_native_type6501); 
                      t = CQL3Type.Native.INET;
@@ -8400,7 +8400,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1010:7: K_INT
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1010:7: K_INT
                     {
                     match(input,K_INT,FOLLOW_K_INT_in_native_type6516); 
                      t = CQL3Type.Native.INT; 
@@ -8408,7 +8408,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1011:7: K_TEXT
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1011:7: K_TEXT
                     {
                     match(input,K_TEXT,FOLLOW_K_TEXT_in_native_type6532); 
                      t = CQL3Type.Native.TEXT; 
@@ -8416,7 +8416,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1012:7: K_TIMESTAMP
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1012:7: K_TIMESTAMP
                     {
                     match(input,K_TIMESTAMP,FOLLOW_K_TIMESTAMP_in_native_type6547); 
                      t = CQL3Type.Native.TIMESTAMP; 
@@ -8424,7 +8424,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 13 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1013:7: K_UUID
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1013:7: K_UUID
                     {
                     match(input,K_UUID,FOLLOW_K_UUID_in_native_type6557); 
                      t = CQL3Type.Native.UUID; 
@@ -8432,7 +8432,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 14 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1014:7: K_VARCHAR
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1014:7: K_VARCHAR
                     {
                     match(input,K_VARCHAR,FOLLOW_K_VARCHAR_in_native_type6572); 
                      t = CQL3Type.Native.VARCHAR; 
@@ -8440,7 +8440,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 15 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1015:7: K_VARINT
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1015:7: K_VARINT
                     {
                     match(input,K_VARINT,FOLLOW_K_VARINT_in_native_type6584); 
                      t = CQL3Type.Native.VARINT; 
@@ -8448,7 +8448,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 16 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1016:7: K_TIMEUUID
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1016:7: K_TIMEUUID
                     {
                     match(input,K_TIMEUUID,FOLLOW_K_TIMEUUID_in_native_type6597); 
                      t = CQL3Type.Native.TIMEUUID; 
@@ -8470,7 +8470,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "collection_type"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1019:1: collection_type returns [CQL3Type pt] : ( K_MAP '<' t1= comparatorType ',' t2= comparatorType '>' | K_LIST '<' t= comparatorType '>' | K_SET '<' t= comparatorType '>' );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1019:1: collection_type returns [CQL3Type pt] : ( K_MAP '<' t1= comparatorType ',' t2= comparatorType '>' | K_LIST '<' t= comparatorType '>' | K_SET '<' t= comparatorType '>' );
     public final CQL3Type collection_type() throws RecognitionException {
         CQL3Type pt = null;
 
@@ -8482,7 +8482,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1020:5: ( K_MAP '<' t1= comparatorType ',' t2= comparatorType '>' | K_LIST '<' t= comparatorType '>' | K_SET '<' t= comparatorType '>' )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1020:5: ( K_MAP '<' t1= comparatorType ',' t2= comparatorType '>' | K_LIST '<' t= comparatorType '>' | K_SET '<' t= comparatorType '>' )
             int alt123=3;
             switch ( input.LA(1) ) {
             case K_MAP:
@@ -8509,7 +8509,7 @@ public class CqlParser extends Parser {
 
             switch (alt123) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1020:7: K_MAP '<' t1= comparatorType ',' t2= comparatorType '>'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1020:7: K_MAP '<' t1= comparatorType ',' t2= comparatorType '>'
                     {
                     match(input,K_MAP,FOLLOW_K_MAP_in_collection_type6621); 
                     match(input,150,FOLLOW_150_in_collection_type6624); 
@@ -8534,7 +8534,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1026:7: K_LIST '<' t= comparatorType '>'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1026:7: K_LIST '<' t= comparatorType '>'
                     {
                     match(input,K_LIST,FOLLOW_K_LIST_in_collection_type6654); 
                     match(input,150,FOLLOW_150_in_collection_type6656); 
@@ -8549,7 +8549,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1028:7: K_SET '<' t= comparatorType '>'
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1028:7: K_SET '<' t= comparatorType '>'
                     {
                     match(input,K_SET,FOLLOW_K_SET_in_collection_type6680); 
                     match(input,150,FOLLOW_150_in_collection_type6683); 
@@ -8580,14 +8580,14 @@ public class CqlParser extends Parser {
     };
 
     // $ANTLR start "username"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1032:1: username : ( IDENT | STRING_LITERAL );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1032:1: username : ( IDENT | STRING_LITERAL );
     public final CqlParser.username_return username() throws RecognitionException {
         CqlParser.username_return retval = new CqlParser.username_return();
         retval.start = input.LT(1);
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1033:5: ( IDENT | STRING_LITERAL )
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1033:5: ( IDENT | STRING_LITERAL )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:
             {
             if ( input.LA(1)==IDENT||input.LA(1)==STRING_LITERAL ) {
                 input.consume();
@@ -8616,7 +8616,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "unreserved_keyword"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1037:1: unreserved_keyword returns [String str] : (u= unreserved_function_keyword | k= ( K_TTL | K_COUNT | K_WRITETIME ) );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1037:1: unreserved_keyword returns [String str] : (u= unreserved_function_keyword | k= ( K_TTL | K_COUNT | K_WRITETIME ) );
     public final String unreserved_keyword() throws RecognitionException {
         String str = null;
 
@@ -8625,7 +8625,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1038:5: (u= unreserved_function_keyword | k= ( K_TTL | K_COUNT | K_WRITETIME ) )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1038:5: (u= unreserved_function_keyword | k= ( K_TTL | K_COUNT | K_WRITETIME ) )
             int alt124=2;
             int LA124_0 = input.LA(1);
 
@@ -8643,7 +8643,7 @@ public class CqlParser extends Parser {
             }
             switch (alt124) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1038:7: u= unreserved_function_keyword
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1038:7: u= unreserved_function_keyword
                     {
                     pushFollow(FOLLOW_unreserved_function_keyword_in_unreserved_keyword6747);
                     u=unreserved_function_keyword();
@@ -8655,7 +8655,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1039:7: k= ( K_TTL | K_COUNT | K_WRITETIME )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1039:7: k= ( K_TTL | K_COUNT | K_WRITETIME )
                     {
                     k=(Token)input.LT(1);
                     if ( input.LA(1)==K_COUNT||(input.LA(1)>=K_WRITETIME && input.LA(1)<=K_TTL) ) {
@@ -8686,7 +8686,7 @@ public class CqlParser extends Parser {
 
 
     // $ANTLR start "unreserved_function_keyword"
-    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1042:1: unreserved_function_keyword returns [String str] : (k= ( K_KEY | K_AS | K_CLUSTERING | K_COMPACT | K_STORAGE | K_TYPE | K_VALUES | K_MAP | K_LIST | K_FILTERING | K_PERMISSION | K_PERMISSIONS | K_KEYSPACES | K_ALL | K_USER | K_USERS | K_SUPERUSER | K_NOSUPERUSER | K_PASSWORD | K_EXISTS | K_CUSTOM | K_TRIGGER | K_DISTINCT | K_STATIC ) | t= native_type );
+    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1042:1: unreserved_function_keyword returns [String str] : (k= ( K_KEY | K_AS | K_CLUSTERING | K_COMPACT | K_STORAGE | K_TYPE | K_VALUES | K_MAP | K_LIST | K_FILTERING | K_PERMISSION | K_PERMISSIONS | K_KEYSPACES | K_ALL | K_USER | K_USERS | K_SUPERUSER | K_NOSUPERUSER | K_PASSWORD | K_EXISTS | K_CUSTOM | K_TRIGGER | K_DISTINCT | K_STATIC ) | t= native_type );
     public final String unreserved_function_keyword() throws RecognitionException {
         String str = null;
 
@@ -8695,7 +8695,7 @@ public class CqlParser extends Parser {
 
 
         try {
-            // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1043:5: (k= ( K_KEY | K_AS | K_CLUSTERING | K_COMPACT | K_STORAGE | K_TYPE | K_VALUES | K_MAP | K_LIST | K_FILTERING | K_PERMISSION | K_PERMISSIONS | K_KEYSPACES | K_ALL | K_USER | K_USERS | K_SUPERUSER | K_NOSUPERUSER | K_PASSWORD | K_EXISTS | K_CUSTOM | K_TRIGGER | K_DISTINCT | K_STATIC ) | t= native_type )
+            // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1043:5: (k= ( K_KEY | K_AS | K_CLUSTERING | K_COMPACT | K_STORAGE | K_TYPE | K_VALUES | K_MAP | K_LIST | K_FILTERING | K_PERMISSION | K_PERMISSIONS | K_KEYSPACES | K_ALL | K_USER | K_USERS | K_SUPERUSER | K_NOSUPERUSER | K_PASSWORD | K_EXISTS | K_CUSTOM | K_TRIGGER | K_DISTINCT | K_STATIC ) | t= native_type )
             int alt125=2;
             int LA125_0 = input.LA(1);
 
@@ -8713,7 +8713,7 @@ public class CqlParser extends Parser {
             }
             switch (alt125) {
                 case 1 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1043:7: k= ( K_KEY | K_AS | K_CLUSTERING | K_COMPACT | K_STORAGE | K_TYPE | K_VALUES | K_MAP | K_LIST | K_FILTERING | K_PERMISSION | K_PERMISSIONS | K_KEYSPACES | K_ALL | K_USER | K_USERS | K_SUPERUSER | K_NOSUPERUSER | K_PASSWORD | K_EXISTS | K_CUSTOM | K_TRIGGER | K_DISTINCT | K_STATIC )
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1043:7: k= ( K_KEY | K_AS | K_CLUSTERING | K_COMPACT | K_STORAGE | K_TYPE | K_VALUES | K_MAP | K_LIST | K_FILTERING | K_PERMISSION | K_PERMISSIONS | K_KEYSPACES | K_ALL | K_USER | K_USERS | K_SUPERUSER | K_NOSUPERUSER | K_PASSWORD | K_EXISTS | K_CUSTOM | K_TRIGGER | K_DISTINCT | K_STATIC )
                     {
                     k=(Token)input.LT(1);
                     if ( input.LA(1)==K_DISTINCT||input.LA(1)==K_AS||input.LA(1)==K_FILTERING||input.LA(1)==K_VALUES||input.LA(1)==K_EXISTS||input.LA(1)==K_STATIC||(input.LA(1)>=K_KEY && input.LA(1)<=K_CUSTOM)||input.LA(1)==K_TRIGGER||input.LA(1)==K_TYPE||input.LA(1)==K_LIST||(input.LA(1)>=K_ALL && input.LA(1)<=K_PASSWORD)||input.LA(1)==K_MAP ) {
@@ -8730,7 +8730,7 @@ public class CqlParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/yasu/Summer Stuff/CassandraQoS/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1068:7: t= native_type
+                    // /root/Cassandra_Team/CassandraQoS/cassandra/src/java/org/apache/cassandra/cql3/Cql.g:1068:7: t= native_type
                     {
                     pushFollow(FOLLOW_native_type_in_unreserved_function_keyword7098);
                     t=native_type();
