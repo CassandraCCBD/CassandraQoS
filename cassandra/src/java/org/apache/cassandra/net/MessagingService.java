@@ -312,7 +312,8 @@ public final class MessagingService implements MessagingServiceMBean
 
     private MessagingService()
     {
-        for (Verb verb : DROPPABLE_VERBS)
+       
+	for (Verb verb : DROPPABLE_VERBS)
         {
             droppedMessages.put(verb, new DroppedMessageMetrics(verb));
             lastDroppedInternal.put(verb, 0);
@@ -405,7 +406,8 @@ public final class MessagingService implements MessagingServiceMBean
      */
     public void listen(InetAddress localEp) throws ConfigurationException
     {
-        callbacks.reset(); // hack to allow tests to stop/restart MS
+        logger.debug("HEY LISTEN");
+	callbacks.reset(); // hack to allow tests to stop/restart MS
         for (ServerSocket ss : getServerSockets(localEp))
         {
             SocketThread th = new SocketThread(ss, "ACCEPT-" + localEp);
@@ -720,6 +722,8 @@ public final class MessagingService implements MessagingServiceMBean
 
     public void receive(MessageIn message, int id, long timestamp)
     {
+	if(message.tag == 10)
+	logger.debug("Messaging service print : ");
         TraceState state = Tracing.instance.initializeFromMessage(message);
         if (state != null)
             state.trace("Message received from {}", message.from);

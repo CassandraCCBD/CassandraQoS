@@ -651,6 +651,16 @@ public class Cassandra {
       send_get_slice(key, column_parent, predicate, consistency_level);
       return recv_get_slice();
     }
+    /*Cassandra Team function */
+    /** get_slice_QoS
+     * This function is what the Client would use if he wants to set the QoS for the query 
+     * */
+    public List<ColumnOrSuperColumn> get_slice_QoS(ByteBuffer key, ColumnParent column_parent, SlicePredicate predicate, ConsistencyLevel consistency_level, int QoSLevel) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException
+    {
+      logger.debug("In getSliceQos()");
+      send_get_slice_QoS(key, column_parent, predicate, consistency_level, QoSLevel);
+      return recv_get_slice();
+    }
 
     public void send_get_slice(ByteBuffer key, ColumnParent column_parent, SlicePredicate predicate, ConsistencyLevel consistency_level) throws org.apache.thrift.TException
     {
@@ -659,6 +669,20 @@ public class Cassandra {
       args.setColumn_parent(column_parent);
       args.setPredicate(predicate);
       args.setConsistency_level(consistency_level);
+      sendBase("get_slice", args);
+    }
+    /** send_get_slice_QoS
+     * This is what get_slice_QoS calls, this initializes args and calls the extra function setQoSReq
+     * */
+    public void send_get_slice_QoS(ByteBuffer key, ColumnParent column_parent, SlicePredicate predicate, ConsistencyLevel consistency_level, int QoSLevel) throws org.apache.thrift.TException
+    {
+      get_slice_args args = new get_slice_args();
+      args.setKey(key);
+      args.setColumn_parent(column_parent);
+      args.setPredicate(predicate);
+      args.setConsistency_level(consistency_level);
+      /* setting the QoS level in args */
+      args.setQoSReq(QoSLevel);
       sendBase("get_slice", args);
     }
 
@@ -809,6 +833,24 @@ public class Cassandra {
       args.setPredicate(predicate);
       args.setRange(range);
       args.setConsistency_level(consistency_level);
+      sendBase("get_range_slices", args);
+    }
+/* thsi is Cassandra team function*/
+    public  List<KeySlice> get_range_slices_Qos(ColumnParent column_parent, SlicePredicate predicate, KeyRange range, ConsistencyLevel consistency_level,int QoSLevel) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException
+    {
+     logger.debug("In get rangesliceQos()");
+      send_get_range_slices_QoS(column_parent, predicate, range, consistency_level, QoSLevel);
+      return recv_get_range_slices();
+    }
+
+    public void send_get_range_slices_QoS(ColumnParent column_parent, SlicePredicate predicate, KeyRange range, ConsistencyLevel consistency_level,int QosLevel) throws org.apache.thrift.TException
+    {
+      get_range_slices_args args = new get_range_slices_args();
+      args.setColumn_parent(column_parent);
+      args.setPredicate(predicate);
+      args.setRange(range);
+      args.setConsistency_level(consistency_level);
+      //args.setQOSReq(QoSLevel);
       sendBase("get_range_slices", args);
     }
 
@@ -1064,14 +1106,28 @@ public class Cassandra {
       }
       return;
     }
-
+    /* this guy needs to be overriden */
     public void batch_mutate(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException
+    {
+      send_batch_mutate(mutation_map, consistency_level);
+      recv_batch_mutate();
+    }
+	
+    public void batch_mutate_Qos(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level, int QoSLevel) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException
     {
       send_batch_mutate(mutation_map, consistency_level);
       recv_batch_mutate();
     }
 
     public void send_batch_mutate(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level) throws org.apache.thrift.TException
+    {
+      batch_mutate_args args = new batch_mutate_args();
+      args.setMutation_map(mutation_map);
+      args.setConsistency_level(consistency_level);
+      sendBase("batch_mutate", args);
+    }
+
+    public void send_batch_mutate_QoS(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level) throws org.apache.thrift.TException
     {
       batch_mutate_args args = new batch_mutate_args();
       args.setMutation_map(mutation_map);
@@ -10374,11 +10430,13 @@ public class Cassandra {
 
   public static class get_slice_args implements org.apache.thrift.TBase<get_slice_args, get_slice_args._Fields>, java.io.Serializable, Cloneable, Comparable<get_slice_args>   {
     private static final org.apache.thrift.protocol.TStruct STRUCT_DESC = new org.apache.thrift.protocol.TStruct("get_slice_args");
-
+    private static Logger logger = LoggerFactory.getLogger(get_slice_args.class);
     private static final org.apache.thrift.protocol.TField KEY_FIELD_DESC = new org.apache.thrift.protocol.TField("key", org.apache.thrift.protocol.TType.STRING, (short)1);
     private static final org.apache.thrift.protocol.TField COLUMN_PARENT_FIELD_DESC = new org.apache.thrift.protocol.TField("column_parent", org.apache.thrift.protocol.TType.STRUCT, (short)2);
     private static final org.apache.thrift.protocol.TField PREDICATE_FIELD_DESC = new org.apache.thrift.protocol.TField("predicate", org.apache.thrift.protocol.TType.STRUCT, (short)3);
     private static final org.apache.thrift.protocol.TField CONSISTENCY_LEVEL_FIELD_DESC = new org.apache.thrift.protocol.TField("consistency_level", org.apache.thrift.protocol.TType.I32, (short)4);
+    /* Cassandra Team Modification.. This is to write the QoSReq */
+    private static final org.apache.thrift.protocol.TField QOS_REQ_DESC = new org.apache.thrift.protocol.TField("QoSReq", org.apache.thrift.protocol.TType.BYTE, (short)5);
 
     private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
     static {
@@ -10389,6 +10447,7 @@ public class Cassandra {
     public ByteBuffer key; // required
     public ColumnParent column_parent; // required
     public SlicePredicate predicate; // required
+    public int QoSReq; // this is the QoS requirement of the particular query that's given
     /**
      * 
      * @see ConsistencyLevel
@@ -10530,6 +10589,13 @@ public class Cassandra {
       this.predicate = null;
       this.consistency_level = org.apache.cassandra.thrift.ConsistencyLevel.ONE;
 
+    }
+
+    /* Cassandra Team modification */
+    public get_slice_args setQoSReq(int val)
+    {
+    	this.QoSReq=val;
+	return this;
     }
 
     public byte[] getKey() {
@@ -10855,10 +10921,13 @@ public class Cassandra {
     }
 
     public void read(org.apache.thrift.protocol.TProtocol iprot) throws org.apache.thrift.TException {
+      logger.debug("In Read of args");
       schemes.get(iprot.getScheme()).getScheme().read(iprot, this);
     }
 
     public void write(org.apache.thrift.protocol.TProtocol oprot) throws org.apache.thrift.TException {
+      Object temp = schemes.get(oprot.getScheme()).getScheme();
+      logger.debug("The object to look at is {}", temp);
       schemes.get(oprot.getScheme()).getScheme().write(oprot, this);
     }
 
@@ -10896,6 +10965,13 @@ public class Cassandra {
         sb.append("null");
       } else {
         sb.append(this.consistency_level);
+      }
+      if (!first) sb.append(", ");
+      sb.append("QoSReq:");
+      if (this.QoSReq== 0) {
+        sb.append("null");
+      } else {
+        sb.append(this.QoSReq);
       }
       first = false;
       sb.append(")");
@@ -10950,6 +11026,7 @@ public class Cassandra {
     private static class get_slice_argsStandardScheme extends StandardScheme<get_slice_args> {
 
       public void read(org.apache.thrift.protocol.TProtocol iprot, get_slice_args struct) throws org.apache.thrift.TException {
+      	logger.debug("In Read of get_slic_args stuff");
         org.apache.thrift.protocol.TField schemeField;
         iprot.readStructBegin();
         while (true)
@@ -10993,6 +11070,13 @@ public class Cassandra {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
+	    case 5:
+              if (schemeField.type == org.apache.thrift.protocol.TType.BYTE) {
+                struct.QoSReq= iprot.readByte();
+              } else { 
+                org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+              }
+	      break; 
             default:
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
           }
@@ -11006,7 +11090,7 @@ public class Cassandra {
 
       public void write(org.apache.thrift.protocol.TProtocol oprot, get_slice_args struct) throws org.apache.thrift.TException {
         struct.validate();
-
+	logger.debug("Writing Stuff now.. Struct is {} ", struct);
         oprot.writeStructBegin(STRUCT_DESC);
         if (struct.key != null) {
           oprot.writeFieldBegin(KEY_FIELD_DESC);
@@ -11028,6 +11112,12 @@ public class Cassandra {
           oprot.writeI32(struct.consistency_level.getValue());
           oprot.writeFieldEnd();
         }
+	/* Cassandra Team Modification */
+        if (struct.QoSReq!= 0) {
+          oprot.writeFieldBegin(QOS_REQ_DESC);
+          oprot.writeByte((byte)struct.QoSReq);
+          oprot.writeFieldEnd();
+	}
         oprot.writeFieldStop();
         oprot.writeStructEnd();
       }

@@ -34,18 +34,20 @@ import org.apache.cassandra.io.IVersionedSerializer;
 import org.apache.cassandra.tracing.Tracing;
 import org.apache.cassandra.utils.FBUtilities;
 import org.apache.cassandra.utils.UUIDGen;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.apache.cassandra.tracing.Tracing.TRACE_HEADER;
 import static org.apache.cassandra.tracing.Tracing.isTracing;
 
 public class MessageOut<T>
-{
+{   
     public final InetAddress from;
     public final MessagingService.Verb verb;
     public final T payload;
     public final IVersionedSerializer<T> serializer;
     public final Map<String, byte[]> parameters;
-
+	public final int tag = 10;	
     // we do support messages that just consist of a verb
     public MessageOut(MessagingService.Verb verb)
     {
@@ -78,7 +80,8 @@ public class MessageOut<T>
 
     public MessageOut<T> withParameter(String key, byte[] value)
     {
-        ImmutableMap.Builder<String, byte[]> builder = ImmutableMap.builder();
+        
+	ImmutableMap.Builder<String, byte[]> builder = ImmutableMap.builder();
         builder.putAll(parameters).put(key, value);
         return new MessageOut<T>(verb, payload, serializer, builder.build());
     }

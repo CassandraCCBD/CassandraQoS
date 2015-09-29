@@ -189,6 +189,7 @@ public class Gossiper implements IFailureDetectionEventListener, GossiperMBean
 
     private Gossiper()
     {
+
         // half of QUARATINE_DELAY, to ensure justRemovedEndpoints has enough leeway to prevent re-gossip
         FatClientTimeout = (long) (QUARANTINE_DELAY / 2);
         /* register with the Failure Detector for receiving Failure detector events */
