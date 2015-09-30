@@ -152,6 +152,14 @@ public class CompactionManager implements CompactionManagerMBean
                      cfs.name,
                      cfs.getCompactionStrategy().getClass().getSimpleName());
         List<Future<?>> futures = new ArrayList<Future<?>>();
+	//Throwing Exeption CASSANDRA TEAM 
+	try{
+		throw new RuntimeException("CASSANDRA TEAM throwing exception");
+	}catch(Exception e){
+	logger.debug("Exception in compaction mangaer {} ",e);
+	}	
+
+
 
         // we must schedule it at least once, otherwise compaction will stop for a CF until next flush
         do {

@@ -836,21 +836,21 @@ public class Cassandra {
       sendBase("get_range_slices", args);
     }
 /* thsi is Cassandra team function*/
-    public  List<KeySlice> get_range_slices_Qos(ColumnParent column_parent, SlicePredicate predicate, KeyRange range, ConsistencyLevel consistency_level,int QoSLevel) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException
+    public  List<KeySlice> get_range_slices_QoS(ColumnParent column_parent, SlicePredicate predicate, KeyRange range, ConsistencyLevel consistency_level,int QoSLevel) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException
     {
      logger.debug("In get rangesliceQos()");
       send_get_range_slices_QoS(column_parent, predicate, range, consistency_level, QoSLevel);
       return recv_get_range_slices();
     }
 
-    public void send_get_range_slices_QoS(ColumnParent column_parent, SlicePredicate predicate, KeyRange range, ConsistencyLevel consistency_level,int QosLevel) throws org.apache.thrift.TException
+    public void send_get_range_slices_QoS(ColumnParent column_parent, SlicePredicate predicate, KeyRange range, ConsistencyLevel consistency_level,int QoSLevel) throws org.apache.thrift.TException
     {
       get_range_slices_args args = new get_range_slices_args();
       args.setColumn_parent(column_parent);
       args.setPredicate(predicate);
       args.setRange(range);
       args.setConsistency_level(consistency_level);
-      //args.setQOSReq(QoSLevel);
+      args.setQoSReq(QoSLevel);
       sendBase("get_range_slices", args);
     }
 
@@ -1113,9 +1113,9 @@ public class Cassandra {
       recv_batch_mutate();
     }
 	
-    public void batch_mutate_Qos(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level, int QoSLevel) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException
+    public void batch_mutate_QoS(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level, int QoSLevel) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException
     {
-      send_batch_mutate(mutation_map, consistency_level);
+      send_batch_mutate_QoS(mutation_map, consistency_level,QoSLevel);
       recv_batch_mutate();
     }
 
@@ -1127,11 +1127,12 @@ public class Cassandra {
       sendBase("batch_mutate", args);
     }
 
-    public void send_batch_mutate_QoS(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level) throws org.apache.thrift.TException
+    public void send_batch_mutate_QoS(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level, int QoSLevel) throws org.apache.thrift.TException
     {
       batch_mutate_args args = new batch_mutate_args();
       args.setMutation_map(mutation_map);
       args.setConsistency_level(consistency_level);
+      args.setQoSReq(QoSLevel);
       sendBase("batch_mutate", args);
     }
 
@@ -10966,6 +10967,7 @@ public class Cassandra {
       } else {
         sb.append(this.consistency_level);
       }
+      /* Cassandra Team Modification */
       if (!first) sb.append(", ");
       sb.append("QoSReq:");
       if (this.QoSReq== 0) {
@@ -11070,7 +11072,7 @@ public class Cassandra {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-	    case 5:
+	    case 5: // QoSReq
               if (schemeField.type == org.apache.thrift.protocol.TType.BYTE) {
                 struct.QoSReq= iprot.readByte();
               } else { 
@@ -16261,7 +16263,7 @@ public class Cassandra {
     }
 
   }
-
+  /* To be modified by Cassandra Team */
   public static class get_range_slices_args implements org.apache.thrift.TBase<get_range_slices_args, get_range_slices_args._Fields>, java.io.Serializable, Cloneable, Comparable<get_range_slices_args>   {
     private static final org.apache.thrift.protocol.TStruct STRUCT_DESC = new org.apache.thrift.protocol.TStruct("get_range_slices_args");
 
@@ -16269,6 +16271,8 @@ public class Cassandra {
     private static final org.apache.thrift.protocol.TField PREDICATE_FIELD_DESC = new org.apache.thrift.protocol.TField("predicate", org.apache.thrift.protocol.TType.STRUCT, (short)2);
     private static final org.apache.thrift.protocol.TField RANGE_FIELD_DESC = new org.apache.thrift.protocol.TField("range", org.apache.thrift.protocol.TType.STRUCT, (short)3);
     private static final org.apache.thrift.protocol.TField CONSISTENCY_LEVEL_FIELD_DESC = new org.apache.thrift.protocol.TField("consistency_level", org.apache.thrift.protocol.TType.I32, (short)4);
+    /* Cassandra Team Modification.. This is to write the QoSReq */
+    private static final org.apache.thrift.protocol.TField QOS_REQ_DESC = new org.apache.thrift.protocol.TField("QoSReq", org.apache.thrift.protocol.TType.BYTE, (short)5);
 
     private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
     static {
@@ -16279,6 +16283,7 @@ public class Cassandra {
     public ColumnParent column_parent; // required
     public SlicePredicate predicate; // required
     public KeyRange range; // required
+    public int QoSReq; // this is the QoS requirement of the particular query that's given
     /**
      * 
      * @see ConsistencyLevel
@@ -16418,7 +16423,6 @@ public class Cassandra {
       this.predicate = null;
       this.range = null;
       this.consistency_level = org.apache.cassandra.thrift.ConsistencyLevel.ONE;
-
     }
 
     public ColumnParent getColumn_parent() {
@@ -16428,6 +16432,13 @@ public class Cassandra {
     public get_range_slices_args setColumn_parent(ColumnParent column_parent) {
       this.column_parent = column_parent;
       return this;
+    }
+
+    /* Cassandra Team modification */
+    public get_range_slices_args setQoSReq(int val)
+    {
+    	this.QoSReq=val;
+	return this;
     }
 
     public void unsetColumn_parent() {
@@ -16776,6 +16787,14 @@ public class Cassandra {
       } else {
         sb.append(this.consistency_level);
       }
+      /* Cassandra Team Modification */
+      if (!first) sb.append(", ");
+      sb.append("QoSReq:");
+      if (this.QoSReq== 0) {
+        sb.append("null");
+      } else {
+        sb.append(this.QoSReq);
+      }
       first = false;
       sb.append(")");
       return sb.toString();
@@ -16876,6 +16895,13 @@ public class Cassandra {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
+	    case 5: // QoSReq
+              if (schemeField.type == org.apache.thrift.protocol.TType.BYTE) {
+                struct.QoSReq= iprot.readByte();
+              } else { 
+                org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+              }
+	      break; 
             default:
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
           }
@@ -16911,6 +16937,12 @@ public class Cassandra {
           oprot.writeI32(struct.consistency_level.getValue());
           oprot.writeFieldEnd();
         }
+	/* Cassandra Team Modification */
+        if (struct.QoSReq!= 0) {
+          oprot.writeFieldBegin(QOS_REQ_DESC);
+          oprot.writeByte((byte)struct.QoSReq);
+          oprot.writeFieldEnd();
+	}
         oprot.writeFieldStop();
         oprot.writeStructEnd();
       }
@@ -27249,11 +27281,19 @@ public class Cassandra {
 
   }
 
+  /* Cassandra Team will modify here */
+  /* Things to do:
+   * 1 - add the QoSLevel as an int
+   * 2 - add the thrift things QOS_REQ_DESC 
+   * 3 - add the set method
+   * 4 - add the write and read modifications */
   public static class batch_mutate_args implements org.apache.thrift.TBase<batch_mutate_args, batch_mutate_args._Fields>, java.io.Serializable, Cloneable, Comparable<batch_mutate_args>   {
     private static final org.apache.thrift.protocol.TStruct STRUCT_DESC = new org.apache.thrift.protocol.TStruct("batch_mutate_args");
 
     private static final org.apache.thrift.protocol.TField MUTATION_MAP_FIELD_DESC = new org.apache.thrift.protocol.TField("mutation_map", org.apache.thrift.protocol.TType.MAP, (short)1);
     private static final org.apache.thrift.protocol.TField CONSISTENCY_LEVEL_FIELD_DESC = new org.apache.thrift.protocol.TField("consistency_level", org.apache.thrift.protocol.TType.I32, (short)2);
+    /* Cassandra Team Modification.. This is to write the QoSReq */
+    private static final org.apache.thrift.protocol.TField QOS_REQ_DESC = new org.apache.thrift.protocol.TField("QoSReq", org.apache.thrift.protocol.TType.BYTE, (short)5);
 
     private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
     static {
@@ -27267,6 +27307,7 @@ public class Cassandra {
      * @see ConsistencyLevel
      */
     public ConsistencyLevel consistency_level; // required
+    public int QoSReq;
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -27413,7 +27454,12 @@ public class Cassandra {
       this.consistency_level = org.apache.cassandra.thrift.ConsistencyLevel.ONE;
 
     }
-
+    /*Cassandra Team Modification */
+    public batch_mutate_args setQoSReq(int QoSReq)
+    {
+    	this.QoSReq=QoSReq;
+	return this;
+    }
     public int getMutation_mapSize() {
       return (this.mutation_map == null) ? 0 : this.mutation_map.size();
     }
@@ -27642,6 +27688,14 @@ public class Cassandra {
       } else {
         sb.append(this.consistency_level);
       }
+      /* Cassandra Team Modification */
+      if (!first) sb.append(", ");
+      sb.append("QoSReq:");
+      if (this.QoSReq== 0) {
+        sb.append("null");
+      } else {
+        sb.append(this.QoSReq);
+      }
       first = false;
       sb.append(")");
       return sb.toString();
@@ -27743,6 +27797,13 @@ public class Cassandra {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
+	    case 5: // QoSReq
+              if (schemeField.type == org.apache.thrift.protocol.TType.BYTE) {
+                struct.QoSReq= iprot.readByte();
+              } else { 
+                org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+              }
+	      break; 
             default:
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
           }
@@ -27791,6 +27852,12 @@ public class Cassandra {
           oprot.writeI32(struct.consistency_level.getValue());
           oprot.writeFieldEnd();
         }
+	/* Cassandra Team Modification */
+        if (struct.QoSReq!= 0) {
+          oprot.writeFieldBegin(QOS_REQ_DESC);
+          oprot.writeByte((byte)struct.QoSReq);
+          oprot.writeFieldEnd();
+	}
         oprot.writeFieldStop();
         oprot.writeStructEnd();
       }
