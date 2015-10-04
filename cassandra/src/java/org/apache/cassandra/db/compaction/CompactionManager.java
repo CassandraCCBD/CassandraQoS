@@ -52,6 +52,8 @@ import org.apache.cassandra.metrics.CompactionMetrics;
 import org.apache.cassandra.repair.Validator;
 import org.apache.cassandra.service.StorageService;
 import org.apache.cassandra.utils.*;
+/* Cassandra Team modification */
+import org.apache.cassandra.thrift.CustomTThreadPoolServer;
 
 /**
  * A singleton which manages a private executor of ongoing compactions.
@@ -153,20 +155,29 @@ public class CompactionManager implements CompactionManagerMBean
                      cfs.getCompactionStrategy().getClass().getSimpleName());
         List<Future<?>> futures = new ArrayList<Future<?>>();
 	//Throwing Exeption CASSANDRA TEAM 
-	try{
+/*	try{
 		throw new RuntimeException("CASSANDRA TEAM throwing exception");
 	}catch(Exception e){
-	logger.debug("Exception in compaction mangaer {} ",e);
-	}	
+	logger.debug("Exception in compaction mangaer {} ",e); 
+	} */
 
-
-
-        // we must schedule it at least once, otherwise compaction will stop for a CF until next flush
-        do {
-            compactingCF.add(cfs);
-            futures.add(executor.submit(new BackgroundCompactionTask(cfs)));
-            // if we have room for more compactions, then fill up executor
-        } while (autoFill && executor.getActiveCount() + futures.size() < executor.getMaximumPoolSize());
+	/* we schedule the background tasks only when there are clients connecting to the db
+	 * this is to check the effect of compaction on foreground tasks
+	 */
+	if (CustomTThreadPoolServer.numClient>3)
+	{
+		logger.debug("Adding another compaction, number of clients " + CustomTThreadPoolServer.numClient);
+		// we must schedule it at least once, otherwise compaction will stop for a CF until next flush
+		do {
+		    compactingCF.add(cfs);
+		    futures.add(executor.submit(new BackgroundCompactionTask(cfs)));
+		    // if we have room for more compactions, then fill up executor
+		} while (autoFill && executor.getActiveCount() + futures.size() < executor.getMaximumPoolSize());
+	}
+	else 
+	{
+		logger.debug("Did not schedule Compaction as there were no clients" + CustomTThreadPoolServer.numClient);
+	}
 
         return futures;
     }

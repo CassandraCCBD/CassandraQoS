@@ -71,6 +71,7 @@ public class CustomTThreadPoolServer extends TServer
     // Flag for stopping the server
     private volatile boolean stopped;
     public static long startTime=0;
+    public static int numClient=0;
 
     // Server options
     private final TThreadPoolServer.Args args;
@@ -89,6 +90,7 @@ public class CustomTThreadPoolServer extends TServer
 
     public void serve()
     {
+        numClient= activeClients.get();	
         try
         {
             serverTransport_.listen();
@@ -102,9 +104,7 @@ public class CustomTThreadPoolServer extends TServer
         stopped = false;
         while (!stopped)
         {
-        	logger.debug("CASSANDRA TEAM: time  client " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
-			
-   	    // logger.debug("CASSANDRA TEAM: going to create the thread");
+	    numClient= activeClients.get();	
             // block until we are under max clients
             while (activeClients.get() >= args.maxWorkerThreads)
             {
@@ -116,26 +116,19 @@ public class CustomTThreadPoolServer extends TServer
                 TTransport client = serverTransport_.accept();
                 activeClients.incrementAndGet();
 		logger.debug("CASSANDRA TEAM: going to execute WorkerProcess, number of activeClients {}", activeClients.get());
-		
 		// if this is an "even" client, then it gets a higher priority, i.e, the second client gets a higher one 
-		if (count%2==0)
 		{
 			WorkerProcess wp = new WorkerProcess(client);
 			//setting priority here
 	//		wp.setPriority(10);
 			//the thread runs here when the execute thing is done 
-			startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
 			//** Priority Thread Pool
-			logger.debug("CASSANDRA TEAM : counter "+count);
-			s = Executors.newPriorityFixedThreadPool(2);
-			s.submit(wp);
-			s.changePriorities(5, 10);
+			//s = Executors.newPriorityFixedThreadPool(2);
+			executorService.submit(wp);
 			count++;
-			logger.debug("CASSANDRA TEAM: time for even request " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
-			
 		}
 		//for the odd one 
-		else 
+		/*else 
 		{
 			WorkerProcess wp = new WorkerProcess(client);
 			//setting priority here
@@ -144,9 +137,7 @@ public class CustomTThreadPoolServer extends TServer
 			startTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
 			executorService.execute(wp);
 			count++;
-			logger.debug("CASSANDRA TEAM: time for odd request " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));
-			
-		}
+		}*/
 			
             }
             catch (TTransportException ttx)

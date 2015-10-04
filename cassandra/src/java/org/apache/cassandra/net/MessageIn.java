@@ -82,6 +82,8 @@ public class MessageIn<T>
         }
 
         int payloadSize = in.readInt();
+	int tag = in.readInt();
+	logger.debug("HEAD RECEIVING TAG 69"+tag);
         IVersionedSerializer<T2> serializer = (IVersionedSerializer<T2>) MessagingService.verbSerializers.get(verb);
         if (serializer instanceof MessagingService.CallbackDeterminedSerializer)
         {

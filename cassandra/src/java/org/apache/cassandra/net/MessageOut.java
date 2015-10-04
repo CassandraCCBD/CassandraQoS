@@ -42,6 +42,7 @@ import static org.apache.cassandra.tracing.Tracing.isTracing;
 
 public class MessageOut<T>
 {   
+	private static final Logger logger = LoggerFactory.getLogger(MessageOut.class);
     public final InetAddress from;
     public final MessagingService.Verb verb;
     public final T payload;
@@ -119,6 +120,9 @@ public class MessageOut<T>
         long longSize = payload == null ? 0 : serializer.serializedSize(payload, version);
         assert longSize <= Integer.MAX_VALUE; // larger values are supported in sstables but not messages
         out.writeInt((int) longSize);
+	int tag = 7777;
+	logger.debug("HEAD SENDING TAG 69 "+tag);
+	out.writeInt(tag);
         if (payload != null)
             serializer.serialize(payload, out, version);
     }
@@ -140,6 +144,7 @@ public class MessageOut<T>
         assert longSize <= Integer.MAX_VALUE; // larger values are supported in sstables but not messages
         size += TypeSizes.NATIVE.sizeof((int) longSize);
         size += longSize;
+	size += 4;
         return size;
     }
 }
