@@ -1,0 +1,46 @@
+Buildfile: /root/CassandraTeam/CassandraQoS/cassandra/build.xml
+
+init:
+
+maven-ant-tasks-localrepo:
+
+maven-ant-tasks-download:
+
+maven-ant-tasks-init:
+
+maven-declare-dependencies:
+
+maven-ant-tasks-retrieve-build:
+
+init-dependencies:
+     [echo] Loading dependency paths from file: /home/yasu/cassandra/build/build-dependencies.xml
+
+check-gen-cli-grammar:
+
+gen-cli-grammar:
+
+check-gen-cql2-grammar:
+
+gen-cql2-grammar:
+
+check-gen-cql3-grammar:
+
+gen-cql3-grammar:
+
+build-project:
+     [echo] apache-cassandra: /root/CassandraTeam/CassandraQoS/cassandra/build.xml
+    [javac] Compiling 1 source file to /root/CassandraTeam/CassandraQoS/cassandra/build/classes/thrift
+    [javac] Note: /root/CassandraTeam/CassandraQoS/cassandra/interface/thrift/gen-java/org/apache/cassandra/thrift/Cassandra.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /root/CassandraTeam/CassandraQoS/cassandra/interface/thrift/gen-java/org/apache/cassandra/thrift/Cassandra.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Compiling 7 source files to /root/CassandraTeam/CassandraQoS/cassandra/build/classes/main
+
+createVersionPropFile:
+[propertyfile] Updating property file: /root/CassandraTeam/CassandraQoS/cassandra/src/resources/org/apache/cassandra/config/version.properties
+     [copy] Copying 1 file to /root/CassandraTeam/CassandraQoS/cassandra/build/classes/main
+
+build:
+
+BUILD SUCCESSFUL
+Total time: 5 seconds

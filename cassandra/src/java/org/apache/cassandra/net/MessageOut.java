@@ -121,7 +121,7 @@ public class MessageOut<T>
         assert longSize <= Integer.MAX_VALUE; // larger values are supported in sstables but not messages
         out.writeInt((int) longSize);
 	int tag = 7777;
-	logger.debug("HEAD SENDING TAG 69 "+tag);
+	logger.debug("HEAD SENDING TAG:"+tag);
 	out.writeInt(tag);
         if (payload != null)
             serializer.serialize(payload, out, version);

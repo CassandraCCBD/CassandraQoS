@@ -7511,6 +7511,11 @@ public class Cassandra {
 
     public AuthenticationRequest auth_request; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
+
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       AUTH_REQUEST((short)1, "auth_request");
@@ -7872,6 +7877,10 @@ public class Cassandra {
     public AuthenticationException authnx; // required
     public AuthorizationException authzx; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       AUTHNX((short)1, "authnx"),
@@ -8340,6 +8349,10 @@ public class Cassandra {
 
     public String keyspace; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       KEYSPACE((short)1, "keyspace");
@@ -8694,6 +8707,10 @@ public class Cassandra {
 
     public InvalidRequestException ire; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       IRE((short)1, "ire");
@@ -9065,6 +9082,10 @@ public class Cassandra {
      */
     public ConsistencyLevel consistency_level; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       KEY((short)1, "key"),
@@ -9644,6 +9665,10 @@ public class Cassandra {
     private static final org.apache.thrift.protocol.TField UE_FIELD_DESC = new org.apache.thrift.protocol.TField("ue", org.apache.thrift.protocol.TType.STRUCT, (short)3);
     private static final org.apache.thrift.protocol.TField TE_FIELD_DESC = new org.apache.thrift.protocol.TField("te", org.apache.thrift.protocol.TType.STRUCT, (short)4);
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
     static {
       schemes.put(StandardScheme.class, new get_resultStandardSchemeFactory());
@@ -10449,6 +10474,15 @@ public class Cassandra {
     public ColumnParent column_parent; // required
     public SlicePredicate predicate; // required
     public int QoSReq; // this is the QoS requirement of the particular query that's given
+    /*
+     * Returns QoSReq
+     */
+    public int getQosReq()
+    {
+    	return QoSReq;
+    }
+
+    
     /**
      * 
      * @see ConsistencyLevel
@@ -11180,6 +11214,11 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
 
+
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -11920,6 +11959,10 @@ public class Cassandra {
      */
     public ConsistencyLevel consistency_level; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       KEY((short)1, "key"),
@@ -12613,6 +12656,10 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -13284,6 +13331,10 @@ public class Cassandra {
     private static final org.apache.thrift.protocol.TField PREDICATE_FIELD_DESC = new org.apache.thrift.protocol.TField("predicate", org.apache.thrift.protocol.TType.STRUCT, (short)3);
     private static final org.apache.thrift.protocol.TField CONSISTENCY_LEVEL_FIELD_DESC = new org.apache.thrift.protocol.TField("consistency_level", org.apache.thrift.protocol.TType.I32, (short)4);
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
     static {
       schemes.put(StandardScheme.class, new multiget_slice_argsStandardSchemeFactory());
@@ -14025,6 +14076,10 @@ public class Cassandra {
       schemes.put(TupleScheme.class, new multiget_slice_resultTupleSchemeFactory());
     }
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     public Map<ByteBuffer,List<ColumnOrSuperColumn>> success; // required
     public InvalidRequestException ire; // required
     public UnavailableException ue; // required
@@ -14809,6 +14864,10 @@ public class Cassandra {
       schemes.put(TupleScheme.class, new multiget_count_argsTupleSchemeFactory());
     }
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     public List<ByteBuffer> keys; // required
     public ColumnParent column_parent; // required
     public SlicePredicate predicate; // required
@@ -15544,6 +15603,10 @@ public class Cassandra {
       schemes.put(TupleScheme.class, new multiget_count_resultTupleSchemeFactory());
     }
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     public Map<ByteBuffer,Integer> success; // required
     public InvalidRequestException ire; // required
     public UnavailableException ue; // required
@@ -16274,6 +16337,10 @@ public class Cassandra {
     /* Cassandra Team Modification.. This is to write the QoSReq */
     private static final org.apache.thrift.protocol.TField QOS_REQ_DESC = new org.apache.thrift.protocol.TField("QoSReq", org.apache.thrift.protocol.TType.BYTE, (short)5);
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
     static {
       schemes.put(StandardScheme.class, new get_range_slices_argsStandardSchemeFactory());
@@ -17004,6 +17071,10 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -17738,6 +17809,10 @@ public class Cassandra {
     public String column_family; // required
     public KeyRange range; // required
     public ByteBuffer start_column; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /**
      * 
      * @see ConsistencyLevel
@@ -18432,6 +18507,10 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -19166,6 +19245,10 @@ public class Cassandra {
     public ColumnParent column_parent; // required
     public IndexClause index_clause; // required
     public SlicePredicate column_predicate; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /**
      * 
      * @see ConsistencyLevel
@@ -19858,6 +19941,10 @@ public class Cassandra {
     public InvalidRequestException ire; // required
     public UnavailableException ue; // required
     public TimedOutException te; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -20593,6 +20680,10 @@ public class Cassandra {
     public ByteBuffer key; // required
     public ColumnParent column_parent; // required
     public Column column; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /**
      * 
      * @see ConsistencyLevel
@@ -21290,6 +21381,10 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       IRE((short)1, "ire"),
@@ -21867,6 +21962,10 @@ public class Cassandra {
     public ByteBuffer key; // required
     public ColumnParent column_parent; // required
     public CounterColumn column; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /**
      * 
      * @see ConsistencyLevel
@@ -22564,6 +22663,10 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       IRE((short)1, "ire"),
@@ -23144,6 +23247,10 @@ public class Cassandra {
     public String column_family; // required
     public List<Column> expected; // required
     public List<Column> updates; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /**
      * 
      * @see ConsistencyLevel
@@ -24170,6 +24277,10 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -24855,6 +24966,10 @@ public class Cassandra {
     public ByteBuffer key; // required
     public ColumnPath column_path; // required
     public long timestamp; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /**
      * 
      * @see ConsistencyLevel
@@ -25553,6 +25668,10 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       IRE((short)1, "ire"),
@@ -26128,6 +26247,10 @@ public class Cassandra {
 
     public ByteBuffer key; // required
     public ColumnPath path; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /**
      * 
      * @see ConsistencyLevel
@@ -26721,6 +26844,10 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       IRE((short)1, "ire"),
@@ -27309,6 +27436,10 @@ public class Cassandra {
     public ConsistencyLevel consistency_level; // required
     public int QoSReq;
 
+    public int getQosReq()
+    {
+    	return QoSReq;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       MUTATION_MAP((short)1, "mutation_map"),
@@ -27960,6 +28091,11 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
+
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       IRE((short)1, "ire"),
@@ -28539,6 +28675,10 @@ public class Cassandra {
      */
     public ConsistencyLevel consistency_level; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       MUTATION_MAP((short)1, "mutation_map"),
@@ -29164,6 +29304,10 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       IRE((short)1, "ire"),
@@ -29737,6 +29881,10 @@ public class Cassandra {
 
     public String cfname; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       CFNAME((short)1, "cfname");
@@ -30095,6 +30243,10 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       IRE((short)1, "ire"),
@@ -30665,6 +30817,10 @@ public class Cassandra {
       schemes.put(TupleScheme.class, new describe_schema_versions_argsTupleSchemeFactory());
     }
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -30909,6 +31065,10 @@ public class Cassandra {
     private static final org.apache.thrift.protocol.TField SUCCESS_FIELD_DESC = new org.apache.thrift.protocol.TField("success", org.apache.thrift.protocol.TType.MAP, (short)0);
     private static final org.apache.thrift.protocol.TField IRE_FIELD_DESC = new org.apache.thrift.protocol.TField("ire", org.apache.thrift.protocol.TType.STRUCT, (short)1);
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
     static {
       schemes.put(StandardScheme.class, new describe_schema_versions_resultStandardSchemeFactory());
@@ -31477,6 +31637,10 @@ public class Cassandra {
       schemes.put(TupleScheme.class, new describe_keyspaces_argsTupleSchemeFactory());
     }
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -31727,6 +31891,10 @@ public class Cassandra {
       schemes.put(TupleScheme.class, new describe_keyspaces_resultTupleSchemeFactory());
     }
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     public List<KsDef> success; // required
     public InvalidRequestException ire; // required
 
@@ -32248,6 +32416,10 @@ public class Cassandra {
     }
 
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
 ;
@@ -32498,6 +32670,10 @@ public class Cassandra {
 
     public String success; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success");
@@ -32856,6 +33032,10 @@ public class Cassandra {
       schemes.put(TupleScheme.class, new describe_version_argsTupleSchemeFactory());
     }
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -33107,6 +33287,10 @@ public class Cassandra {
 
     public String success; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success");
@@ -33468,6 +33652,10 @@ public class Cassandra {
 
     public String keyspace; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       KEYSPACE((short)1, "keyspace");
@@ -33824,6 +34012,10 @@ public class Cassandra {
     public List<TokenRange> success; // required
     public InvalidRequestException ire; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -34344,6 +34536,10 @@ public class Cassandra {
 
     public String keyspace; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       KEYSPACE((short)1, "keyspace");
@@ -34700,6 +34896,10 @@ public class Cassandra {
     public List<TokenRange> success; // required
     public InvalidRequestException ire; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -35217,6 +35417,10 @@ public class Cassandra {
       schemes.put(TupleScheme.class, new describe_token_map_argsTupleSchemeFactory());
     }
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -35470,6 +35674,10 @@ public class Cassandra {
     public Map<String,String> success; // required
     public InvalidRequestException ire; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -35497,6 +35705,10 @@ public class Cassandra {
         }
       }
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
       /**
        * Find the _Fields constant that matches fieldId, throwing an exception
        * if it is not found.
@@ -35985,6 +36197,10 @@ public class Cassandra {
       schemes.put(TupleScheme.class, new describe_partitioner_argsTupleSchemeFactory());
     }
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -36236,6 +36452,10 @@ public class Cassandra {
 
     public String success; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success");
@@ -36595,6 +36815,10 @@ public class Cassandra {
     }
 
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
 ;
@@ -36845,6 +37069,10 @@ public class Cassandra {
 
     public String success; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success");
@@ -37206,6 +37434,10 @@ public class Cassandra {
 
     public String keyspace; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       KEYSPACE((short)1, "keyspace");
@@ -37564,6 +37796,10 @@ public class Cassandra {
     public NotFoundException nfe; // required
     public InvalidRequestException ire; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -38146,6 +38382,10 @@ public class Cassandra {
     public String end_token; // required
     public int keys_per_split; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       CF_NAME((short)1, "cfName"),
@@ -38798,6 +39038,10 @@ public class Cassandra {
     public List<String> success; // required
     public InvalidRequestException ire; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -39311,6 +39555,10 @@ public class Cassandra {
     }
 
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
 ;
@@ -39561,6 +39809,10 @@ public class Cassandra {
 
     public ByteBuffer success; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success");
@@ -39939,6 +40191,10 @@ public class Cassandra {
     public String end_token; // required
     public int keys_per_split; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       CF_NAME((short)1, "cfName"),
@@ -40591,6 +40847,10 @@ public class Cassandra {
     public List<CfSplit> success; // required
     public InvalidRequestException ire; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -41111,6 +41371,10 @@ public class Cassandra {
 
     public CfDef cf_def; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       CF_DEF((short)1, "cf_def");
@@ -41474,6 +41738,10 @@ public class Cassandra {
     public InvalidRequestException ire; // required
     public SchemaDisagreementException sde; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -42045,6 +42313,10 @@ public class Cassandra {
 
     public String column_family; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       COLUMN_FAMILY((short)1, "column_family");
@@ -42403,6 +42675,10 @@ public class Cassandra {
     public InvalidRequestException ire; // required
     public SchemaDisagreementException sde; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -42974,6 +43250,10 @@ public class Cassandra {
 
     public KsDef ks_def; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       KS_DEF((short)1, "ks_def");
@@ -43337,6 +43617,10 @@ public class Cassandra {
     public InvalidRequestException ire; // required
     public SchemaDisagreementException sde; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -43908,6 +44192,10 @@ public class Cassandra {
 
     public String keyspace; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       KEYSPACE((short)1, "keyspace");
@@ -44265,6 +44553,11 @@ public class Cassandra {
     public String success; // required
     public InvalidRequestException ire; // required
     public SchemaDisagreementException sde; // required
+
+    public int getQosReq()
+    {
+    	return 0;
+    }
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -44837,6 +45130,10 @@ public class Cassandra {
 
     public KsDef ks_def; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       KS_DEF((short)1, "ks_def");
@@ -45200,6 +45497,10 @@ public class Cassandra {
     public InvalidRequestException ire; // required
     public SchemaDisagreementException sde; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -45771,6 +46072,10 @@ public class Cassandra {
 
     public CfDef cf_def; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       CF_DEF((short)1, "cf_def");
@@ -46134,6 +46439,10 @@ public class Cassandra {
     public InvalidRequestException ire; // required
     public SchemaDisagreementException sde; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -46705,6 +47014,11 @@ public class Cassandra {
     }
 
     public ByteBuffer query; // required
+    
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /**
      * 
      * @see Compression
@@ -47195,6 +47509,10 @@ public class Cassandra {
     public TimedOutException te; // required
     public SchemaDisagreementException sde; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -47982,6 +48300,10 @@ public class Cassandra {
     }
 
     public ByteBuffer query; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /**
      * 
      * @see Compression
@@ -48587,6 +48909,10 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
     public SchemaDisagreementException sde; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -49380,6 +49706,10 @@ public class Cassandra {
      */
     public Compression compression; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       QUERY((short)1, "query"),
@@ -49858,6 +50188,10 @@ public class Cassandra {
     public CqlPreparedResult success; // required
     public InvalidRequestException ire; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -50329,6 +50663,10 @@ public class Cassandra {
     }
 
     public ByteBuffer query; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /**
      * 
      * @see Compression
@@ -50813,6 +51151,10 @@ public class Cassandra {
     public CqlPreparedResult success; // required
     public InvalidRequestException ire; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -51286,6 +51628,10 @@ public class Cassandra {
     public int itemId; // required
     public List<ByteBuffer> values; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       ITEM_ID((short)1, "itemId"),
@@ -51795,6 +52141,10 @@ public class Cassandra {
     public TimedOutException te; // required
     public SchemaDisagreementException sde; // required
 
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       SUCCESS((short)0, "success"),
@@ -52583,6 +52933,10 @@ public class Cassandra {
 
     public int itemId; // required
     public List<ByteBuffer> values; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
     /**
      * 
      * @see ConsistencyLevel
@@ -53208,6 +53562,10 @@ public class Cassandra {
     public UnavailableException ue; // required
     public TimedOutException te; // required
     public SchemaDisagreementException sde; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -53994,6 +54352,10 @@ public class Cassandra {
     }
 
     public String version; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -54348,6 +54710,10 @@ public class Cassandra {
     }
 
     public InvalidRequestException ire; // required
+    public int getQosReq()
+    {
+    	return 0;
+    }
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
