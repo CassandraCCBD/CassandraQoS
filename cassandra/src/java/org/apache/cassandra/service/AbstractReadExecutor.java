@@ -73,6 +73,7 @@ public abstract class AbstractReadExecutor
 
     private static boolean isLocalRequest(InetAddress replica)
     {
+	logger.debug("CASSANDRA TEAM : is local {} ***  {} ***  {} ",replica,FBUtilities.getBroadcastAddress(),StorageProxy.OPTIMIZE_LOCAL_REQUESTS );
         return replica.equals(FBUtilities.getBroadcastAddress()) && StorageProxy.OPTIMIZE_LOCAL_REQUESTS;
     }
 

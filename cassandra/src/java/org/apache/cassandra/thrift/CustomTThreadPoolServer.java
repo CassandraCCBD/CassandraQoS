@@ -232,6 +232,7 @@ public class CustomTThreadPoolServer extends TServer
                 // down. this is necessary for graceful shutdown.  (but not sufficient,
                 // since process() can take arbitrarily long waiting for client input.
                 // See comments at the end of serve().)
+                //logger.debug("CASSANRA TEAM : ThriftSessionManager  {} ",ThriftSessionManager.instance.getConnectedClients());
                 while (!stopped && processor.process(inputProtocol, outputProtocol))
                 {
                     inputProtocol = inputProtocolFactory_.getProtocol(inputTransport);
@@ -307,7 +308,9 @@ public class CustomTThreadPoolServer extends TServer
                                                                      .inputProtocolFactory(args.tProtocolFactory)
                                                                      .outputProtocolFactory(args.tProtocolFactory)
                                                                      .processor(args.processor);
-            /*ExecutorService executorService = new ThreadPoolExecutor(serverArgs.minWorkerThreads,
+            
+	//   logger.debug("Cassandra Team : RPC {} {}",DatabaseDescriptor.getRpcMinThreads(),DatabaseDescriptor.getRpcMaxThreads());
+	   /*ExecutorService executorService = new ThreadPoolExecutor(serverArgs.minWorkerThreads,
                                                                      serverArgs.maxWorkerThreads,
                                                                      60,
                                                                      TimeUnit.SECONDS,

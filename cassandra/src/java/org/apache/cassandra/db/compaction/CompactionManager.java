@@ -164,7 +164,7 @@ public class CompactionManager implements CompactionManagerMBean
 	/* we schedule the background tasks only when there are clients connecting to the db
 	 * this is to check the effect of compaction on foreground tasks
 	 */
-	if (CustomTThreadPoolServer.numClient>3)
+	if (CustomTThreadPoolServer.numClient<3)
 	{
 		logger.debug("Adding another compaction, number of clients " + CustomTThreadPoolServer.numClient);
 		// we must schedule it at least once, otherwise compaction will stop for a CF until next flush

@@ -299,6 +299,56 @@ public class CassandraServer implements Cassandra.Iface
             return thriftifyColumns(cf.getSortedColumns(), reverseOrder, now);
         }
     }
+//Cassandra Team overlaoding get_slice
+     
+    public List<ColumnOrSuperColumn> get_slice(ByteBuffer key, ColumnParent column_parent, SlicePredicate predicate, ConsistencyLevel consistency_level,int tag)
+    throws InvalidRequestException, UnavailableException, TimedOutException
+    {
+    	long ycsbStart = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+        if (startSessionIfRequested())
+        {
+            Map<String, String> traceParameters = ImmutableMap.of("key", ByteBufferUtil.bytesToHex(key),
+                                                                  "column_parent", column_parent.toString(),
+                                                                  "predicate", predicate.toString(),
+                                                                  "consistency_level", consistency_level.name());
+            Tracing.instance.begin("get_slice", traceParameters);
+        }
+        else
+        {
+            logger.debug("get_slice tag QoS Level {} ",tag);
+	    // CASSANDRA TEAM MODIFICATION
+	    /* this is where the ycsb client is ending up */
+	    try 
+	    {
+	    	throw new RuntimeException("Exception for YCSB");
+	    }
+	    catch(Exception e)
+	    {
+	    	logger.debug("Stacktrace is ", e);
+	    }
+        }
+
+        try
+        {
+            ClientState cState = state();
+            String keyspace = cState.getKeyspace();
+            state().hasColumnFamilyAccess(keyspace, column_parent.column_family, Permission.SELECT);
+            return getSliceInternal(keyspace, key, column_parent, System.currentTimeMillis(), predicate, consistency_level);
+        }
+        catch (RequestValidationException e)
+        {
+            throw ThriftConversion.toThrift(e);
+        }
+        finally
+        {
+       	    long ycsbStop = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
+	    logger.debug("Time taken" + (ycsbStop-ycsbStart));
+            Tracing.instance.stopSession();
+        }
+    }
+
+
+
 
     public List<ColumnOrSuperColumn> get_slice(ByteBuffer key, ColumnParent column_parent, SlicePredicate predicate, ConsistencyLevel consistency_level)
     throws InvalidRequestException, UnavailableException, TimedOutException
@@ -1123,6 +1173,113 @@ public class CassandraServer implements Cassandra.Iface
         return ksm.toThrift();
     }
 
+	//Cassandra Team adding qos parameter for slice
+    
+    public List<KeySlice> get_range_slices_QoS(ColumnParent column_parent, SlicePredicate predicate, KeyRange range, ConsistencyLevel consistency_level,int QoSLevel)
+    throws InvalidRequestException, UnavailableException, TException, TimedOutException
+    {
+        if (startSessionIfRequested())
+        {
+            Map<String, String> traceParameters = ImmutableMap.of(
+                    "column_parent", column_parent.toString(),
+                    "predicate", predicate.toString(),
+                    "range", range.toString(),
+                    "consistency_level", consistency_level.name()
+		    );
+            Tracing.instance.begin("get_range_slices", traceParameters);
+        }
+        else
+        {
+	    logger.debug("Scan QOSLEVEL : {} ",QoSLevel);
+            logger.debug("range_slice");
+        }
+
+        try
+        {
+            ThriftClientState cState = state();
+            String keyspace = cState.getKeyspace();
+            cState.hasColumnFamilyAccess(keyspace, column_parent.column_family, Permission.SELECT);
+
+            CFMetaData metadata = ThriftValidation.validateColumnFamily(keyspace, column_parent.column_family);
+            ThriftValidation.validateColumnParent(metadata, column_parent);
+            ThriftValidation.validatePredicate(metadata, column_parent, predicate);
+            ThriftValidation.validateKeyRange(metadata, column_parent.super_column, range);
+
+            org.apache.cassandra.db.ConsistencyLevel consistencyLevel = ThriftConversion.fromThrift(consistency_level);
+            consistencyLevel.validateForRead(keyspace);
+
+            List<Row> rows = null;
+
+            IPartitioner<?> p = StorageService.getPartitioner();
+            AbstractBounds<RowPosition> bounds;
+            if (range.start_key == null)
+            {
+                Token.TokenFactory<?> tokenFactory = p.getTokenFactory();
+                Token left = tokenFactory.fromString(range.start_token);
+                Token right = tokenFactory.fromString(range.end_token);
+                bounds = Range.makeRowRange(left, right, p);
+            }
+            else
+            {
+                RowPosition end = range.end_key == null
+                                ? p.getTokenFactory().fromString(range.end_token).maxKeyBound(p)
+                                : RowPosition.forKey(range.end_key, p);
+                bounds = new Bounds<RowPosition>(RowPosition.forKey(range.start_key, p), end);
+            }
+            long now = System.currentTimeMillis();
+            schedule(DatabaseDescriptor.getRangeRpcTimeout());
+            try
+            {
+                IDiskAtomFilter filter = ThriftValidation.asIFilter(predicate, metadata, column_parent.super_column);
+                rows = StorageProxy.getRangeSlice(new RangeSliceCommand(keyspace,
+                                                                        column_parent.column_family,
+                                                                        now,
+                                                                        filter,
+                                                                        bounds,
+                                                                        range.row_filter,
+                                                                        range.count),
+                                                  consistencyLevel);
+            }
+            finally
+            {
+                release();
+            }
+            assert rows != null;
+
+            return thriftifyKeySlices(rows, column_parent, predicate, now);
+        }
+        catch (RequestValidationException e)
+        {
+            throw ThriftConversion.toThrift(e);
+        }
+        catch (ReadTimeoutException e)
+        {
+            throw ThriftConversion.toThrift(e);
+        }
+        catch (org.apache.cassandra.exceptions.UnavailableException e)
+        {
+            throw ThriftConversion.toThrift(e);
+        }
+        finally
+        {
+            Tracing.instance.stopSession();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public List<KeySlice> get_range_slices(ColumnParent column_parent, SlicePredicate predicate, KeyRange range, ConsistencyLevel consistency_level)
     throws InvalidRequestException, UnavailableException, TException, TimedOutException
     {
@@ -1138,6 +1295,9 @@ public class CassandraServer implements Cassandra.Iface
         else
         {
             logger.debug("range_slice");
+		try{throw new RuntimeException();}catch(Exception e){logger.debug("Exception in range_slice ",e);}
+
+
         }
 
         try

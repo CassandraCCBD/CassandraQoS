@@ -83,6 +83,7 @@ public class Cassandra {
      */
     public List<ColumnOrSuperColumn> get_slice(ByteBuffer key, ColumnParent column_parent, SlicePredicate predicate, ConsistencyLevel consistency_level) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException;
 
+    public List<ColumnOrSuperColumn> get_slice(ByteBuffer key, ColumnParent column_parent, SlicePredicate predicate, ConsistencyLevel consistency_level,int tag) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException;
     /**
      * returns the number of columns matching <code>predicate</code> for a particular <code>key</code>,
      * <code>ColumnFamily</code> and optionally <code>SuperColumn</code>.
@@ -655,6 +656,13 @@ public class Cassandra {
     /** get_slice_QoS
      * This function is what the Client would use if he wants to set the QoS for the query 
      * */
+
+    public List<ColumnOrSuperColumn> get_slice(ByteBuffer key, ColumnParent column_parent, SlicePredicate predicate, ConsistencyLevel consistency_level,int tag) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException
+    {
+      logger.debug("In getSlice()");
+      send_get_slice(key, column_parent, predicate, consistency_level);
+      return recv_get_slice();
+    }
     public List<ColumnOrSuperColumn> get_slice_QoS(ByteBuffer key, ColumnParent column_parent, SlicePredicate predicate, ConsistencyLevel consistency_level, int QoSLevel) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException
     {
       logger.debug("In getSliceQos()");
@@ -3502,7 +3510,7 @@ public class Cassandra {
   }
 
   public static class Processor<I extends Iface> extends org.apache.thrift.TBaseProcessor<I> implements org.apache.thrift.TProcessor {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Processor.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(Processor.class.getName());
     public Processor(I iface) {
       super(iface, getProcessMap(new HashMap<String, org.apache.thrift.ProcessFunction<I, ? extends org.apache.thrift.TBase>>()));
     }
@@ -3624,6 +3632,7 @@ public class Cassandra {
 
       public get_result getResult(I iface, get_args args) throws org.apache.thrift.TException {
         get_result result = new get_result();
+	logger.debug("Checking QoS Level {} ",args.getQosReq());
         try {
           result.success = iface.get(args.key, args.column_path, args.consistency_level);
         } catch (InvalidRequestException ire) {
@@ -3654,8 +3663,9 @@ public class Cassandra {
 
       public get_slice_result getResult(I iface, get_slice_args args) throws org.apache.thrift.TException {
         get_slice_result result = new get_slice_result();
+	logger.debug("Checking QoS Level {} ",args.getQosReq());
         try {
-          result.success = iface.get_slice(args.key, args.column_parent, args.predicate, args.consistency_level);
+          result.success = iface.get_slice(args.key, args.column_parent, args.predicate, args.consistency_level,args.getQosReq());
         } catch (InvalidRequestException ire) {
           result.ire = ire;
         } catch (UnavailableException ue) {

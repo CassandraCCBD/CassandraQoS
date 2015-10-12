@@ -55,6 +55,7 @@ public class ThriftSessionManager
         assert socket != null;
 
         ThriftClientState cState = activeSocketSessions.get(socket);
+//	    logger.debug(" csate {} socket {} ",cState.getQueryState(),socket);
         if (cState == null)
         {
             cState = new ThriftClientState(socket);
@@ -69,6 +70,7 @@ public class ThriftSessionManager
     public void connectionComplete(SocketAddress socket)
     {
         assert socket != null;
+//	logger.debug("CASSANDRA TEAM : getConnectedClient {} ",this.getConnectedClients());
         activeSocketSessions.remove(socket);
         if (logger.isTraceEnabled())
             logger.trace("ClientState removed for socket addr {}", socket);
