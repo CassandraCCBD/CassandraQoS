@@ -125,6 +125,7 @@ public class Cassandra {
      */
     public List<KeySlice> get_range_slices(ColumnParent column_parent, SlicePredicate predicate, KeyRange range, ConsistencyLevel consistency_level) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException;
 
+    public List<KeySlice> get_range_slices_QoS(ColumnParent column_parent, SlicePredicate predicate, KeyRange range, ConsistencyLevel consistency_level,int QoSLevel) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException;
     /**
      * returns a range of columns, wrapping to the next rows if necessary to collect max_results.
      * 
@@ -225,6 +226,8 @@ public class Cassandra {
      */
     public void batch_mutate(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException;
 
+    public void batch_mutate_QoS(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level,int QoSLevel
+    ) throws InvalidRequestException, UnavailableException, TimedOutException, org.apache.thrift.TException;
     /**
      *   Atomically mutate many columns or super columns for many row keys. See also: Mutation.
      * 
@@ -3778,7 +3781,8 @@ public class Cassandra {
       public get_range_slices_result getResult(I iface, get_range_slices_args args) throws org.apache.thrift.TException {
         get_range_slices_result result = new get_range_slices_result();
         try {
-          result.success = iface.get_range_slices(args.column_parent, args.predicate, args.range, args.consistency_level);
+	  logger.debug("GET RESULT");
+          result.success = iface.get_range_slices_QoS(args.column_parent, args.predicate, args.range, args.consistency_level,args.getQosReq());
         } catch (InvalidRequestException ire) {
           result.ire = ire;
         } catch (UnavailableException ue) {
@@ -4002,7 +4006,8 @@ public class Cassandra {
       public batch_mutate_result getResult(I iface, batch_mutate_args args) throws org.apache.thrift.TException {
         batch_mutate_result result = new batch_mutate_result();
         try {
-          iface.batch_mutate(args.mutation_map, args.consistency_level);
+         // iface.batch_mutate(args.mutation_map, args.consistency_level);
+          iface.batch_mutate_QoS(args.mutation_map, args.consistency_level,args.getQosReq());
         } catch (InvalidRequestException ire) {
           result.ire = ire;
         } catch (UnavailableException ue) {
@@ -16349,7 +16354,7 @@ public class Cassandra {
 
     public int getQosReq()
     {
-    	return 0;
+    	return QoSReq;
     }
     private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
     static {

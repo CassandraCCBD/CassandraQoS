@@ -996,6 +996,45 @@ public class CassandraServer implements Cassandra.Iface
         }
     }
 
+    public void batch_mutate_QoS(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level,int QoSLevel)
+    throws InvalidRequestException, UnavailableException, TimedOutException
+    {
+        if (startSessionIfRequested())
+        {
+            Map<String, String> traceParameters = Maps.newLinkedHashMap();
+            for (Map.Entry<ByteBuffer, Map<String, List<Mutation>>> mutationEntry : mutation_map.entrySet())
+            {
+                traceParameters.put(ByteBufferUtil.bytesToHex(mutationEntry.getKey()),
+                                    Joiner.on(";").withKeyValueSeparator(":").join(mutationEntry.getValue()));
+            }
+            traceParameters.put("consistency_level", consistency_level.name());
+            Tracing.instance.begin("batch_mutate", traceParameters);
+        }
+        else
+        {
+            logger.debug("batch_mutate {} ",QoSLevel);
+	    try{ throw new RuntimeException();}catch(Exception e){logger.debug("BATCH-MUTATE {} ",e);}
+        }
+
+        try
+        {
+            doInsert(consistency_level, createMutationList(consistency_level, mutation_map, true));
+        }
+        catch (RequestValidationException e)
+        {
+            throw ThriftConversion.toThrift(e);
+        }
+        finally
+        {
+            Tracing.instance.stopSession();
+        }
+
+
+    }
+
+
+
+
     public void batch_mutate(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level)
     throws InvalidRequestException, UnavailableException, TimedOutException
     {
@@ -1013,6 +1052,7 @@ public class CassandraServer implements Cassandra.Iface
         else
         {
             logger.debug("batch_mutate");
+	    try{ throw new RuntimeException();}catch(Exception e){logger.debug("BATCH-MUTATE {} ",e);}
         }
 
         try

@@ -46,6 +46,7 @@ import org.apache.cassandra.net.MessagingService;
 import org.apache.cassandra.service.StorageProxy.LocalReadRunnable;
 import org.apache.cassandra.utils.FBUtilities;
 
+import org.apache.thrift.Profiling;
 /**
  * Sends a read request to the replicas needed to satisfy a given ConsistencyLevel.
  *
@@ -88,8 +89,11 @@ public abstract class AbstractReadExecutor
         {
             if (isLocalRequest(endpoint))
             {   /* CASSANDRA TEAM: this is where the ReadStage begins */
+	//    	Profiling.incrementAndGetLocalRead();
                 logger.trace("reading data locally ");
                 StageManager.getStage(Stage.READ).execute(new LocalReadRunnable(command, handler));
+		logger.debug("Done Reading");
+	//	Profiling.decrementLocalRead();
             }
             else
             {

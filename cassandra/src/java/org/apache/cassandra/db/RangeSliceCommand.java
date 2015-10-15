@@ -28,6 +28,7 @@ import org.apache.cassandra.config.CFMetaData;
 import org.apache.cassandra.config.Schema;
 import org.apache.cassandra.db.Keyspace;
 import org.apache.cassandra.db.filter.ExtendedFilter;
+import org.apache.thrift.Profiling;
 import org.apache.cassandra.db.filter.IDiskAtomFilter;
 import org.apache.cassandra.db.marshal.AbstractType;
 import org.apache.cassandra.db.marshal.CompositeType;
@@ -129,7 +130,6 @@ public class RangeSliceCommand extends AbstractRangeCommand implements Pageable
     public List<Row> executeLocally()
     {
         ColumnFamilyStore cfs = Keyspace.open(keyspace).getColumnFamilyStore(columnFamily);
-
         ExtendedFilter exFilter = cfs.makeExtendedFilter(keyRange, predicate, rowFilter, maxResults, countCQL3Rows, isPaging, timestamp);
         if (cfs.indexManager.hasIndexFor(rowFilter))
             return cfs.search(exFilter);

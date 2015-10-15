@@ -35,7 +35,7 @@ import org.apache.cassandra.metrics.*;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import org.apache.thrift.Profiling;
 import org.apache.cassandra.concurrent.Stage;
 import org.apache.cassandra.concurrent.StageManager;
 import org.apache.cassandra.config.CFMetaData;
@@ -1453,11 +1453,15 @@ public class StorageProxy implements StorageProxyMBean
 
         protected void runMayThrow()
         {
+	    int number = Profiling.localRead.incrementAndGet();
+	    logger.debug("Starting local read, number is ", number);
             Keyspace keyspace = Keyspace.open(command.ksName);
             Row r = command.getRow(keyspace);
             ReadResponse result = ReadVerbHandler.getResponse(command, r);
             MessagingService.instance().addLatency(FBUtilities.getBroadcastAddress(), TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - start));
             handler.response(result);
+	    logger.debug("Done with local read");
+	    Profiling.localRead.decrementAndGet();
         }
     }
 
@@ -1475,10 +1479,11 @@ public class StorageProxy implements StorageProxyMBean
         }
 
         protected void runMayThrow()
-        {
+        {   Profiling.localScan.incrementAndGet();
             RangeSliceReply result = new RangeSliceReply(command.executeLocally());
             MessagingService.instance().addLatency(FBUtilities.getBroadcastAddress(), TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - start));
             handler.response(result);
+	    Profiling.localScan.decrementAndGet();
         }
     }
 

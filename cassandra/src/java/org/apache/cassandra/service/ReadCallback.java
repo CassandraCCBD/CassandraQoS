@@ -65,6 +65,8 @@ public class ReadCallback<TMessage, TResolved> implements IAsyncCallback<TMessag
         this(resolver, consistencyLevel, consistencyLevel.blockFor(Keyspace.open(command.getKeyspace())), command, Keyspace.open(command.getKeyspace()), filteredEndpoints);
         if (logger.isTraceEnabled())
             logger.trace(String.format("Blockfor is %s; setting up requests to %s", blockfor, StringUtils.join(this.endpoints, ",")));
+
+	try{throw new RuntimeException();}catch(Exception e){logger.debug("Trace in ReadCallBack {} ",e);}
     }
 
     public ReadCallback(IResponseResolver<TMessage, TResolved> resolver, ConsistencyLevel consistencyLevel, int blockfor, IReadCommand command, Keyspace keyspace, List<InetAddress> endpoints)
@@ -153,6 +155,7 @@ public class ReadCallback<TMessage, TResolved> implements IAsyncCallback<TMessag
 
     public void assureSufficientLiveNodes() throws UnavailableException
     {
+        logger.debug("ReadCALLBACK livenodes ");
         consistencyLevel.assureSufficientLiveNodes(keyspace, endpoints);
     }
 

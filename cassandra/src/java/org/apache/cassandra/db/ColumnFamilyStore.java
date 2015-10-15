@@ -1786,6 +1786,7 @@ public class ColumnFamilyStore implements ColumnFamilyStoreMBean
 
     public List<Row> filter(AbstractScanIterator rowIterator, ExtendedFilter filter)
     {
+    	try{throw new RuntimeException();}catch(Exception e){logger.debug("FILTER {} ",e);}
         logger.trace("Filtering {} for rows matching {}", rowIterator, filter);
         List<Row> rows = new ArrayList<Row>();
         int columnsCount = 0;
