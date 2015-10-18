@@ -176,7 +176,7 @@ public class CompactionManager implements CompactionManagerMBean
 	}
 	else 
 	{
-		logger.debug("Did not schedule Compaction as there were no clients" + CustomTThreadPoolServer.numClient);
+		logger.debug("Did not schedule Compaction as there were clients" + CustomTThreadPoolServer.numClient);
 	}
 
         return futures;

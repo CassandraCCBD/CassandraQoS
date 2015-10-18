@@ -86,10 +86,10 @@ public abstract class AbstractReadExecutor
 	logger.debug("CASSANDRA TEAM: start time for Thrift stage " + CustomTThreadPoolServer.startTime);	
 	logger.debug("Time taken is for ThriftStage " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime())-CustomTThreadPoolServer.startTime));	
         for (InetAddress endpoint : endpoints)
-        {
-            if (isLocalRequest(endpoint))
+        { 
+            if (isLocalRequest(endpoint)) 
             {   /* CASSANDRA TEAM: this is where the ReadStage begins */
-	//    	Profiling.incrementAndGetLocalRead();
+	//    	Profiling.incrementAndGetLocalRead(); */
                 logger.trace("reading data locally ");
                 StageManager.getStage(Stage.READ).execute(new LocalReadRunnable(command, handler));
 		logger.debug("Done Reading");
@@ -98,8 +98,8 @@ public abstract class AbstractReadExecutor
             else
             {
                 logger.trace("reading data from {}", endpoint);
-                MessagingService.instance().sendRR(command.createMessage(), endpoint, handler);
-            }
+                MessagingService.instance().sendRRQoS(command.createMessage(), endpoint, handler,ReadQoS);
+            } 
         }
     }
 
@@ -149,6 +149,86 @@ public abstract class AbstractReadExecutor
     {
         return handler.get();
     }
+
+
+
+
+	static int ReadQoS=0;
+    public static AbstractReadExecutor getReadExecutor(ReadCommand command, ConsistencyLevel consistencyLevel,int QoSLevel) throws UnavailableException
+    {
+        Keyspace keyspace = Keyspace.open(command.ksName);
+        List<InetAddress> allReplicas = StorageProxy.getLiveSortedEndpoints(keyspace, command.key);
+        ReadRepairDecision repairDecision = Schema.instance.getCFMetaData(command.ksName, command.cfName).newReadRepairDecision();
+        List<InetAddress> targetReplicas = consistencyLevel.filterForQuery(keyspace, allReplicas, repairDecision);
+
+        // Throw UAE early if we don't have enough replicas.
+        consistencyLevel.assureSufficientLiveNodes(keyspace, targetReplicas);
+        logger.debug("READ QOS {}",QoSLevel);
+	ReadQoS=QoSLevel;
+        // Fat client. Speculating read executors need access to cfs metrics and sampled latency, and fat clients
+        // can't provide that. So, for now, fat clients will always use NeverSpeculatingReadExecutor.
+        if (StorageService.instance.isClientMode())
+            return new NeverSpeculatingReadExecutor(command, consistencyLevel, targetReplicas);
+
+        if (repairDecision != ReadRepairDecision.NONE)
+            ReadRepairMetrics.attempted.mark();
+
+        ColumnFamilyStore cfs = keyspace.getColumnFamilyStore(command.cfName);
+        RetryType retryType = cfs.metadata.getSpeculativeRetry().type;
+
+        // Speculative retry is disabled *OR* there are simply no extra replicas to speculate.
+        if (retryType == RetryType.NONE || consistencyLevel.blockFor(keyspace) == allReplicas.size())
+            return new NeverSpeculatingReadExecutor(command, consistencyLevel, targetReplicas);
+
+        if (targetReplicas.size() == allReplicas.size())
+        {
+            // CL.ALL, RRD.GLOBAL or RRD.DC_LOCAL and a single-DC.
+            // We are going to contact every node anyway, so ask for 2 full data requests instead of 1, for redundancy
+            // (same amount of requests in total, but we turn 1 digest request into a full blown data request).
+            return new AlwaysSpeculatingReadExecutor(cfs, command, consistencyLevel, targetReplicas);
+        }
+
+        // RRD.NONE or RRD.DC_LOCAL w/ multiple DCs.
+        InetAddress extraReplica = allReplicas.get(targetReplicas.size());
+        // With repair decision DC_LOCAL all replicas/target replicas may be in different order, so
+        // we might have to find a replacement that's not already in targetReplicas.
+        if (repairDecision == ReadRepairDecision.DC_LOCAL && targetReplicas.contains(extraReplica))
+        {
+            for (InetAddress address : allReplicas)
+            {
+                if (!targetReplicas.contains(address))
+                {
+                    extraReplica = address;
+                    break;
+                }
+            }
+        }
+        targetReplicas.add(extraReplica);
+
+        if (retryType == RetryType.ALWAYS)
+            return new AlwaysSpeculatingReadExecutor(cfs, command, consistencyLevel, targetReplicas);
+        else // PERCENTILE or CUSTOM.
+            return new SpeculatingReadExecutor(cfs, command, consistencyLevel, targetReplicas);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * @return an executor appropriate for the configured speculative read policy

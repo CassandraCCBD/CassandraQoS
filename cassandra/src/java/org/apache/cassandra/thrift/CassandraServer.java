@@ -84,7 +84,8 @@ public class CassandraServer implements Cassandra.Iface
     private final static List<ColumnOrSuperColumn> EMPTY_COLUMNS = Collections.emptyList();
 
     private volatile boolean loggedCQL2Warning = false;
-
+   
+    int ReadQoS=0;
     /*
      * RequestScheduler to perform the scheduling of incoming requests
      */
@@ -114,7 +115,7 @@ public class CassandraServer implements Cassandra.Iface
             schedule(DatabaseDescriptor.getReadRpcTimeout());
             try
             {
-                rows = StorageProxy.read(commands, consistency_level);
+                rows = StorageProxy.read(commands, consistency_level,ReadQoS);
             }
             finally
             {
@@ -318,6 +319,7 @@ public class CassandraServer implements Cassandra.Iface
             logger.debug("get_slice tag QoS Level {} ",tag);
 	    // CASSANDRA TEAM MODIFICATION
 	    /* this is where the ycsb client is ending up */
+	    ReadQoS=tag;
 	    try 
 	    {
 	    	throw new RuntimeException("Exception for YCSB");
@@ -995,6 +997,7 @@ public class CassandraServer implements Cassandra.Iface
                 rm.delete(cfName, del.timestamp);
         }
     }
+    static int WriteQoS=0;
 
     public void batch_mutate_QoS(Map<ByteBuffer,Map<String,List<Mutation>>> mutation_map, ConsistencyLevel consistency_level,int QoSLevel)
     throws InvalidRequestException, UnavailableException, TimedOutException
@@ -1013,7 +1016,8 @@ public class CassandraServer implements Cassandra.Iface
         else
         {
             logger.debug("batch_mutate {} ",QoSLevel);
-	    try{ throw new RuntimeException();}catch(Exception e){logger.debug("BATCH-MUTATE {} ",e);}
+	    WriteQoS=QoSLevel;
+	  try{ throw new RuntimeException();}catch(Exception e){logger.debug("BATCH-MUTATE {} ",e);}
         }
 
         try
@@ -1178,7 +1182,7 @@ public class CassandraServer implements Cassandra.Iface
         schedule(DatabaseDescriptor.getWriteRpcTimeout());
         try
         {
-            StorageProxy.mutateWithTriggers(mutations, consistencyLevel, mutateAtomically);
+            StorageProxy.mutateWithTriggersQoS(mutations, consistencyLevel, mutateAtomically,WriteQoS);
         }
         catch (RequestExecutionException e)
         {
@@ -1214,10 +1218,11 @@ public class CassandraServer implements Cassandra.Iface
     }
 
 	//Cassandra Team adding qos parameter for slice
-    
+    static int ScanQoS=0;
     public List<KeySlice> get_range_slices_QoS(ColumnParent column_parent, SlicePredicate predicate, KeyRange range, ConsistencyLevel consistency_level,int QoSLevel)
     throws InvalidRequestException, UnavailableException, TException, TimedOutException
     {
+        ScanQoS=QoSLevel;
         if (startSessionIfRequested())
         {
             Map<String, String> traceParameters = ImmutableMap.of(
@@ -1271,14 +1276,14 @@ public class CassandraServer implements Cassandra.Iface
             try
             {
                 IDiskAtomFilter filter = ThriftValidation.asIFilter(predicate, metadata, column_parent.super_column);
-                rows = StorageProxy.getRangeSlice(new RangeSliceCommand(keyspace,
+                rows = StorageProxy.getRangeSliceQoS(new RangeSliceCommand(keyspace,
                                                                         column_parent.column_family,
                                                                         now,
                                                                         filter,
                                                                         bounds,
                                                                         range.row_filter,
                                                                         range.count),
-                                                  consistencyLevel);
+                                                  consistencyLevel,ScanQoS);
             }
             finally
             {

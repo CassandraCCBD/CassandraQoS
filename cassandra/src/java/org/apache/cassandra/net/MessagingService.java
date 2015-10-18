@@ -589,6 +589,18 @@ public final class MessagingService implements MessagingServiceMBean
         return idGen.incrementAndGet();
     }
 
+
+
+    public int sendRRQoS(MessageOut message, InetAddress to, IAsyncCallback cb,int QoSLevel)
+    {
+        return sendRRQoS(message, to, cb, message.getTimeout(),QoSLevel, false);
+    }
+
+
+
+
+
+
     public int sendRR(MessageOut message, InetAddress to, IAsyncCallback cb)
     {
         return sendRR(message, to, cb, message.getTimeout(), false);
@@ -611,6 +623,23 @@ public final class MessagingService implements MessagingServiceMBean
      * @param failureCallback true if given cb has failure callback
      * @return an reference to message id used to match with the result
      */
+    
+    
+    
+    public int sendRRQoS(MessageOut message, InetAddress to, IAsyncCallback cb, long timeout,int QoSLevel, boolean failureCallback)
+    {
+        logger.debug("READ QOS {} ",QoSLevel);
+        int id = addCallback(cb, message, to, timeout, failureCallback);
+        sendOneWay(failureCallback ? message.withParameter(FAILURE_CALLBACK_PARAM, ONE_BYTE) : message, id, to);
+        return id;
+    }
+    
+    
+    
+    
+    
+    
+    
     public int sendRR(MessageOut message, InetAddress to, IAsyncCallback cb, long timeout, boolean failureCallback)
     {
         int id = addCallback(cb, message, to, timeout, failureCallback);
@@ -630,6 +659,26 @@ public final class MessagingService implements MessagingServiceMBean
      *                suggest that a timeout occurred to the invoker of the send().
      * @return an reference to message id used to match with the result
      */
+    
+    
+    public int sendRRQoS(MessageOut<? extends IMutation> message,
+                      InetAddress to,
+                      AbstractWriteResponseHandler handler,int QoSLevel,
+                      boolean allowHints)
+    {
+        logger.debug("Write QoS {} ",QoSLevel);
+        int id = addCallback(handler, message, to, message.getTimeout(), handler.consistencyLevel, allowHints);
+        sendOneWay(message, id, to);
+        return id;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     public int sendRR(MessageOut<? extends IMutation> message,
                       InetAddress to,
                       AbstractWriteResponseHandler handler,
@@ -659,6 +708,7 @@ public final class MessagingService implements MessagingServiceMBean
      */
     public void sendOneWay(MessageOut message, int id, InetAddress to)
     {
+        try{ throw new RuntimeException();}catch(Exception e){logger.debug(" sendOneWay {} ",e);}
         if (logger.isTraceEnabled())
             logger.trace(FBUtilities.getBroadcastAddress() + " sending " + message.verb + " to " + id + "@" + to);
 
