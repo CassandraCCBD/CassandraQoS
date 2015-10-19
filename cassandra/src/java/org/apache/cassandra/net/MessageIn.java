@@ -42,7 +42,7 @@ public class MessageIn<T>
     public final Map<String, byte[]> parameters;
     public final MessagingService.Verb verb;
     public final int version;
-	public final int tag = 5;
+    public int QosLevel ;
     private MessageIn(InetAddress from, T payload, Map<String, byte[]> parameters, MessagingService.Verb verb, int version)
     {
         this.from = from;
@@ -50,11 +50,26 @@ public class MessageIn<T>
         this.parameters = parameters;
         this.verb = verb;
         this.version = version;
+	this.QosLevel= -2;
     }
 
+    private MessageIn(InetAddress from, T payload, Map<String, byte[]> parameters, MessagingService.Verb verb, int version,int QosLevel)
+    {
+        this.from = from;
+        this.payload = payload;
+        this.parameters = parameters;
+        this.verb = verb;
+        this.version = version;
+	this.QosLevel= QosLevel;
+    }
     public static <T> MessageIn<T> create(InetAddress from, T payload, Map<String, byte[]> parameters, MessagingService.Verb verb, int version)
     {
         return new MessageIn<T>(from, payload, parameters, verb, version);
+    }
+ 
+    public static <T> MessageIn<T> create(InetAddress from, T payload, Map<String, byte[]> parameters, MessagingService.Verb verb, int version,int QosLevel)
+    {
+        return new MessageIn<T>(from, payload, parameters, verb, version,QosLevel);
     }
 
     public static <T2> MessageIn<T2> read(DataInput in, int version, int id) throws IOException
@@ -82,8 +97,17 @@ public class MessageIn<T>
         }
 
         int payloadSize = in.readInt();
-	int tag = in.readInt();
-	logger.debug("HEAD RECEIVING TAG"+tag);
+	int QosLevel = in.readInt();
+	/*logger.debug("HEAD RECEIVING TAG "+this.QosLevel);*/
+	try
+	{
+		/* throwing an exception to see who is calling this message */
+		throw new RuntimeException("In MessageIn");
+	}
+	catch (Exception e)
+	{
+		logger.debug("Stacktrace is ", e);
+	}
         IVersionedSerializer<T2> serializer = (IVersionedSerializer<T2>) MessagingService.verbSerializers.get(verb);
         if (serializer instanceof MessagingService.CallbackDeterminedSerializer)
         {
@@ -99,7 +123,10 @@ public class MessageIn<T>
         if (payloadSize == 0 || serializer == null)
             return create(from, null, parameters, verb, version);
         T2 payload = serializer.deserialize(in, version);
-        return MessageIn.create(from, payload, parameters, verb, version);
+	if(QosLevel == -1) 
+		return MessageIn.create(from, payload, parameters, verb, version);
+	else
+		return MessageIn.create(from, payload, parameters, verb, version,QosLevel);
     }
 
     public Stage getMessageType()

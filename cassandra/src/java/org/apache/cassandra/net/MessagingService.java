@@ -660,24 +660,21 @@ public final class MessagingService implements MessagingServiceMBean
      * @return an reference to message id used to match with the result
      */
     
-    
+    //cassandra Qos
     public int sendRRQoS(MessageOut<? extends IMutation> message,
                       InetAddress to,
-                      AbstractWriteResponseHandler handler,int QoSLevel,
+                      AbstractWriteResponseHandler handler,int QosLevel,
                       boolean allowHints)
     {
-        logger.debug("Write QoS {} ",QoSLevel);
+        //logger.debug("Write QoS {} ",QoSLevel);
         int id = addCallback(handler, message, to, message.getTimeout(), handler.consistencyLevel, allowHints);
-        sendOneWay(message, id, to);
+        message.setQosLevel(QosLevel);
+	sendOneWay(message, id, to);
         return id;
     }
     
     
-    
-    
-    
-    
-    
+        
     
     public int sendRR(MessageOut<? extends IMutation> message,
                       InetAddress to,
@@ -694,6 +691,7 @@ public final class MessagingService implements MessagingServiceMBean
         sendOneWay(message, nextId(), to);
     }
 
+
     public void sendReply(MessageOut message, int id, InetAddress to)
     {
         sendOneWay(message, id, to);
@@ -708,7 +706,7 @@ public final class MessagingService implements MessagingServiceMBean
      */
     public void sendOneWay(MessageOut message, int id, InetAddress to)
     {
-        try{ throw new RuntimeException();}catch(Exception e){logger.debug(" sendOneWay {} ",e);}
+     //   try{ throw new RuntimeException();}catch(Exception e){logger.debug(" sendOneWay {} ",e);}
         if (logger.isTraceEnabled())
             logger.trace(FBUtilities.getBroadcastAddress() + " sending " + message.verb + " to " + id + "@" + to);
 
@@ -729,6 +727,25 @@ public final class MessagingService implements MessagingServiceMBean
         connection.enqueue(processedMessage, id);
     }
 
+    //cassandra Qos
+    /*
+    public void sendOneWayQos(MessageOut message, int id, InetAddress to,int QosLevel)
+        {
+	        try{ throw new RuntimeException();}catch(Exception e){logger.debug(" sendOneWay {} ",e);}
+		        if (logger.isTraceEnabled())
+			            logger.trace(FBUtilities.getBroadcastAddress() + " sending " + message.verb + " to " + id + "@" + to);
+
+				            if (to.equals(FBUtilities.getBroadcastAddress()))
+					                logger.trace("Message-to-self {} going over MessagingService", message);
+
+							        // message sinks are a testing hook
+								         MessageOut processedMessage = SinkManager.processOutboundMessage(message, id, to);
+								                 if (processedMessage == null)
+								                         {
+								                                     return;
+								                                             }
+								
+								                                   */
     public <T> AsyncOneResponse<T> sendRR(MessageOut message, InetAddress to)
     {
         AsyncOneResponse<T> iar = new AsyncOneResponse<T>();
@@ -777,6 +794,8 @@ public final class MessagingService implements MessagingServiceMBean
         TraceState state = Tracing.instance.initializeFromMessage(message);
         if (state != null)
             state.trace("Message received from {}", message.from);
+	/* trying to see what the message contains */
+	logger.debug("Message contains {}", message);
 
         Verb verb = message.verb;
         message = SinkManager.processInboundMessage(message, id);
@@ -789,7 +808,7 @@ public final class MessagingService implements MessagingServiceMBean
         Runnable runnable = new MessageDeliveryTask(message, id, timestamp);
         TracingAwareExecutorService stage = StageManager.getStage(message.getMessageType());
         assert stage != null : "No stage for message type " + message.verb;
-
+	logger.debug("Stage is {}", stage);
         stage.execute(runnable, state);
     }
 

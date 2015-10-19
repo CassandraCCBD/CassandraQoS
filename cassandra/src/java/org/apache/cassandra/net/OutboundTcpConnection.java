@@ -70,7 +70,7 @@ public class OutboundTcpConnection extends Thread
     private volatile long completed;
     private final AtomicLong dropped = new AtomicLong();
     private int targetVersion;
-
+ //   private int QosLevel;
     public OutboundTcpConnection(OutboundTcpConnectionPool pool)
     {
         super("MessagingService-Outgoing-" + pool.endPoint());
@@ -97,6 +97,23 @@ public class OutboundTcpConnection extends Thread
         }
     }
 
+    //cassandra Qos
+  /*      public void enqueueQos(MessageOut<?> message, int id,int QosLevel)
+	    {
+	    //cassandra Qos
+	    this.QosLevel = QosLevel;
+	            expireMessages();
+		            try
+			            {   
+				                backlog.put(new QueuedMessage(message, id));
+						        }
+							        catch (InterruptedException e)
+								        {   
+									            throw new AssertionError(e);
+										            }
+											        }
+*/
+
     void closeSocket(boolean destroyThread)
     {
         active.clear();
@@ -120,6 +137,8 @@ public class OutboundTcpConnection extends Thread
         while (true)
         {
             QueuedMessage qm = active.poll();
+	    //cassandra Qos
+	    //int QosLevel = qm.QosLevel;
             if (qm == null)
             {
                 // exhausted the active queue.  switch to backlog, once there's something to process there
@@ -148,7 +167,11 @@ public class OutboundTcpConnection extends Thread
             if (qm.isTimedOut(m.getTimeout()))
                 dropped.incrementAndGet();
             else if (socket != null || connect())
+		
+		//if(QosLevel == 0)
                 writeConnected(qm);
+		//else
+		//writeConnectedQos(qm,QosLevel);
             else
                 // clear out the queue, else gossip messages back up.
                 active.clear();
@@ -446,14 +469,25 @@ public class OutboundTcpConnection extends Thread
         final int id;
         final long timestamp;
         final boolean droppable;
-
+	int QosLevel;
         QueuedMessage(MessageOut<?> message, int id)
-        {
+        {	
+	    this.QosLevel = -1;
             this.message = message;
             this.id = id;
             this.timestamp = System.currentTimeMillis();
             this.droppable = MessagingService.DROPPABLE_VERBS.contains(message.verb);
         }
+	//cassandra Qos
+	/*QueuedMessage(MessageOut<?> message, int id,int QosLevel)
+	        {
+			this.QosLevel = QosLevel;
+		            this.message = message;
+			                this.id = id;
+					            this.timestamp = System.currentTimeMillis();
+						                this.droppable = MessagingService.DROPPABLE_VERBS.contains(message.verb);
+								        }
+*/
 
         /** don't drop a non-droppable message just because it's timestamp is expired */
         boolean isTimedOut(long maxTime)

@@ -42,6 +42,9 @@ import org.apache.cassandra.service.pager.QueryPagers;
 import org.apache.cassandra.tracing.Tracing;
 import org.apache.cassandra.metrics.KeyspaceMetrics;
 
+/* this is for profiling */
+
+import org.apache.thrift.Profiling;
 /**
  * It represents a Keyspace.
  */
@@ -326,8 +329,11 @@ public class Keyspace
 
     public Row getRow(QueryFilter filter)
     {
+    	/* every Read, whether it comes from another node, or a local read */
+	Profiling.totalRead.incrementAndGet();	
         ColumnFamilyStore cfStore = getColumnFamilyStore(filter.getColumnFamilyName());
         ColumnFamily columnFamily = cfStore.getColumnFamily(filter);
+	Profiling.totalRead.decrementAndGet();
         return new Row(filter.key, columnFamily);
     }
 

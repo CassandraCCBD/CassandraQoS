@@ -59,6 +59,8 @@ public class MessageDeliveryTask implements Runnable
 
         try
         {
+	    int QoSLevel = message.QosLevel;
+	    logger.debug("MDAK" + QoSLevel);
             verbHandler.doVerb(message, id);
         }
         catch (Throwable t)

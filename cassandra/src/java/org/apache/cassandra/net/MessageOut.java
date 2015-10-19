@@ -48,7 +48,7 @@ public class MessageOut<T>
     public final T payload;
     public final IVersionedSerializer<T> serializer;
     public final Map<String, byte[]> parameters;
-	public final int tag = 10;	
+	public int QosLevel = -1;	
     // we do support messages that just consist of a verb
     public MessageOut(MessagingService.Verb verb)
     {
@@ -120,12 +120,17 @@ public class MessageOut<T>
         long longSize = payload == null ? 0 : serializer.serializedSize(payload, version);
         assert longSize <= Integer.MAX_VALUE; // larger values are supported in sstables but not messages
         out.writeInt((int) longSize);
-	int tag = 7777;
-	logger.debug("HEAD SENDING TAG:"+tag);
-	out.writeInt(tag);
+	logger.debug("HEAD SENDING TAG:"+QosLevel);
+	out.writeInt(QosLevel);
         if (payload != null)
             serializer.serialize(payload, out, version);
     }
+    //cassandra Qos
+    public void setQosLevel(int QosLevel)
+    {
+    	this.QosLevel = QosLevel;
+    }
+   
 
     public int serializedSize(int version)
     {
