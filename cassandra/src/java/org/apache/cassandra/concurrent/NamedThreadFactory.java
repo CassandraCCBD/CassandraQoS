@@ -20,6 +20,8 @@ package org.apache.cassandra.concurrent;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /**
  * This class is an implementation of the <i>ThreadFactory</i> interface. This
  * is useful to give Java threads meaningful names which is useful when using
@@ -31,7 +33,7 @@ public class NamedThreadFactory implements ThreadFactory
     protected final String id;
     private final int priority;
     protected final AtomicInteger n = new AtomicInteger(1);
-
+    private static Logger logger = LoggerFactory.getLogger(NamedThreadFactory.class);
     public NamedThreadFactory(String id)
     {
         this(id, Thread.NORM_PRIORITY);
@@ -39,7 +41,7 @@ public class NamedThreadFactory implements ThreadFactory
 
     public NamedThreadFactory(String id, int priority)
     {
-
+	logger.debug("Creating a Threadpool for " + id );	
         this.id = id;
         this.priority = priority;
     }

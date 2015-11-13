@@ -29,6 +29,8 @@ import org.apache.cassandra.utils.FBUtilities;
 
 import static org.apache.cassandra.config.DatabaseDescriptor.*;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class manages executor services for Messages recieved: each Message requests
@@ -59,6 +61,9 @@ public class StageManager
         stages.put(Stage.MISC, new JMXEnabledThreadPoolExecutor(Stage.MISC));
         stages.put(Stage.READ_REPAIR, multiThreadedStage(Stage.READ_REPAIR, FBUtilities.getAvailableProcessors()));
         stages.put(Stage.TRACING, tracingExecutor());
+	/* this is what we need to add to include a ScanStage */
+	stages.put(Stage.SCAN, multiThreadedConfigurableStage(Stage.SCAN, getConcurrentReaders()));
+	stages.put(Stage.PROFILE, multiThreadedConfigurableStage(Stage.PROFILE, 5));
     }
 
     private static ExecuteOnlyExecutor tracingExecutor()

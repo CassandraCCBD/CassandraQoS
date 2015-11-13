@@ -252,6 +252,7 @@ public class CustomTThreadPoolServer extends TServer
             catch (Exception x)
             {
                 logger.error("Error occurred during processing of message.", x);
+		logger.error("Exception x : ", x);
             }
             finally
             {

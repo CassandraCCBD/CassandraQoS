@@ -23,7 +23,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.apache.cassandra.gms.Gossiper;
-
+ 
 public class MessageDeliveryTask implements Runnable
 {
     private static final Logger logger = LoggerFactory.getLogger(MessageDeliveryTask.class);
@@ -61,6 +61,7 @@ public class MessageDeliveryTask implements Runnable
         {
 	    int QoSLevel = message.QosLevel;
 	    logger.debug("MDAK" + QoSLevel);
+
             verbHandler.doVerb(message, id);
         }
         catch (Throwable t)

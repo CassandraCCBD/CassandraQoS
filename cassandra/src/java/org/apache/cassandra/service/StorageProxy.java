@@ -1733,7 +1733,8 @@ public class StorageProxy implements StorageProxyMBean
                     && filteredEndpoints.get(0).equals(FBUtilities.getBroadcastAddress())
                     && OPTIMIZE_LOCAL_REQUESTS)
                 {
-                    StageManager.getStage(Stage.READ).execute(new LocalRangeSliceRunnable(nodeCmd, handler));
+		/* Cassandra Team changed READ to SCAN */
+                    StageManager.getStage(Stage.SCAN).execute(new LocalRangeSliceRunnable(nodeCmd, handler));
                 }
                 else
                 {

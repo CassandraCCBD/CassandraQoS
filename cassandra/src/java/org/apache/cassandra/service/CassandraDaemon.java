@@ -72,6 +72,8 @@ import org.apache.cassandra.metrics.StorageMetrics;
 import org.apache.cassandra.thrift.ThriftServer;
 import org.apache.cassandra.tracing.Tracing;
 
+
+import org.apache.thrift.PredictionClass;
 /**
  * The <code>CassandraDaemon</code> is an abstraction for a Cassandra daemon
  * service, which defines not only a way to activate and deactivate it, but also
@@ -495,6 +497,14 @@ public class CassandraDaemon
             thriftServer.start();
         else
             logger.info("Not starting RPC server as requested. Use JMX (StorageService->startRPCServer()) or nodetool (enablethrift) to start it");
+
+	/** Cassandra Team Modification
+	 * we try and start the Prediction Class thread here as the stuff that needs be initialized should be done
+	 * by now
+	 * Fingers Crossed
+	 */
+	PredictionClass threadObject = new PredictionClass();
+	StageManager.getStage(Stage.PROFILE).execute(threadObject);
     }
 
     /**

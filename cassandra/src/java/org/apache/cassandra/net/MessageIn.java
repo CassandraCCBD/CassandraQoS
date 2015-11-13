@@ -99,15 +99,15 @@ public class MessageIn<T>
         int payloadSize = in.readInt();
 	int QosLevel = in.readInt();
 	/*logger.debug("HEAD RECEIVING TAG "+this.QosLevel);*/
-	try
+/*	try
 	{
 		/* throwing an exception to see who is calling this message */
-		throw new RuntimeException("In MessageIn");
+/*		throw new RuntimeException("In MessageIn");
 	}
 	catch (Exception e)
 	{
 		logger.debug("Stacktrace is ", e);
-	}
+	}*/
         IVersionedSerializer<T2> serializer = (IVersionedSerializer<T2>) MessagingService.verbSerializers.get(verb);
         if (serializer instanceof MessagingService.CallbackDeterminedSerializer)
         {

@@ -81,20 +81,17 @@ public abstract class AbstractReadExecutor
     protected void makeDataRequests(Iterable<InetAddress> endpoints)
     {
 	logger.debug("CASSANDRA TEAM: in makeDataRequests, endpoints are {}", endpoints);
-	logger.debug("CASSANDRA TEAM: END of THRIFTStage");
-	logger.debug("Time is " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime()));	
         for (InetAddress endpoint : endpoints)
         { 
             if (isLocalRequest(endpoint)) 
             {   /* CASSANDRA TEAM: this is where the ReadStage begins */
-	//    	Profiling.incrementAndGetLocalRead(); */
+	    	Profiling.numLocalRequest.incrementAndGet(); 
                 logger.trace("reading data locally ");
                 StageManager.getStage(Stage.READ).execute(new LocalReadRunnable(command, handler));
-		logger.debug("Done Reading");
-	//	Profiling.decrementLocalRead();
             }
             else
             {
+	    	Profiling.numNonLocalRequest.incrementAndGet();
                 logger.trace("reading data from {}", endpoint);
                 MessagingService.instance().sendRRQoS(command.createMessage(), endpoint, handler,ReadQoS);
             } 

@@ -93,9 +93,10 @@ public class CassandraServer implements Cassandra.Iface
     
     public CassandraServer()
     {   
-	logger.debug("Krithika");
         requestScheduler = DatabaseDescriptor.getRequestScheduler();
         registerMetrics();
+	/* Cassandra Team Modification */
+	
     }
 
     public ThriftClientState state()
