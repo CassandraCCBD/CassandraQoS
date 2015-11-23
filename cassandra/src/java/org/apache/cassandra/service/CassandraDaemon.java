@@ -502,9 +502,20 @@ public class CassandraDaemon
 	 * we try and start the Prediction Class thread here as the stuff that needs be initialized should be done
 	 * by now
 	 * Fingers Crossed
+	 * ATTEMPTED BUG FIX #1
+	 * We start multiple threads in the threadpool in the hope that all of them will take a while to die
 	 */
-	PredictionClass threadObject = new PredictionClass();
-	StageManager.getStage(Stage.PROFILE).execute(threadObject);
+	PredictionClass threadObject1 = new PredictionClass();
+	PredictionClass threadObject2 = new PredictionClass();
+	PredictionClass threadObject3 = new PredictionClass();
+	PredictionClass threadObject4 = new PredictionClass();
+	PredictionClass threadObject5 = new PredictionClass();
+	StageManager.getStage(Stage.PROFILE).execute(threadObject1);
+	StageManager.getStage(Stage.PROFILE).execute(threadObject2);
+	StageManager.getStage(Stage.PROFILE).execute(threadObject3);
+	StageManager.getStage(Stage.PROFILE).execute(threadObject4);
+	StageManager.getStage(Stage.PROFILE).execute(threadObject5);
+	logger.debug("Done Submitting");
     }
 
     /**

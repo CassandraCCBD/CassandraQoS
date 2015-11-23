@@ -83,18 +83,22 @@ public abstract class AbstractReadExecutor
 	logger.debug("CASSANDRA TEAM: in makeDataRequests, endpoints are {}", endpoints);
         for (InetAddress endpoint : endpoints)
         { 
-            if (isLocalRequest(endpoint)) 
+	    /** We comment sections of this code to make sure the query happens locally 
+	     * This is only for the sake of metrics
+	     */
+
+            //if (isLocalRequest(endpoint)) 
             {   /* CASSANDRA TEAM: this is where the ReadStage begins */
 	    	Profiling.numLocalRequest.incrementAndGet(); 
                 logger.trace("reading data locally ");
                 StageManager.getStage(Stage.READ).execute(new LocalReadRunnable(command, handler));
             }
-            else
+            /*else
             {
 	    	Profiling.numNonLocalRequest.incrementAndGet();
                 logger.trace("reading data from {}", endpoint);
                 MessagingService.instance().sendRRQoS(command.createMessage(), endpoint, handler,ReadQoS);
-            } 
+            } */
         }
     }
 
