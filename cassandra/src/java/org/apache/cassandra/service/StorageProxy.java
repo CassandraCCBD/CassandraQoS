@@ -1734,7 +1734,10 @@ public class StorageProxy implements StorageProxyMBean
                     && OPTIMIZE_LOCAL_REQUESTS)
                 {
 		/* Cassandra Team changed READ to SCAN */
-                    StageManager.getStage(Stage.SCAN).execute(new LocalRangeSliceRunnable(nodeCmd, handler));
+		/** We are changing it back to one single threadpool to make sure we can dynamically partition
+		 *  the number of reads and writes from Apache Thrift
+		 */
+                    StageManager.getStage(Stage.READ).execute(new LocalRangeSliceRunnable(nodeCmd, handler));
                 }
                 else
                 {
